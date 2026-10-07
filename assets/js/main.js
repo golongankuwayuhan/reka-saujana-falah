@@ -20,19 +20,17 @@ const translations = {
     // Hero Section
     heroBadge: "Entitas Terdaftar Resmi • Berdiri 2026 • Jawa Barat, ID",
     heroTitlePrefix: "Membangun Pengalaman Interaktif &",
-    heroTitleGradient: "Solusi Perangkat Lunak",
+    heroTitleGradient: "Peluang Perangkat Lunak",
     heroTitleSuffix: "Masa Depan",
-    heroSubtitle: "Reka Saujana Falah berfokus pada pengembangan video gim, rekayasa perangkat lunak pendukung alur produksi gim, dan solusi pemrograman komputer terpadu yang efisien, handal, dan berdaya guna.",
+    heroSubtitle: "Reka Saujana Falah berfokus pada pengembangan pemrograman komputer/mobile terpadu yang efisien dan berdaya guna, serta rekayasa perangkat lunak gim serta pendukung gim.",
     heroCtaPrimary: "Hubungi & Kerjasama",
     heroCtaSecondary: "Pelajari Kapabilitas",
 
-    // Hero Metrics
+    // Hero Metrics (Gambar 2 removed)
     metric1Val: "2026",
     metric1Lbl: "Tahun Berdiri",
     metric2Val: "2 LINI",
     metric2Lbl: "Klasifikasi KBLI",
-    metric3Val: "JAWA BARAT",
-    metric3Lbl: "Wilayah Operasional",
     metric4Val: "MULTI-PLATFORM",
     metric4Lbl: "Ekosistem Solusi",
 
@@ -41,14 +39,12 @@ const translations = {
     aboutTitle: "Dedikasi Teknis & Fondasi Rekayasa Perangkat Lunak",
     aboutDesc: "Ikhtisar resmi perusahaan untuk kepatuhan regulasi, pendaftaran direktori global (D-U-N-S), dan kemitraan strategis.",
     aboutLead: "Reka Saujana Falah adalah entitas teknologi independen yang didirikan pada tahun 2026 di Jawa Barat, Indonesia.",
-    aboutBody: "Kami mengintegrasikan keahlian teknis pemrograman tingkat lanjut dengan perancangan arsitektur perangkat lunak yang pragmatis. Fokus utama kami mencakup siklus hidup pengembangan video gim modern serta implementasi solusi komputasi kustom untuk menunjang kebutuhan industri digital tanpa klaim berlebihan dan berpijak pada eksekusi terukur.",
+    aboutBody: "Kami mengintegrasikan visi perancangan arsitektur perangkat lunak yang pragmatis dengan kekuatan kecerdasan buatan (AI) sebagai akselerator pengembangan. Fokus utama kami mencakup siklus hidup pembuatan aplikasi modern serta implementasi solusi digital kustom untuk menunjang kebutuhan industri, tanpa klaim berlebihan dan berpijak sepenuhnya pada eksekusi terukur.",
     
-    pillar1Title: "Presisi Teknis",
-    pillar1Desc: "Menulis kode yang bersih, terdokumentasi, dan arsitektur yang mudah dipelihara.",
+    pillar1Title: "Sinergi AI & Logika Sistem",
+    pillar1Desc: "Mengarahkan dan mengoptimalkan teknologi AI untuk menyusun struktur aplikasi yang efisien, fungsional, dan memiliki arsitektur yang mudah dipelihara.",
     pillar2Title: "Desain Berdaya Guna",
-    pillar2Desc: "Mengutamakan efisiensi performa dan pengalaman pengguna yang responsif.",
-    pillar3Title: "Kemitraan Terbuka",
-    pillar3Desc: "Komunikasi transparan dan pencapaian target yang realistis serta terverifikasi.",
+    pillar2Desc: "Mengutamakan penyelesaian masalah melalui efisiensi performa aplikasi dan pengalaman pengguna yang responsif.",
 
     // D-U-N-S Compliance Card
     verifyCardBadge: "D-U-N-S® COMPLIANCE READY",
@@ -57,31 +53,29 @@ const translations = {
     verifyItem2Lbl: "Tahun Pendirian",
     verifyItem2Val: "2026",
     verifyItem3Lbl: "Klasifikasi Baku Lapangan Usaha (KBLI)",
-    verifyItem3Val: "62014 (Video Gim) & 62019 (Pemrograman Lainnya)",
-    verifyItem4Lbl: "Yurisdiksi & Domisili",
-    verifyItem4Val: "Jawa Barat, Indonesia",
+    verifyItem3Val: "62014 & 62019",
+    verifyItem4Lbl: "Domisili",
+    verifyItem4Val: "West Java, Indonesia",
     verifyItem5Lbl: "Kanal Komunikasi Resmi",
     verifyItem5Val: "Email & WhatsApp Terverifikasi",
     verifyFooterText: "Data entitas resmi disiapkan untuk audit kelayakan D-U-N-S Dun & Bradstreet.",
 
-    // Services Section
+    // Services Section (Gambar 3 Update)
     servicesTag: "PRODUK & KAPABILITAS",
-    servicesTitle: "Fokus Solusi & Rekayasa Digital",
-    servicesDesc: "Pendekatan modern dan ramping dalam membangun ekosistem gim dan sistem komputasi berkinerja tinggi.",
+    servicesTitle: "Fokus Solusi & Pengembangan Aplikasi Digital",
+    servicesDesc: "Pendekatan praktis dan efisien dalam membangun aplikasi fungsional yang didukung oleh pemanfaatan teknologi Kecerdasan Buatan (AI).",
     
-    service1Code: "KBLI 62014",
-    service1Title: "Pengembangan Video Gim & Perangkat Lunak Pendukung",
-    service1Desc: "Perancangan mekanika interaktif, rekayasa logika gameplay, optimalisasi kinerja multi-platform, dan pembuatan tooling produksi gim yang mempercepat alur kerja.",
-    s1Cap1: "Prototipe interaktif & mekanik gameplay berbasis engine modern",
-    s1Cap2: "Alat pendukung (tooling), integrasi pipeline aset, & otomasi build",
-    s1Cap3: "Optimalisasi performa memori dan rendering (PC & Mobile)",
+    service1Title: "Pengembangan Aplikasi dengan Asistensi AI",
+    service1Desc: "Merancang dan membangun aplikasi fungsional dengan memaksimalkan peran AI sebagai alat bantu utama. Kami menyederhanakan proses teknis dari penyusunan logika dasar hingga menjadi produk digital yang siap digunakan.",
+    s1Cap1: "Penyusunan konsep dan prototipe aplikasi yang berfokus pada kebutuhan praktis.",
+    s1Cap2: "Pemanfaatan AI untuk mempercepat pembuatan kerangka dan fungsi dasar aplikasi (tanpa koding manual yang rumit).",
+    s1Cap3: "Optimalisasi alur kerja digital yang lebih cepat, efisien, dan tepat sasaran.",
 
-    service2Code: "KBLI 62019",
-    service2Title: "Aktivitas Pemrograman Komputer Lainnya YTDL",
-    service2Desc: "Layanan rekayasa perangkat lunak kustom, pengembangan sistem backend, integrasi RESTful/API antarsistem, otomasi data, dan aplikasi komputer fungsional.",
-    s2Cap1: "Pengembangan arsitektur backend, RESTful API, & manajemen database",
-    s2Cap2: "Aplikasi komputer desktop & web kustom berorientasi utilitas",
-    s2Cap3: "Otomasi pemrosesan logika, skrip integrasi, & pemeliharaan sistem",
+    service2Title: "Solusi Digital & Aplikasi Utilitas",
+    service2Desc: "Menghadirkan aplikasi kustom sederhana yang tepat sasaran untuk membantu pengelolaan data, mengotomatisasi tugas-tugas rutin, atau melengkapi kebutuhan operasional sehari-hari Anda.",
+    s2Cap1: "Pembuatan aplikasi web atau desktop berorientasi pada utilitas (kegunaan praktis pengguna).",
+    s2Cap2: "Otomasi pengelolaan data dan tugas-tugas operasional berulang.",
+    s2Cap3: "Penyesuaian (kustomisasi) sistem dasar yang mudah dioperasikan dan dipelihara.",
 
     // Principles Section
     principlesTag: "STANDAR KERJA",
@@ -98,7 +92,7 @@ const translations = {
     contactTag: "KOMUNIKASI RESMI",
     contactTitle: "Hubungi & Penjajakan Kerjasama",
     contactDesc: "Semua info lebih lanjut, verifikasi entitas, maupun konsultasi proyek diarahkan langsung ke kanal resmi kami.",
-    contactLead: "Kami menyambut baik diskusi seputar proyek pengembangan gim, kemitraan rekayasa perangkat lunak, maupun kebutuhan verifikasi korporasi.",
+    contactLead: "Kami menyambut baik diskusi seputar proyek kemitraan rekayasa perangkat lunak, maupun kebutuhan verifikasi korporasi.",
     
     chanWaLbl: "WhatsApp Resmi",
     chanMailLbl: "Email Resmi",
@@ -121,7 +115,7 @@ const translations = {
     btnSendMail: "Kirim via Email",
 
     // Footer
-    footerBrandDesc: "Reka Saujana Falah — Studio pengembangan video gim dan solusi rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.",
+    footerBrandDesc: "Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.",
     footerNavTitle: "Navigasi Cepat",
     footerLegalTitle: "Kepatuhan & Kontak",
     footerCopyright: "© 2026 Reka Saujana Falah. Hak cipta dilindungi undang-undang.",
@@ -131,7 +125,7 @@ const translations = {
 
   en: {
     // Meta & Head
-    pageTitle: "Reka Saujana Falah | Game Development Studio & Custom Software Engineering",
+    pageTitle: "Reka Saujana Falah | Software Engineering Studio & AI-Assisted App Development",
 
     // Header & Navigation
     navAbout: "About Us",
@@ -145,18 +139,16 @@ const translations = {
     heroBadge: "Officially Registered Entity • Established 2026 • West Java, ID",
     heroTitlePrefix: "Engineering Interactive Experiences &",
     heroTitleGradient: "Future-Ready Software",
-    heroTitleSuffix: "Solutions",
-    heroSubtitle: "Reka Saujana Falah specializes in video game development, game engine production tooling, and custom computer programming architectures designed for efficiency, resilience, and measurable utility.",
+    heroTitleSuffix: "Opportunities",
+    heroSubtitle: "Reka Saujana Falah focuses on unified, efficient, and functional computer/mobile programming, as well as video game software engineering and game-supporting software.",
     heroCtaPrimary: "Contact & Inquire",
     heroCtaSecondary: "Explore Capabilities",
 
-    // Hero Metrics
+    // Hero Metrics (Gambar 2 removed)
     metric1Val: "2026",
     metric1Lbl: "Year Established",
     metric2Val: "2 SECTORS",
     metric2Lbl: "ISIC/KBLI Classifications",
-    metric3Val: "WEST JAVA",
-    metric3Lbl: "Operational Base",
     metric4Val: "MULTI-PLATFORM",
     metric4Lbl: "Delivery Capability",
 
@@ -164,15 +156,13 @@ const translations = {
     aboutTag: "CORPORATE OVERVIEW",
     aboutTitle: "Engineering Rigor & Sustainable Software Foundations",
     aboutDesc: "Official corporate summary designed for regulatory compliance, international directory accreditation (D-U-N-S), and strategic partnerships.",
-    aboutLead: "Reka Saujana Falah is an independent software and digital technology enterprise established in 2026 in West Java, Indonesia.",
-    aboutBody: "We integrate rigorous programming disciplines with pragmatic systems architecture. Our primary operations span the complete modern video game production lifecycle and custom computing solutions for the digital economy—delivered transparently, efficiently, and grounded in verifiable technical execution.",
+    aboutLead: "Reka Saujana Falah is an independent digital technology enterprise established in 2026 in West Java, Indonesia.",
+    aboutBody: "We integrate pragmatic software architecture disciplines with the power of Artificial Intelligence (AI) as a development accelerator. Our primary operations span the complete modern application development lifecycle and custom digital solutions for industry needs—grounded entirely in verifiable, measured execution without inflated claims.",
     
-    pillar1Title: "Technical Precision",
-    pillar1Desc: "Writing clean, documented, and maintainable production codebases.",
-    pillar2Title: "Functional Architecture",
-    pillar2Desc: "Prioritizing runtime responsiveness, algorithmic efficiency, and low overhead.",
-    pillar3Title: "Transparent Collaboration",
-    pillar3Desc: "Open communication with pragmatic, achievable milestones and delivery.",
+    pillar1Title: "AI Synergy & Systems Logic",
+    pillar1Desc: "Directing and optimizing AI technologies to assemble efficient, functional, and easily maintainable application structures.",
+    pillar2Title: "Functional Design",
+    pillar2Desc: "Prioritizing pragmatic problem solving through application performance efficiency and responsive user experience.",
 
     // D-U-N-S Compliance Card
     verifyCardBadge: "D-U-N-S® COMPLIANCE READY",
@@ -181,31 +171,29 @@ const translations = {
     verifyItem2Lbl: "Year of Establishment",
     verifyItem2Val: "2026",
     verifyItem3Lbl: "Standard Industry Classification (KBLI)",
-    verifyItem3Val: "62014 (Video Games) & 62019 (Custom Programming)",
-    verifyItem4Lbl: "Jurisdiction & Location",
+    verifyItem3Val: "62014 & 62019",
+    verifyItem4Lbl: "Domicile",
     verifyItem4Val: "West Java, Indonesia",
     verifyItem5Lbl: "Official Communication Channels",
     verifyItem5Val: "Verified Corporate Email & WhatsApp",
     verifyFooterText: "Corporate records structured for Dun & Bradstreet D-U-N-S validation review.",
 
-    // Services Section
+    // Services Section (Gambar 3 Update)
     servicesTag: "CORE CAPABILITIES",
-    servicesTitle: "Specialized Engineering Domains",
-    servicesDesc: "A modern, focused approach to interactive entertainment and custom software architectures.",
+    servicesTitle: "Digital Solutions & Application Development",
+    servicesDesc: "A practical and efficient approach to building functional applications powered by Artificial Intelligence (AI) technology.",
     
-    service1Code: "KBLI 62014",
-    service1Title: "Video Game Development & Supporting Software",
-    service1Desc: "Design of interactive mechanics, gameplay logic runtime programming, multi-platform performance optimization, and specialized developer tooling to accelerate production pipelines.",
-    s1Cap1: "Gameplay prototyping & mechanics engineering with modern engines",
-    s1Cap2: "Production tooling, pipeline automation, & asset workflow integration",
-    s1Cap3: "Multi-platform runtime optimization (PC & Mobile systems)",
+    service1Title: "AI-Assisted Application Development",
+    service1Desc: "Designing and building functional applications by maximizing AI as a core development tool. We streamline technical processes from foundational logic structuring into production-ready digital products.",
+    s1Cap1: "Practical concept formulation and rapid application prototyping focused on real needs.",
+    s1Cap2: "Utilizing AI to accelerate scaffolding and core app functions without tedious manual coding.",
+    s1Cap3: "Optimizing digital workflows to be faster, efficient, and precisely targeted.",
 
-    service2Code: "KBLI 62019",
-    service2Title: "Other Computer Programming Activities n.e.c.",
-    service2Desc: "Custom software engineering, backend API services, systems integration, process automation scripts, and purpose-built computational applications.",
-    s2Cap1: "Backend service engineering, RESTful APIs, & database architecture",
-    s2Cap2: "Custom desktop & web-based operational software utilities",
-    s2Cap3: "Automated business logic, integration scripts, & codebase maintenance",
+    service2Title: "Digital Solutions & Utility Applications",
+    service2Desc: "Delivering targeted custom applications to streamline data management, automate routine tasks, or empower everyday operational workflows.",
+    s2Cap1: "Development of web or desktop applications oriented towards practical user utility.",
+    s2Cap2: "Automation of data workflows and recurring operational tasks.",
+    s2Cap3: "Customization of accessible foundational systems that are easy to operate and maintain.",
 
     // Principles Section
     principlesTag: "STANDARDS",
@@ -222,7 +210,7 @@ const translations = {
     contactTag: "OFFICIAL CHANNELS",
     contactTitle: "Contact & Partnership Inquiries",
     contactDesc: "All business inquiries, enterprise partnerships, and corporate verification checks are routed to our direct official lines.",
-    contactLead: "We welcome direct correspondence regarding game production collaborations, specialized software engineering contracts, and business verification inquiries.",
+    contactLead: "We welcome direct correspondence regarding software engineering partnerships and corporate verification inquiries.",
     
     chanWaLbl: "Official WhatsApp",
     chanMailLbl: "Official Email",
@@ -238,14 +226,14 @@ const translations = {
     lblFormName: "Your Name / Organization:",
     placeholderName: "e.g. Alex Johnson (Global Tech Ltd)",
     lblFormSubject: "Inquiry Topic:",
-    placeholderSubject: "e.g. Game Development Partnership / Software Inquiry",
+    placeholderSubject: "e.g. Software Partnership / Digital Inquiry",
     lblFormMsg: "Inquiry Details:",
     placeholderMsg: "Describe your project requirements or the nature of your inquiry...",
     btnSendWa: "Dispatch via WhatsApp",
     btnSendMail: "Dispatch via Email",
 
     // Footer
-    footerBrandDesc: "Reka Saujana Falah — Video game development studio and custom software engineering enterprise based in West Java, Indonesia. Founded in 2026.",
+    footerBrandDesc: "Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.",
     footerNavTitle: "Quick Navigation",
     footerLegalTitle: "Compliance & Inquiries",
     footerCopyright: "© 2026 Reka Saujana Falah. All rights reserved.",
