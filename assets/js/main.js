@@ -11,7 +11,8 @@ const translations = {
     
     // Header & Navigation
     navAbout: "Tentang Kami",
-    navServices: "Layanan & Produk",
+    navServices: "Layanan & Solusi",
+    navProducts: "Produk Flagship",
     navPrinciples: "Prinsip Kerja",
     navVerification: "Verifikasi Entitas",
     navContact: "Kontak",
@@ -77,6 +78,87 @@ const translations = {
     s2Cap2: "Otomasi pengelolaan data dan tugas-tugas operasional berulang.",
     s2Cap3: "Penyesuaian (kustomisasi) sistem dasar yang mudah dioperasikan dan dipelihara.",
 
+    // Commercial Product: LuminaTweak Glass (Lemon Squeezy)
+    prodTag: "PRODUK KOMERSIAL RESMI • DIJUAL DI LEMON SQUEEZY",
+    prodTitlePrefix: "LuminaTweak Glass Edition —",
+    prodTitleGradient: "Ultimate macOS Deep Customizer",
+    prodDesc: "Aplikasi kustomisasi sistem macOS tercanggih dengan antarmuka Liquid Frosted Glassmorphism, 2.180+ tweak terkurasi di 11 kategori sistem, simulator interaktif 1:1 real-time, dan lisensi resmi jual putus di Lemon Squeezy.",
+    badgeSip: "100% SIP-Safe (defaults write)",
+    badgeTweaks: "2.180+ Tweak • 382+ Domain",
+    badgeSim: "1:1 Live Interactive Simulator",
+    badgeLangs: "7 Bahasa Antarmuka",
+    badgeLemon: "Lisensi Jual Putus Lemon Squeezy",
+    badgeRevert: "1-Click Revert to Default",
+    tabSimulator: "Simulator 1:1 & Tweak Engine",
+    tabCategories: "11 Kategori & 2.180+ Tweak",
+    tabPricing: "Lisensi & Aktivasi Lemon Squeezy",
+    capSimulator: "Tampilan 1:1 Live Interactive Simulator macOS: pratinjau animasi Dock, transparansi, drop shadows, dan file tersembunyi secara instan sebelum dieksekusi ke sistem Mac Anda.",
+    capCategories: "Matriks lengkap 11 kategori sistem (Dock, Finder, Windowing, Safari, Keyboard, Screenshots, Hardware, Terminal, Xcode Lab, Battery, Security) dengan filter pencarian instan.",
+    capPricing: "Modal aktivasi resmi LuminaTweak Glass PRO dengan validasi lisensi Lemon Squeezy, verifikasi mesin otomatis, dan 3 tier lisensi seumur hidup tanpa langganan.",
+    prodFeat1Title: "2.180+ Tweak di 11 Kategori Inti",
+    prodFeat1Desc: "Akses ribuan optimasi performa dan kustomisasi tersembunyi macOS (Dock, Finder, Liquid Windowing, Safari, Keyboard Latency, Xcode Lab, Power Battery, hingga Keamanan).",
+    prodFeat2Title: "Simulator Interaktif 1:1 Real-Time",
+    prodFeat2Desc: "Eksplorasi tanpa resiko. Uji autohide delay Dock, efek minimasi Genie/Scale/Suck, kecepatan key repeat, dan tampilan Finder dotfiles langsung pada simulasi virtual sebelum diterapkan.",
+    prodFeat3Title: "Universal Registry & Plist Inspector (382+ Domain)",
+    prodFeat3Desc: "Eksplorasi dan kelola database pengaturan sistem internal macOS secara transparan. Mendukung pencarian instan domain preferensi, nilai parameter, dan injeksi aman.",
+    prodFeat4Title: "100% SIP-Safe & 1-Click Revert",
+    prodFeat4Desc: "Sepenuhnya mengandalkan API bawaan Apple (defaults write & killall). Bebas intervensi kernel/SIP, dan dilengkapi tombol pemulihan ke setelan bawaan pabrik kapan saja.",
+    prodSpecsTitle: "Spesifikasi Teknis & Dukungan Multi-Bahasa",
+    prodSpecLangTitle: "7 Pilihan Bahasa Antarmuka",
+    prodSpecLangDesc: "Antarmuka aplikasi dapat langsung diganti secara instan: Bahasa Indonesia, English, 日本語 (Japanese), Deutsch (German), Español (Spanish), Français (French), 简体中文 (Simplified Chinese).",
+    prodSpecCompTitle: "Kompatibilitas Sistem Operasi",
+    prodSpecCompDesc: "macOS 15 Sequoia • macOS 14 Sonoma • macOS 13 Ventura • macOS 12 Monterey.",
+    prodSpecArchTitle: "Arsitektur Prosesor",
+    prodSpecArchDesc: "Apple Silicon Native (M1, M2, M3, M4 series) & Intel Core Macs (64-bit).",
+    prodSpecDistTitle: "Format Distribusi Resmi",
+    prodSpecDistDesc: "Berkas Installer macOS .dmg Resmi (47 MB - UDZO APFS) dengan drag-and-drop ke Applications & panduan instalasi.",
+    pricingTag: "HARGA & LISENSI RESMI",
+    pricingTitle: "Pilihan Lisensi Jual Putus Lemon Squeezy",
+    pricingDesc: "Tanpa biaya langganan bulanan. Beli sekali, akses seumur hidup, dan kunci lisensi instan dikirim ke email pembeli oleh Lemon Squeezy.",
+    tier1Title: "Single Mac",
+    tier1Sub: "1 Lisensi Perangkat Mac",
+    tier1Desc: "Cocok untuk solo developer, desainer grafis, dan pelajar.",
+    tier1Feat1: "Akses Penuh 2.180+ Tweak macOS",
+    tier1Feat2: "1:1 Live Interactive Simulator",
+    tier1Feat3: "Update Versi Gratis Selamanya",
+    tier1Feat4: "Aktivasi 1 Perangkat Mac",
+    tier1Btn: "Beli Single Mac ($24)",
+    tier2Title: "Dual Mac",
+    tier2Badge: "PALING POPULER",
+    tier2Sub: "2 Lisensi Perangkat Mac",
+    tier2Desc: "Pilihan ideal untuk kombinasi MacBook laptop dan Mac mini / Studio di meja kerja.",
+    tier2Feat1: "Semua Fitur Single Mac Lengkap",
+    tier2Feat2: "Aktivasi 2 Perangkat Mac Sekaligus",
+    tier2Feat3: "Dukungan Prioritas & Ekspor Skrip .sh",
+    tier2Feat4: "Hak Deaktivasi & Pindah Mac Baru",
+    tier2Btn: "Beli Dual Mac ($39)",
+    tier3Title: "Power Pack",
+    tier3Sub: "Hingga 5 Perangkat Mac",
+    tier3Desc: "Bagi power user, multi-Mac setups, workstation studio, atau home lab.",
+    tier3Feat1: "Semua Fitur Pro & Domain Inspector",
+    tier3Feat2: "Aktivasi Hingga 5 Perangkat Mac",
+    tier3Feat3: "Fitur Ekspor Skrip Automasi Kustom",
+    tier3Feat4: "Update Mayor & Minor Seumur Hidup",
+    tier3Btn: "Beli Power Pack ($59)",
+    guar1: "Garansi 30 Hari Uang Kembali",
+    guar2: "Pengiriman Kunci Instan via Email",
+    guar3: "Bebas Pindah Lisensi ke Mac Baru",
+    guar4: "Pembayaran Aman Global via Lemon Squeezy (MoR)",
+    faqTag: "PERTANYAAN UMUM",
+    faqTitle: "Tanya Jawab Seputar LuminaTweak Glass",
+    faq1Q: "Mengapa LuminaTweak tidak tersedia di Mac App Store?",
+    faq1A: "Apple secara ketat melarang aplikasi Mac App Store untuk menjalankan perintah defaults write atau memodifikasi file konfigurasi plist sistem demi kebijakan sandbox. Mendistribusikan aplikasi secara langsung via berkas DMG adalah satu-satunya metode resmi untuk memberikan Anda kendali penuh atas optimasi performa macOS.",
+    faq2Q: "Bagaimana cara membuka aplikasi pada instalasi pertama kali?",
+    faq2A: "Karena didistribusikan di luar App Store, macOS akan memunculkan dialog Gatekeeper standar pada peluncuran pertama. Cukup Klik Kanan (atau Control + Klik) ikon LuminaTweak Glass di folder Applications, lalu pilih 'Open' (Buka). Anda hanya perlu melakukannya satu kali!",
+    faq3Q: "Apakah aplikasi ini aman dan tidak akan merusak macOS saya?",
+    faq3A: "Sangat aman. LuminaTweak Glass 100% mematuhi arsitektur keamanan macOS (SIP-Safe). Kami hanya menggunakan API resmi Apple (defaults write dan killall), tanpa pernah memodifikasi kernel extensions (kext) atau partisi terproteksi. Selain itu, setiap tweak dilengkapi tombol 1-Click 'Kembalikan ke Setelan Bawaan Pabrik'.",
+    faq4Q: "Bisakah saya memindahkan lisensi jika membeli laptop Mac baru?",
+    faq4A: "Ya, tentu saja! Anda dapat dengan mudah menonaktifkan lisensi pada Mac lama dan mengaktifkannya di Mac baru langsung melalui menu lisensi di dalam aplikasi sesuai kuota lisensi yang Anda beli.",
+    ctaProdTitle: "Siap Mengoptimalkan Pengalaman macOS Anda?",
+    ctaProdDesc: "Dapatkan LuminaTweak Glass Edition hari ini di Lemon Squeezy atau diskusikan kebutuhan lisensi tim dengan kami.",
+    ctaBuyLemon: "Beli di Lemon Squeezy ($24 - $59)",
+    ctaContactSales: "Konsultasi / Kemitraan Lisensi",
+
     // Principles Section
     principlesTag: "STANDAR KERJA",
     principlesTitle: "Prinsip Operasional Kami",
@@ -129,7 +211,8 @@ const translations = {
 
     // Header & Navigation
     navAbout: "About Us",
-    navServices: "Services & Products",
+    navServices: "Services & Solutions",
+    navProducts: "Featured Product",
     navPrinciples: "Core Principles",
     navVerification: "Entity Verification",
     navContact: "Contact",
@@ -195,6 +278,87 @@ const translations = {
     s2Cap2: "Automation of data workflows and recurring operational tasks.",
     s2Cap3: "Customization of accessible foundational systems that are easy to operate and maintain.",
 
+    // Commercial Product: LuminaTweak Glass (Lemon Squeezy)
+    prodTag: "OFFICIAL COMMERCIAL PRODUCT • SOLD ON LEMON SQUEEZY",
+    prodTitlePrefix: "LuminaTweak Glass Edition —",
+    prodTitleGradient: "Ultimate macOS Deep Customizer",
+    prodDesc: "The next-generation macOS deep customizer featuring GPU-accelerated liquid frosted glass, 2,180+ curated system tweaks across 11 core categories, a 1:1 real-time interactive simulator, and official lifetime licensing on Lemon Squeezy.",
+    badgeSip: "100% SIP-Safe (defaults write)",
+    badgeTweaks: "2,180+ Tweaks • 382+ Domains",
+    badgeSim: "1:1 Live Interactive Simulator",
+    badgeLangs: "7 UI Languages Supported",
+    badgeLemon: "Official Lifetime License on Lemon Squeezy",
+    badgeRevert: "1-Click Revert to Default",
+    tabSimulator: "1:1 Simulator & Tweak Engine",
+    tabCategories: "11 Categories & 2,180+ Tweaks",
+    tabPricing: "Lemon Squeezy License & Tiers",
+    capSimulator: "1:1 Live Interactive macOS Simulator: preview Dock animations, transparency, drop shadows, and hidden dotfiles instantly before applying to your system.",
+    capCategories: "Comprehensive matrix of 11 system categories (Dock, Finder, Windowing, Safari, Keyboard, Screenshots, Hardware, Terminal, Xcode Lab, Battery, Security) with instant search filtering.",
+    capPricing: "Official LuminaTweak Glass PRO activation modal featuring Lemon Squeezy license verification, machine binding, and 3 lifetime tiers without subscriptions.",
+    prodFeat1Title: "2,180+ Curated macOS Tweaks Across 11 Categories",
+    prodFeat1Desc: "Unlock thousands of hidden performance optimizations and visual preferences across Dock, Finder, Windowing, Safari, Keyboard Latency, Xcode Lab, Power/Battery, and System Security.",
+    prodFeat2Title: "Real-Time 1:1 Interactive macOS Simulator",
+    prodFeat2Desc: "Never fly blind. Test dock delay, minimize animations (Genie/Scale/Suck), key repeat latency, and Finder hidden dotfiles inside an interactive virtual Mac before touching any system file.",
+    prodFeat3Title: "Universal Registry & Plist Inspector (382+ Domains)",
+    prodFeat3Desc: "Safely explore and manage your Mac's internal configuration registry. Real-time indexing of 382+ registered macOS domains with zero terminal complexity.",
+    prodFeat4Title: "100% SIP-Safe & 1-Click Revert to Default",
+    prodFeat4Desc: "Built exclusively on native Apple defaults write and system preference APIs. Zero kernel extensions or SIP partition tampering, complete with 1-click revert to factory stock.",
+    prodSpecsTitle: "Technical Specifications & Multi-Language Support",
+    prodSpecLangTitle: "7 Integrated Interface Languages",
+    prodSpecLangDesc: "Switch UI language on the fly: English, Bahasa Indonesia, 日本語 (Japanese), Deutsch (German), Español (Spanish), Français (French), 简体中文 (Simplified Chinese).",
+    prodSpecCompTitle: "macOS Operating System Compatibility",
+    prodSpecCompDesc: "macOS 15 Sequoia • macOS 14 Sonoma • macOS 13 Ventura • macOS 12 Monterey.",
+    prodSpecArchTitle: "Hardware Architecture",
+    prodSpecArchDesc: "Native Apple Silicon (M1, M2, M3, M4 series) & Intel Core 64-bit Macs.",
+    prodSpecDistTitle: "Official Installer Package",
+    prodSpecDistDesc: "Official macOS .dmg Installer (47 MB - UDZO APFS) with instant drag-and-drop to Applications and setup guide.",
+    pricingTag: "OFFICIAL PRICING & LICENSING",
+    pricingTitle: "Simple, Honest Pricing — Buy Once, Keep Forever",
+    pricingDesc: "Zero recurring subscriptions. Buy once, keep it forever. Instant license key delivery directly to your inbox via Lemon Squeezy.",
+    tier1Title: "Single Mac",
+    tier1Sub: "1 Mac Device License",
+    tier1Desc: "Perfect for solo developers, UI/UX designers, and students.",
+    tier1Feat1: "Full Access to 2,180+ Curated Tweaks",
+    tier1Feat2: "1:1 Live Interactive Simulator",
+    tier1Feat3: "Free Lifetime Software Updates",
+    tier1Feat4: "1 Mac Device Activation",
+    tier1Btn: "Buy Single Mac ($24)",
+    tier2Title: "Dual Mac",
+    tier2Badge: "MOST POPULAR",
+    tier2Sub: "2 Mac Devices License",
+    tier2Desc: "Ideal setup for MacBook laptop + desktop Mac mini or Mac Studio.",
+    tier2Feat1: "Everything in Single Mac Included",
+    tier2Feat2: "Simultaneous 2 Mac Activations",
+    tier2Feat3: "Priority Support & Shell Script Export",
+    tier2Feat4: "Transferable License Between Macs",
+    tier2Btn: "Buy Dual Mac ($39)",
+    tier3Title: "Power Pack",
+    tier3Sub: "Up to 5 Mac Devices License",
+    tier3Desc: "For power users, home labs, small design studios, and multi-Mac setups.",
+    tier3Feat1: "All Pro Tweaks & Domain Plist Inspector",
+    tier3Feat2: "Up to 5 Mac Devices Activations",
+    tier3Feat3: "Full Custom Automation Script Engine",
+    tier3Feat4: "All Future Major Updates Included",
+    tier3Btn: "Buy Power Pack ($59)",
+    guar1: "30-Day Money-Back Guarantee",
+    guar2: "Instant Delivery to Your Inbox",
+    guar3: "Transferable License to New Mac",
+    guar4: "Secure Global Checkout via Lemon Squeezy (MoR)",
+    faqTag: "FREQUENTLY ASKED QUESTIONS",
+    faqTitle: "Frequently Asked Questions About LuminaTweak Glass",
+    faq1Q: "Why isn't LuminaTweak on the Mac App Store?",
+    faq1A: "Apple strictly forbids App Store applications from executing defaults write or modifying system plists due to sandbox restrictions. Distributing directly via DMG is the only way to grant you full control over macOS's hidden engine.",
+    faq2Q: "How do I open the app on first launch?",
+    faq2A: "Because LuminaTweak is distributed outside the App Store, macOS will display a standard Gatekeeper prompt on the first launch. Simply Right-Click (or Control + Click) LuminaTweak Glass in your Applications folder and choose Open. You only need to do this once!",
+    faq3Q: "Can I break my Mac with this app?",
+    faq3A: "No. LuminaTweak Glass only uses official Apple defaults, killall, and system preferences APIs. It never touches system kernel extensions (kexts) or protected SIP partitions. Every single tweak includes a 1-click 'Revert to Default' button.",
+    faq4Q: "Can I transfer my license to a new Mac?",
+    faq4A: "Yes! You can easily deactivate your license on your old Mac and activate it on your new machine directly within the app according to your license quota.",
+    ctaProdTitle: "Ready to Supercharge Your Mac Experience?",
+    ctaProdDesc: "Get LuminaTweak Glass Edition today on Lemon Squeezy, or contact our engineering team for team/volume licensing.",
+    ctaBuyLemon: "Buy on Lemon Squeezy ($24 - $59)",
+    ctaContactSales: "Enterprise Licensing Inquiry",
+
     // Principles Section
     principlesTag: "STANDARDS",
     principlesTitle: "Our Operational Principles",
@@ -252,6 +416,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initCopyButtons();
   initInquiryDispatcher();
+  initShowcaseTabs();
+  initImageLightbox();
 });
 
 /**
@@ -460,3 +626,84 @@ function initInquiryDispatcher() {
     });
   }
 }
+
+/**
+ * Interactive Showcase Tabs (LuminaTweak Glass Screenshots)
+ */
+function initShowcaseTabs() {
+  const tabs = document.querySelectorAll('.gallery-tab');
+  const slides = document.querySelectorAll('.gallery-slide');
+  if (!tabs.length || !slides.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab-target');
+      if (!target) return;
+
+      // Update Tab Buttons
+      tabs.forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      // Update Slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      const targetSlide = document.getElementById(`slide-${target}`);
+      if (targetSlide) {
+        targetSlide.classList.add('active');
+      }
+    });
+  });
+}
+
+/**
+ * Image Lightbox Modal for Hi-Res Screenshots
+ */
+function initImageLightbox() {
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('lightboxCloseBtn');
+  const backdrop = lightbox ? lightbox.querySelector('.lightbox-backdrop') : null;
+  const triggers = document.querySelectorAll('[data-lightbox-src]');
+
+  if (!lightbox || !lightboxImg) return;
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const src = trigger.getAttribute('data-lightbox-src');
+      const img = trigger.querySelector('img');
+      const alt = img ? img.getAttribute('alt') : 'Screenshot';
+      const captionEl = trigger.closest('.gallery-slide') ? trigger.closest('.gallery-slide').querySelector('.slide-caption p') : null;
+      
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      if (lightboxCaption) {
+        lightboxCaption.textContent = captionEl ? captionEl.textContent.trim() : alt;
+      }
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+      closeLightbox();
+    }
+  });
+}
+
