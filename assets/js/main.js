@@ -408,6 +408,11 @@ function initInquiryDispatcher() {
   const btnEmail = document.getElementById('btnDispatchEmail');
 
   const officialEmail = "admin@rekasaujanafalah.com";
+  const mirrorEmails = [
+    "golongankuwayuhan@gmail.com",
+    "buatlainlainsaja@gmail.com",
+    "buatopenaisaja@gmail.com"
+  ];
   const officialPhoneClean = "6289601014132"; // +62 896-0101-4132
 
   if (btnWa) {
@@ -449,7 +454,8 @@ function initInquiryDispatcher() {
       }
       emailBody += `Salam,\n${sender || "Rekan Bisnis"}`;
 
-      const mailtoUrl = `mailto:${officialEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      const bccParam = mirrorEmails.length > 0 ? `&bcc=${encodeURIComponent(mirrorEmails.join(','))}` : "";
+      const mailtoUrl = `mailto:${officialEmail}?subject=${encodeURIComponent(subject)}${bccParam}&body=${encodeURIComponent(emailBody)}`;
       window.location.href = mailtoUrl;
     });
   }
