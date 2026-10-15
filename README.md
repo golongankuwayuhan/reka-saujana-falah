@@ -9,7 +9,7 @@ Website profil perusahaan modern & futuristik untuk **Reka Saujana Falah**, dira
 - **Nama Legal Entitas**: Reka Saujana Falah
 - **Tahun Pendirian**: 2026
 - **Domisili Operasional**: Jawa Barat, Indonesia (West Java, Indonesia)
-- **Email Resmi**: `golongankuwayuhan@gmail.com`
+- **Email Resmi**: `admin@rekasaujanafalah.com`
 - **Telepon / WhatsApp**: `+62 896-0101-4132`
 - **Klasifikasi Industri (KBLI)**:
   1. **KBLI 62014**: Pengembangan Video Gim, Perangkat Lunak Video Gim, dan Perangkat Lunak Pendukungnya *(Video Game Development & Tooling)*
@@ -114,7 +114,7 @@ Jika Anda nanti membeli domain sendiri (misalnya `rekasaujanafalah.com` atau `re
 Ketika mengisi formulir D-U-N-S di portal Dun & Bradstreet / Apple / Google Developer:
 - **Legal Entity Name**: Masukkan persis `Reka Saujana Falah`.
 - **Website URL**: Masukkan URL GitHub Pages atau domain kustom Anda.
-- **Organization Email**: Masukkan `golongankuwayuhan@gmail.com`.
+- **Organization Email**: Masukkan `admin@rekasaujanafalah.com`.
 - **Work Phone**: Masukkan `+62 896-0101-4132`.
 - **Physical Address**: Pastikan kota & provinsi di formulir sesuai dengan informasi yang ada di web (Jawa Barat / West Java, Indonesia).
 - **Line of Business**: Sebutkan *Video Game Software Development (KBLI 62014)* dan *Computer Programming Services (KBLI 62019)*.

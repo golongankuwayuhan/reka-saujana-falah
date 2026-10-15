@@ -407,7 +407,7 @@ function initInquiryDispatcher() {
   const btnWa = document.getElementById('btnDispatchWa');
   const btnEmail = document.getElementById('btnDispatchEmail');
 
-  const officialEmail = "golongankuwayuhan@gmail.com";
+  const officialEmail = "admin@rekasaujanafalah.com";
   const officialPhoneClean = "6289601014132"; // +62 896-0101-4132
 
   if (btnWa) {
