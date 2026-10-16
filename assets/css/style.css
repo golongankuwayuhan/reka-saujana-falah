@@ -1216,8 +1216,8 @@ section {
 .product-commercial-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.95rem;
+  gap: 0.65rem;
+  padding: 0.45rem 1.1rem;
   background: rgba(245, 158, 11, 0.12);
   border: 1px solid rgba(245, 158, 11, 0.35);
   border-radius: var(--radius-full);
@@ -1228,6 +1228,12 @@ section {
   text-transform: uppercase;
   margin-bottom: 1rem;
   box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.lemon-badge-logo {
+  height: 20px;
+  width: auto;
+  display: block;
 }
 
 .product-pills-row {
@@ -1267,6 +1273,13 @@ section {
   background: rgba(250, 204, 21, 0.12);
   border-color: rgba(250, 204, 21, 0.4);
   color: #fde047;
+}
+
+.pill-lemon-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .product-hero-card {
@@ -1595,6 +1608,12 @@ section {
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
+.lang-mini-pill.rtl-pill {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
 .spec-pill-group {
   display: flex;
   flex-direction: column;
@@ -1609,6 +1628,200 @@ section {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
+}
+
+/* Lemon Squeezy Store Search & Early Access Banner */
+.lemon-store-search-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 2.25rem 2.5rem;
+  margin-bottom: 3.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 194, 51, 0.35);
+  background: radial-gradient(ellipse at 20% 0%, rgba(255, 194, 51, 0.12) 0%, rgba(14, 20, 33, 0.9) 70%);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7), 0 0 35px -10px rgba(255, 194, 51, 0.2);
+}
+
+.store-banner-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255, 194, 51, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.store-banner-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.store-banner-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.store-lemon-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.store-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseGreen 1.8s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.store-banner-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.6rem;
+}
+
+.store-banner-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  max-width: 750px;
+}
+
+.store-search-query-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.search-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.search-code {
+  font-size: 0.825rem;
+  color: #fde047;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-copy-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-copy-search:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.store-banner-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 240px;
+}
+
+.btn-lemon-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffc233 0%, #f59e0b 100%);
+  color: #030712;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-lemon-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.5);
+  color: #030712;
+}
+
+.btn-lemon-svg-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-glass-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-glass-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--text-main);
 }
 
 /* Pricing Grid */
@@ -1654,6 +1867,27 @@ section {
   box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4);
 }
 
+.tier-discount-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.65rem;
+  width: fit-content;
+}
+
+.tier-discount-badge.highlight-save {
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--accent-cyan);
+  border-color: rgba(0, 240, 255, 0.35);
+}
+
 .tier-name {
   font-size: 1.35rem;
   font-weight: 700;
@@ -1664,14 +1898,32 @@ section {
 .tier-sub {
   font-size: 0.825rem;
   color: var(--text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .tier-price-box {
   display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.tier-price-anchor {
+  margin-bottom: 0.1rem;
+}
+
+.price-original {
+  font-size: 1.15rem;
+  text-decoration: line-through;
+  color: var(--text-dim);
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.tier-price-current {
+  display: flex;
   align-items: baseline;
   gap: 0.25rem;
-  margin-bottom: 0.75rem;
 }
 
 .currency {
@@ -1691,6 +1943,17 @@ section {
 .price-suffix {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.tier-save-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #34d399;
+  margin-bottom: 0.75rem;
+}
+
+.tier-save-tag.highlight-save {
+  color: var(--accent-cyan);
 }
 
 .tier-desc {
@@ -1741,12 +2004,14 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--text-main);
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .btn-tier-buy:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+  color: var(--text-main);
 }
 
 .btn-popular-buy {
@@ -1759,6 +2024,15 @@ section {
   border-radius: 10px;
   font-size: 0.925rem;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-tier-lemon-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.45rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .lemon-guarantees-row {
@@ -1822,6 +2096,26 @@ section {
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 0 35px rgba(0, 240, 255, 0.12);
 }
 
+.cta-lemon-inline-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.cta-lemon-mini-logo {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+.cta-lemon-inline-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 0.08em;
+}
+
 .cta-banner-title {
   font-size: 1.4rem;
   font-weight: 700;
@@ -1853,6 +2147,7 @@ section {
   border: none;
   box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .btn-lemon-store:hover {
@@ -1937,6 +2232,15 @@ section {
 
 /* Responsive Overrides */
 @media (max-width: 992px) {
+  .store-banner-inner {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .store-banner-right {
+    min-width: 100%;
+  }
+
   .prod-features-grid {
     grid-template-columns: 1fr;
   }
@@ -1958,6 +2262,10 @@ section {
     text-align: center;
   }
 
+  .cta-lemon-inline-brand {
+    justify-content: center;
+  }
+
   .cta-banner-actions {
     flex-direction: column;
     width: 100%;
@@ -1970,6 +2278,16 @@ section {
 }
 
 @media (max-width: 640px) {
+  .lemon-store-search-banner {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .store-search-query-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .specs-items-grid {
     grid-template-columns: 1fr;
   }

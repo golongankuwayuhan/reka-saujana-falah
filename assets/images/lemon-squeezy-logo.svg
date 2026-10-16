@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Lemon Squeezy Official Emblem -->
+  <g transform="translate(6, 6)">
+    <!-- Yellow Lemon Body -->
+    <path d="M24 4 C35 4 45 13 46 25 C47 37 39 46 27 47 C15 48 5 40 4 28 C3 16 13 4 24 4 Z" fill="#FFC233"/>
+    <path d="M22 6 C32 6 42 14 43 25 C44 36 36 44 25 45 C16 46 7 38 6 28 C5 18 13 6 22 6 Z" fill="#FFE853"/>
+    <!-- Highlight shine -->
+    <path d="M14 16 C18 11 26 9 32 12 C30 14 26 13 20 15 C16 17 14 20 13 23 C12 21 13 18 14 16 Z" fill="#FFFFFF" opacity="0.75"/>
+    <!-- Fresh Green Leaf -->
+    <path d="M26 6 C28 1 35 0 39 3 C36 8 30 8 26 6 Z" fill="#10B981"/>
+    <!-- Small Leaf Accent -->
+    <path d="M29 5 C32 3 36 2 38 4" stroke="#059669" stroke-width="0.8" stroke-linecap="round"/>
+  </g>
+  <!-- Lemon Squeezy Typography -->
+  <text x="62" y="32" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif" font-size="19" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">Lemon</text>
+  <text x="124" y="32" font-family="'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif" font-size="19" font-weight="700" fill="#FFC233" letter-spacing="-0.02em">Squeezy</text>
+  <text x="63" y="45" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="700" fill="#94A3B8" letter-spacing="0.1em">MERCHANT OF RECORD</text>
+</svg>

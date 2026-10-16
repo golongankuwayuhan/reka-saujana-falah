@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Lemon Squeezy Official Lemon Emblem -->
+  <!-- Yellow Lemon Body -->
+  <path d="M24 6 C35 6 44 14 45 25 C46 36 38 44 27 45 C16 46 6 38 5 27 C4 16 13 6 24 6 Z" fill="#FFC233"/>
+  <path d="M22 8 C32 8 41 15 42 25 C43 35 35 42 25 43 C16 44 8 37 7 27 C6 18 13 8 22 8 Z" fill="#FFE853"/>
+  <!-- Highlight shine -->
+  <path d="M14 18 C18 13 26 11 32 14 C30 16 26 15 20 17 C16 19 14 22 13 25 C12 23 13 20 14 18 Z" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Fresh Green Leaf -->
+  <path d="M26 8 C28 3 35 2 39 5 C36 10 30 10 26 8 Z" fill="#10B981"/>
+  <path d="M29 7 C32 5 36 4 38 6" stroke="#059669" stroke-width="0.8" stroke-linecap="round"/>
+</svg>
