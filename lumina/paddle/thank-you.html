@@ -166,6 +166,11 @@
         <div style="background: rgba(0, 0, 0, 0.25); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;" id="step1Tip">
           💡 <em>Tip: If you do not see it within 2 minutes, please check your Spam or Promotions folder.</em>
         </div>
+        <div style="margin-top: 0.85rem;">
+          <a href="https://sandbox-customer-portal.paddle.com/cpl_01m547725fznsrt8wgt2hmhrjw" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem; text-decoration: underline; display: inline-flex; align-items: center; gap: 0.35rem;" id="step1PortalLink">
+            <span>Access Paddle Customer Portal →</span>
+          </a>
+        </div>
       </div>
 
       <!-- Step 2: Download DMG -->
@@ -236,8 +241,9 @@
           <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.85rem;" id="guaranteeDesc">
             We are dedicated to your complete satisfaction. If you encounter any technical issues or find that LuminaTweak Glass doesn't fit your daily Mac workflow, you are covered by our 30-day 100% money-back guarantee via Paddle.
           </p>
-          <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem;">
-            <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">Self-Service Buyer Portal (paddle.net) →</a>
+          <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem; margin-top: 1rem;">
+            <a href="https://sandbox-customer-portal.paddle.com/cpl_01m547725fznsrt8wgt2hmhrjw" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; font-weight: 600; text-decoration: underline;" id="linkCustomerPortal">🏛️ Paddle Customer Portal (Manage Order &amp; Invoices) →</a>
+            <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">Self-Service Buyer Lookup (paddle.net) →</a>
             <a href="refund.html" style="color: var(--text-secondary); text-decoration: underline;" id="linkRefund">Paddle Refund Policy →</a>
             <a href="mailto:admin@rekasaujanafalah.com" style="color: var(--text-secondary); text-decoration: underline;">Email: admin@rekasaujanafalah.com</a>
           </div>
@@ -280,6 +286,7 @@
           <li><a href="terms.html">Terms of Service (Paddle)</a></li>
           <li><a href="privacy.html">Privacy Policy (Paddle)</a></li>
           <li><a href="refund.html">Refund Policy (Paddle)</a></li>
+          <li><a href="https://sandbox-customer-portal.paddle.com/cpl_01m547725fznsrt8wgt2hmhrjw" target="_blank" rel="noopener noreferrer" style="color: #38bdf8;">Paddle Customer Portal</a></li>
           <li><a href="https://paddle.net" target="_blank" rel="noopener noreferrer">Paddle Buyer Support</a></li>
         </ul>
       </div>
@@ -417,10 +424,15 @@
         const guaranteeTitle = document.getElementById('guaranteeTitle');
         const guaranteeDesc = document.getElementById('guaranteeDesc');
         const linkRefund = document.getElementById('linkRefund');
+        const step1PortalLink = document.getElementById('step1PortalLink');
+        const linkCustomerPortal = document.getElementById('linkCustomerPortal');
+
+        if (step1PortalLink) step1PortalLink.querySelector('span').textContent = isId ? 'Akses Portal Pelanggan Paddle →' : 'Access Paddle Customer Portal →';
         if (guaranteeTitle) guaranteeTitle.textContent = isId ? 'Garansi 30 Hari Uang Kembali Tanpa Risiko' : '30-Day Risk-Free Money-Back Guarantee';
         if (guaranteeDesc) guaranteeDesc.textContent = isId ? 
           'Kepuasan Anda adalah prioritas mutlak kami. Jika Anda menghadapi kendala teknis atau aplikasi tidak sesuai alur kerja harian Mac Anda, Anda dilindungi oleh garansi 100% uang kembali 30 hari via Paddle.' : 
           'We are dedicated to your complete satisfaction. If you encounter any technical issues or find that LuminaTweak Glass doesn\'t fit your daily Mac workflow, you are covered by our 30-day 100% money-back guarantee via Paddle.';
+        if (linkCustomerPortal) linkCustomerPortal.textContent = isId ? '🏛️ Portal Pelanggan Paddle (Kelola Pesanan & Faktur) →' : '🏛️ Paddle Customer Portal (Manage Order & Invoices) →';
         if (linkRefund) linkRefund.textContent = isId ? 'Kebijakan Pengembalian Dana Paddle →' : 'Paddle Refund Policy →';
 
         // Back link & Footer
