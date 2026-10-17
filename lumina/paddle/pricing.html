@@ -540,7 +540,12 @@
     if (typeof Paddle !== 'undefined') {
       Paddle.Initialize({
         token: "live_0ea7a7733b317ac0938addf7798",
-        pwCustomer: {}
+        eventCallback: function(data) {
+          console.log("Paddle Event:", data);
+          if (data.name === "checkout.completed") {
+            window.location.href = "thank-you.html";
+          }
+        }
       });
     }
 
@@ -555,7 +560,8 @@
           settings: {
             displayMode: "overlay",
             theme: "dark",
-            locale: "en"
+            locale: "en",
+            successUrl: "https://rekasaujanafalah.com/lumina/paddle/thank-you.html"
           }
         });
       } catch (err) {
