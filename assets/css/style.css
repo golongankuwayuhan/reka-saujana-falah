@@ -1276,6 +1276,19 @@ section {
   color: var(--accent-cyan);
 }
 
+.product-pill.paddle-pill {
+  background: rgba(0, 235, 136, 0.12);
+  border-color: rgba(0, 235, 136, 0.4);
+  color: #00eb88;
+}
+
+.pill-paddle-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .product-pill.lemon-pill {
   background: rgba(250, 204, 21, 0.12);
   border-color: rgba(250, 204, 21, 0.4);
@@ -1681,6 +1694,7 @@ section {
   margin-bottom: 0.85rem;
 }
 
+.store-paddle-logo,
 .store-lemon-logo {
   height: 28px;
   width: auto;
@@ -1807,6 +1821,62 @@ section {
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(245, 158, 11, 0.5);
   color: #030712;
+}
+
+.btn-paddle-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00eb88 0%, #059669 100%);
+  color: #030712;
+  box-shadow: 0 8px 25px rgba(0, 235, 136, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-paddle-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 235, 136, 0.5);
+  color: #030712;
+}
+
+.btn-paddle-store {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 12px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00eb88 0%, #059669 100%);
+  color: #030712;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 235, 136, 0.35);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-paddle-store:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 235, 136, 0.5);
+  color: #030712;
+}
+
+.btn-tier-buy.btn-tier-paddle {
+  background: rgba(0, 235, 136, 0.12);
+  border: 1px solid rgba(0, 235, 136, 0.4);
+  color: #00eb88;
+}
+
+.btn-tier-buy.btn-tier-paddle:hover {
+  background: rgba(0, 235, 136, 0.22);
+  border-color: #00eb88;
+  color: #00eb88;
 }
 
 .btn-lemon-svg-icon {
@@ -2004,6 +2074,12 @@ section {
   font-weight: 800;
 }
 
+.tier-action {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
 .btn-tier-buy {
   width: 100%;
   display: flex;
@@ -2040,7 +2116,31 @@ section {
   text-decoration: none;
 }
 
-.btn-tier-lemon-icon {
+.btn-popular-paddle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(135deg, #00eb88 0%, #00b4d8 100%);
+  color: #030712;
+  box-shadow: 0 8px 25px rgba(0, 235, 136, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.btn-popular-paddle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 235, 136, 0.55);
+  color: #030712;
+}
+
+.btn-tier-lemon-icon,
+.btn-tier-paddle-icon {
   width: 16px;
   height: 16px;
   margin-right: 0.45rem;

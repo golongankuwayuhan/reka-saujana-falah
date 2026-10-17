@@ -128,9 +128,13 @@
         </ul>
 
         <div class="tier-action">
+          <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy btn-tier-paddle" id="t1BtnPaddle">
+            <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
+            <span>Beli di Paddle ($39)</span>
+          </a>
           <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy" id="t1Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-            <span>Beli Plus Edition ($39)</span>
+            <span>Beli di Lemon Squeezy ($39)</span>
           </a>
         </div>
       </div>
@@ -168,9 +172,14 @@
         </ul>
 
         <div class="tier-action">
+          <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-popular-paddle" id="t2BtnPaddle">
+            <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
+            <span>Beli di Paddle ($59)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
           <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-popular-buy" id="t2Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-            <span>Beli Pro Edition ($59)</span>
+            <span>Beli di Lemon Squeezy ($59)</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         </div>
@@ -207,9 +216,13 @@
         </ul>
 
         <div class="tier-action">
+          <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy btn-tier-paddle" id="t3BtnPaddle">
+            <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
+            <span>Beli di Paddle ($99)</span>
+          </a>
           <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy" id="t3Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-            <span>Beli Power Pack ($99)</span>
+            <span>Beli di Lemon Squeezy ($99)</span>
           </a>
         </div>
       </div>
@@ -347,6 +360,7 @@
         const t1Save = document.getElementById('t1Save');
         const t1Desc = document.getElementById('t1Desc');
         const t1Btn = document.getElementById('t1Btn');
+        const t1BtnPaddle = document.getElementById('t1BtnPaddle');
         const t1FeatList = document.getElementById('t1FeatList');
 
         if (t1Discount) t1Discount.textContent = isId ? 'HEMAT $10 — LAUNCH SPECIAL' : 'SAVE $10 — LAUNCH SPECIAL';
@@ -354,7 +368,8 @@
         if (t1Suffix) t1Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t1Save) t1Save.textContent = isId ? 'Hemat $10 — Penawaran Peluncuran' : 'Save $10 — Launch Special Deal';
         if (t1Desc) t1Desc.textContent = isId ? 'Pilihan hemat untuk solo developer, desainer UI/UX, dan pelajar pengguna 1 unit Mac.' : 'Perfect for solo developers, designers, and students on a single Mac.';
-        if (t1Btn) t1Btn.querySelector('span').textContent = isId ? 'Beli Plus Edition ($39)' : 'Get Plus Edition ($39)';
+        if (t1BtnPaddle) t1BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($39)' : 'Get via Paddle ($39)';
+        if (t1Btn) t1Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($39)' : 'Get via Lemon Squeezy ($39)';
         if (t1FeatList) {
           t1FeatList.innerHTML = isId ? `
             <li><span class="check-bullet">✓</span> <span>Akses Penuh 2.265+ Tweak macOS</span></li>
@@ -379,6 +394,7 @@
         const t2Save = document.getElementById('t2Save');
         const t2Desc = document.getElementById('t2Desc');
         const t2Btn = document.getElementById('t2Btn');
+        const t2BtnPaddle = document.getElementById('t2BtnPaddle');
         const t2FeatList = document.getElementById('t2FeatList');
 
         if (t2Ribbon) t2Ribbon.textContent = isId ? 'PALING POPULER' : 'MOST POPULAR';
@@ -387,7 +403,8 @@
         if (t2Suffix) t2Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t2Save) t2Save.textContent = isId ? 'Hemat $20 — Pilihan Favorit Pengguna' : 'Save $20 — Most Popular Choice';
         if (t2Desc) t2Desc.textContent = isId ? 'Pilihan paling ideal untuk kombinasi MacBook laptop, Mac mini, hingga workstation Studio.' : 'Ideal choice for MacBook, Mac mini, and Mac Studio multi-desk setups.';
-        if (t2Btn) t2Btn.querySelector('span').textContent = isId ? 'Beli Pro Edition ($59)' : 'Get Pro Edition ($59)';
+        if (t2BtnPaddle) t2BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($59)' : 'Get via Paddle ($59)';
+        if (t2Btn) t2Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($59)' : 'Get via Lemon Squeezy ($59)';
         if (t2FeatList) {
           t2FeatList.innerHTML = isId ? `
             <li><span class="check-bullet">✓</span> <span>Semua Fitur Plus Edition Lengkap</span></li>
@@ -411,6 +428,7 @@
         const t3Save = document.getElementById('t3Save');
         const t3Desc = document.getElementById('t3Desc');
         const t3Btn = document.getElementById('t3Btn');
+        const t3BtnPaddle = document.getElementById('t3BtnPaddle');
         const t3FeatList = document.getElementById('t3FeatList');
 
         if (t3Discount) t3Discount.textContent = isId ? 'HEMAT $50 — VALUE DEVELOPER' : 'SAVE $50 — BEST DEVELOPER VALUE';
@@ -418,7 +436,8 @@
         if (t3Suffix) t3Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t3Save) t3Save.textContent = isId ? 'Hemat $50 — Nilai Terbaik Multi-Mac' : 'Save $50 — Best Value for Multi-Mac';
         if (t3Desc) t3Desc.textContent = isId ? 'Bagi power users, studio kreatif, lab pengembangan aplikasi, dan workstation multi-mesin.' : 'For power users, creative studios, app testing labs, and multi-Mac setups.';
-        if (t3Btn) t3Btn.querySelector('span').textContent = isId ? 'Beli Power Pack ($99)' : 'Get Power Pack ($99)';
+        if (t3BtnPaddle) t3BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($99)' : 'Get via Paddle ($99)';
+        if (t3Btn) t3Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($99)' : 'Get via Lemon Squeezy ($99)';
         if (t3FeatList) {
           t3FeatList.innerHTML = isId ? `
             <li><span class="check-bullet">✓</span> <span>Semua Fitur Pro &amp; Domain Inspector</span></li>
