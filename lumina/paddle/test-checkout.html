@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paddle Sandbox Test Checkout — LuminaTweak Glass | PT Reka Saujana Falah</title>
+  
+  <meta name="title" content="Paddle Sandbox Test Checkout — LuminaTweak Glass">
+  <meta name="description" content="Technical test page for Paddle Billing v2 sandbox checkout. Verify overlay checkout, test cards, and order fulfillment flow for PT Reka Saujana Falah.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+
+  <style>
+    .sandbox-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .sandbox-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(56, 189, 248, 0.08);
+      margin-bottom: 2rem;
+    }
+    .badge-sandbox {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+    }
+    .test-cred-box {
+      background: rgba(10, 15, 26, 0.85);
+      border: 1px dashed rgba(56, 189, 248, 0.35);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+    }
+    .test-cred-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.85rem;
+    }
+    .cred-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.65rem 0.85rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .cred-label {
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .cred-val {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      color: #f8fafc;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .checkout-btn-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.75rem;
+    }
+    .btn-checkout-tier {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.15rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: rgba(22, 30, 49, 0.8);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .btn-checkout-tier:hover {
+      background: rgba(30, 41, 59, 0.95);
+      border-color: var(--accent-cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -6px rgba(56, 189, 248, 0.25);
+    }
+    .btn-checkout-pro {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.35) 0%, rgba(37, 99, 235, 0.45) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.6);
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+    }
+    .btn-checkout-pro:hover {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.5) 0%, rgba(29, 78, 216, 0.6) 100%);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 30px -5px rgba(37, 99, 235, 0.5);
+    }
+    .tier-badge-pill {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 4px 12px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+  </style>
+
+  <!-- Paddle Billing v2 CDN -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof Paddle !== 'undefined') {
+        Paddle.Environment.set("sandbox");
+        Paddle.Initialize({
+          token: "test_695a3dd3ca3bddd548e64e8d80c",
+          eventCallback: function (data) {
+            console.log("Paddle Billing Event:", data);
+            if (data.name === "checkout.completed") {
+              setTimeout(function () {
+                window.location.href = "thank-you.html";
+              }, 1200);
+            }
+          }
+        });
+        console.log("Paddle.js Sandbox initialized with token test_695a3dd3ca3bddd548e64e8d80c");
+      }
+    });
+
+    function launchCheckout(priceId, defaultEmail) {
+      if (typeof Paddle === 'undefined') {
+        alert('Paddle library is still initializing, please wait 2 seconds...');
+        return;
+      }
+      Paddle.Checkout.open({
+        items: [{ priceId: priceId, quantity: 1 }],
+        customer: {
+          email: defaultEmail || "aji@rekasaujanafalah.com"
+        },
+        settings: {
+          displayMode: "overlay",
+          theme: "dark",
+          locale: "en",
+          successUrl: "https://rekasaujanafalah.com/lumina/paddle/thank-you.html"
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background Glow FX -->
+  <div class="bg-glow"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="../../index.html" class="logo">
+        <img src="../../assets/images/logo.svg" alt="Reka Saujana Falah Logo" class="logo-img">
+        <span class="logo-text">Reka Saujana Falah</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../../index.html" class="nav-link" id="navHome">Home</a>
+        <a href="../index.html" class="nav-link" id="navOverview">LuminaTweak</a>
+        <a href="pricing.html" class="nav-link" id="navPricing">Paddle Store</a>
+        <a href="thank-you.html" class="nav-link" id="navThankYou">Thank You</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="pricing.html" class="btn btn-secondary btn-sm" id="btnBackPricing">← Store Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="sandbox-container">
+
+    <!-- Language Selector Pill -->
+    <div class="doc-lang-selector" style="margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem;">
+      <span class="doc-lang-label" style="font-size: 0.85rem; color: var(--text-muted);" id="docLangPrompt">Language / Bahasa:</span>
+      <div class="doc-lang-pills">
+        <button type="button" class="lang-pill" data-doc-lang="en">English</button>
+        <button type="button" class="lang-pill" data-doc-lang="id">Bahasa Indonesia</button>
+      </div>
+    </div>
+
+    <div class="sandbox-card">
+      <div class="badge-sandbox">
+        <span class="badge-dot"></span>
+        <span id="badgeText">Paddle Billing v2 Sandbox Mode</span>
+      </div>
+
+      <h1 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.02em;" id="mainTitle">
+        Simulasi Checkout Paddle Sandbox
+      </h1>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;" id="mainDesc">
+        Halaman pengujian teknis resmi ini digunakan untuk menyelesaikan dan memvalidasi alur pembayaran <strong>Paddle Billing v2 Sandbox</strong> di bawah entitas <strong>PT Reka Saujana Falah</strong>. Semua transaksi di halaman ini bersifat simulasi 100% aman tanpa biaya kartu riil.
+      </p>
+
+      <!-- Test Card Credentials -->
+      <div class="test-cred-box">
+        <div class="test-cred-title">
+          <span>💳 Data Kartu Uji Coba Sandbox (Gratis / 100% Bebas Biaya)</span>
+        </div>
+        <div class="cred-grid">
+          <div class="cred-item">
+            <span class="cred-label">Nomor Kartu Test</span>
+            <span class="cred-val">4242 4242 4242 4242</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Masa Berlaku (Exp)</span>
+            <span class="cred-val">12 / 28 (Masa Depan)</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Kode Keamanan CVC</span>
+            <span class="cred-val">100</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-label">Negara &amp; Kode Pos</span>
+            <span class="cred-val">ID / 40115 (Bebas)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="checkout-btn-list">
+        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m548a285c52jx2mtyb4a552x')">
+          <span>🧪 Test Beli: Plus Edition (1 Mac)</span>
+          <span class="tier-badge-pill">$39 USD</span>
+        </button>
+
+        <button type="button" class="btn-checkout-tier btn-checkout-pro" onclick="launchCheckout('pri_01m5488205fyrfta84s159saaz')">
+          <span>⭐ Test Beli: Pro Edition (3 Macs • Best Seller)</span>
+          <span class="tier-badge-pill">$59 USD</span>
+        </button>
+
+        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m548ca0wh6dt3rj47mn01vj3')">
+          <span>🚀 Test Beli: Power Pack (5 Macs)</span>
+          <span class="tier-badge-pill">$99 USD</span>
+        </button>
+      </div>
+
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;" id="footerNote">
+        💡 <strong>Alur Pembeli:</strong> Setelah pembayaran simulasi berhasil, Paddle otomatis mengarahkan ke halaman <a href="thank-you.html" style="color: var(--accent-cyan); text-decoration: underline;">Thank You Resmi</a> dan mengirimkan tanda terima digital serta kunci lisensi ke email Anda.
+      </div>
+    </div>
+
+    <!-- Quick Navigation Links -->
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem;">
+      <a href="pricing.html" style="color: var(--accent-cyan); text-decoration: underline;">← Kembali ke Halaman Harga Paddle</a>
+      <a href="https://sandbox-vendors.paddle.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: underline;">Buka Paddle Sandbox Dashboard ↗</a>
+      <a href="https://sandbox-customer-portal.paddle.com/cpl_01m547725fznsrt8wgt2hmhrjw" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline;">Paddle Customer Portal ↗</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top: 4rem;">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 PT Reka Saujana Falah. Sandbox Test Environment for LuminaTweak Glass (Paddle Edition).</p>
+    </div>
+  </footer>
+
+  <!-- Script for Language Switcher -->
+  <script>
+    (function() {
+      const savedLang = localStorage.getItem('rsf_lang') || 'en';
+      switchTestLang(savedLang);
+
+      document.querySelectorAll('[data-doc-lang]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const lang = e.currentTarget.getAttribute('data-doc-lang');
+          if (lang) {
+            localStorage.setItem('rsf_lang', lang);
+            switchTestLang(lang);
+          }
+        });
+      });
+
+      function switchTestLang(lang) {
+        const isId = lang === 'id';
+        document.documentElement.lang = lang;
+
+        const mainTitle = document.getElementById('mainTitle');
+        const mainDesc = document.getElementById('mainDesc');
+        const badgeText = document.getElementById('badgeText');
+        const footerNote = document.getElementById('footerNote');
+        const docLangPrompt = document.getElementById('docLangPrompt');
+        const btnBackPricing = document.getElementById('btnBackPricing');
+
+        if (docLangPrompt) docLangPrompt.textContent = isId ? 'Pilih Bahasa Tampilan:' : 'Display Language:';
+        if (btnBackPricing) btnBackPricing.textContent = isId ? '← Toko Paddle' : '← Store Pricing';
+
+        if (isId) {
+          if (badgeText) badgeText.textContent = 'Mode Sandbox Paddle Billing v2';
+          if (mainTitle) mainTitle.textContent = 'Simulasi Checkout Paddle Sandbox';
+          if (mainDesc) mainDesc.innerHTML = 'Halaman pengujian teknis resmi ini digunakan untuk memvalidasi alur pembayaran <strong>Paddle Billing v2 Sandbox</strong> di bawah entitas <strong>PT Reka Saujana Falah</strong>. Semua transaksi bersifat simulasi 100% aman tanpa biaya kartu riil.';
+          if (footerNote) footerNote.innerHTML = '💡 <strong>Alur Pembeli:</strong> Setelah pembayaran simulasi berhasil, Paddle otomatis mengarahkan ke halaman <a href="thank-you.html" style="color: var(--accent-cyan); text-decoration: underline;">Thank You Resmi</a> dan mengirimkan tanda terima digital serta kunci lisensi ke email Anda.';
+        } else {
+          if (badgeText) badgeText.textContent = 'Paddle Billing v2 Sandbox Mode';
+          if (mainTitle) mainTitle.textContent = 'Paddle Sandbox Checkout Simulation';
+          if (mainDesc) mainDesc.innerHTML = 'Official technical testing environment to validate <strong>Paddle Billing v2 Sandbox</strong> checkout flows for <strong>PT Reka Saujana Falah</strong>. All transactions are simulated in a risk-free sandbox with zero actual card charges.';
+          if (footerNote) footerNote.innerHTML = '💡 <strong>Buyer Flow:</strong> Upon successful checkout completion, Paddle automatically redirects buyers to the <a href="thank-you.html" style="color: var(--accent-cyan); text-decoration: underline;">Official Thank You Page</a> and delivers a digital receipt with license credentials to the checkout email.';
+        }
+
+        // Active pill state
+        document.querySelectorAll('[data-doc-lang]').forEach(el => {
+          if (el.getAttribute('data-doc-lang') === lang) {
+            el.classList.add('active');
+          } else {
+            el.classList.remove('active');
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
