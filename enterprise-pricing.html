@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise &amp; Volume Pricing Sheet — LuminaTweak Glass | PT Reka Saujana Falah</title>
+  
+  <meta name="title" content="Enterprise &amp; Volume Pricing Sheet — LuminaTweak Glass | PT Reka Saujana Falah">
+  <meta name="description" content="Official Enterprise and Volume Licensing Pricing Sheet for LuminaTweak Glass Edition. Downloadable PDF specification sheet for corporate procurement, IT fleet administrators, and design studios. Published by PT Reka Saujana Falah via Paddle.com.">
+  <meta name="author" content="PT Reka Saujana Falah">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .enterprise-spec-card {
+      background: rgba(18, 26, 43, 0.75);
+      border: 1px solid rgba(0, 240, 255, 0.22);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      margin-bottom: 2.5rem;
+    }
+    .tier-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+    .enterprise-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+    }
+    .enterprise-table th {
+      background: rgba(0, 240, 255, 0.08);
+      color: var(--accent-cyan);
+      padding: 1rem 1.25rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    .enterprise-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-body);
+      vertical-align: middle;
+    }
+    .enterprise-table tr:last-child td {
+      border-bottom: none;
+    }
+    .enterprise-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .price-highlight {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .per-unit-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(0, 240, 255, 0.15);
+      color: var(--accent-cyan);
+      border-radius: 999px;
+      margin-top: 0.25rem;
+    }
+    .doc-actions-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      background: rgba(10, 16, 28, 0.8);
+      border: 1px solid var(--border-color);
+      padding: 1.25rem 1.75rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 2.5rem;
+    }
+    .btn-pdf-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--accent-cyan), #00a3ff);
+      color: #040814;
+      font-weight: 700;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .btn-pdf-download:hover {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+      transform: translateY(-2px);
+    }
+    .btn-outline-sales {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      font-weight: 600;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .btn-outline-sales:hover {
+      background: rgba(0, 240, 255, 0.1);
+    }
+    .deliverable-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .deliverable-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .deliverable-card h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .deliverable-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Print Stylesheet for PDF Generation */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+      .bg-ambient, .cyber-grid, .site-header, .site-footer, .doc-actions-bar, .legal-breadcrumb, .lang-switcher {
+        display: none !important;
+      }
+      .enterprise-spec-card {
+        background: #ffffff !important;
+        border: 1px solid #d1d5db !important;
+        color: #111827 !important;
+        box-shadow: none !important;
+        padding: 1rem 0 !important;
+      }
+      .legal-page-header {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+      }
+      .text-gradient {
+        color: #111827 !important;
+        -webkit-text-fill-color: #111827 !important;
+      }
+      .enterprise-table th {
+        background: #f3f4f6 !important;
+        color: #111827 !important;
+        border-bottom: 2px solid #9ca3af !important;
+      }
+      .enterprise-table td {
+        color: #374151 !important;
+        border-bottom: 1px solid #e5e7eb !important;
+      }
+      .price-highlight {
+        color: #111827 !important;
+      }
+      .deliverable-card {
+        background: #f9fafb !important;
+        border: 1px solid #e5e7eb !important;
+      }
+      .deliverable-card h4 {
+        color: #111827 !important;
+      }
+      .deliverable-card p {
+        color: #4b5563 !important;
+      }
+      .mor-print-seal {
+        border-top: 2px solid #e5e7eb;
+        margin-top: 2rem;
+        padding-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-ambient"></div>
+  <div class="cyber-grid"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Reka Saujana Falah">
+        <img src="assets/images/logo.svg" alt="Reka Saujana Falah Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item-link" id="navHome">Home</a></li>
+          <li><a href="pricing.html" class="nav-item-link" id="navPricing">Retail Pricing</a></li>
+          <li><a href="enterprise-pricing.html" class="nav-item-link active" id="navEnterprise" style="color: var(--accent-cyan);">Enterprise Pricing</a></li>
+          <li><a href="terms.html" class="nav-item-link" id="navTerms">Terms</a></li>
+          <li><a href="privacy.html" class="nav-item-link" id="navPrivacy">Privacy</a></li>
+          <li><a href="refund.html" class="nav-item-link" id="navRefund">Refunds</a></li>
+          <li><a href="index.html#contact" class="nav-item-link" id="navContact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="lang-switcher" aria-label="Language Selector">
+            <button class="lang-btn" data-doc-lang="id" aria-label="Bahasa Indonesia">ID</button>
+            <button class="lang-btn active" data-doc-lang="en" aria-label="English">EN</button>
+          </div>
+          <button onclick="window.print()" class="btn-header-cta" id="btnPrintNav">📄 Print / PDF</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="legal-page-header">
+    <div class="container">
+      <div class="legal-breadcrumb">
+        <a href="index.html" id="breadcrumbHome">Home</a>
+        <span>/</span>
+        <a href="pricing.html" id="breadcrumbProduct">LuminaTweak Glass</a>
+        <span>/</span>
+        <span id="breadcrumbCurrent">Enterprise &amp; Volume Pricing Sheet</span>
+      </div>
+
+      <div class="badge-pill-header" style="margin-bottom: 0.85rem;">
+        <span class="live-pulse-dot"></span>
+        <span id="headerBadge">Commercial Procurement &amp; Volume Licensing Specification</span>
+      </div>
+
+      <h1 class="legal-hero-title">
+        <span class="text-gradient" id="docTitle">Enterprise &amp; Volume Pricing Sheet</span>
+      </h1>
+
+      <p class="section-desc" style="max-width: 760px; margin: 0 auto;" id="docSubtitle">
+        Official corporate volume licensing tiers, deliverables schedule, and procurement specifications for LuminaTweak Glass Edition. Published by PT Reka Saujana Falah with authorized distribution via Paddle.com Market Ltd.
+      </p>
+
+      <div class="legal-meta-row">
+        <span class="legal-badge-pill">🏢 Document: ENT-PRICING-2026-v2</span>
+        <span id="metaEntity">Developer: PT Reka Saujana Falah</span>
+        <span>•</span>
+        <span id="metaMoR">MoR: Paddle.com Market Ltd</span>
+        <span>•</span>
+        <span>Valid Through: December 31, 2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="container" style="max-width: 980px; padding-bottom: 5rem;">
+
+    <!-- Document Actions Bar -->
+    <div class="doc-actions-bar">
+      <div>
+        <strong style="color: #fff; font-size: 0.95rem;" id="barTitle">Official Volume Quotation Sheet</strong>
+        <p style="color: var(--text-muted); font-size: 0.82rem; margin: 0.2rem 0 0 0;" id="barSub">
+          Complies with Paddle Domain Review &amp; Corporate Procurement Standards.
+        </p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <button onclick="window.print()" class="btn-pdf-download" id="btnDownloadPdf">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span id="btnPdfText">Save as PDF / Print Sheet</span>
+        </button>
+        <a href="mailto:admin@rekasaujanafalah.com?subject=Enterprise%20Volume%20Inquiry%20-%20LuminaTweak%20Glass" class="btn-outline-sales" id="btnSalesInquiry">
+          ✉️ <span id="btnSalesText">Inquire via Sales Desk</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Product Description & System Specifications -->
+    <div class="enterprise-spec-card">
+      <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>🔍</span> <span id="sec1Title">1. Product Description &amp; Architectural Overview</span>
+      </h2>
+      <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-body);" id="sec1Desc">
+        <strong>LuminaTweak Glass Edition</strong> is a native macOS system utility and UI augmentation engine developed by <strong>PT Reka Saujana Falah</strong>. Built exclusively with Swift and low-level CoreGraphics / Mach IPC APIs, it provides corporate IT administrators, design studios, and engineering teams with fine-grained control over 2,265+ macOS system behaviors without disabling System Integrity Protection (SIP).
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.25rem;">
+        <div style="background: rgba(0,0,0,0.25); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan);">
+          <strong style="color: #fff; font-size: 0.85rem;" id="specArchTitle">Platform Architecture:</strong>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0.25rem 0 0 0;">Universal 2 Binary (Apple Silicon M1/M2/M3/M4 &amp; Intel 64-bit)</p>
+        </div>
+        <div style="background: rgba(0,0,0,0.25); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan);">
+          <strong style="color: #fff; font-size: 0.85rem;" id="specOsTitle">OS Compatibility:</strong>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0.25rem 0 0 0;">macOS 12.0 Monterey, 13.0 Ventura, 14.0 Sonoma, 15.0+ Sequoia</p>
+        </div>
+        <div style="background: rgba(0,0,0,0.25); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border-left: 3px solid var(--accent-cyan);">
+          <strong style="color: #fff; font-size: 0.85rem;" id="specSecTitle">Security Compliance:</strong>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0.25rem 0 0 0;">100% SIP Compliant, Apple Gatekeeper Notarized, Zero Daemon Root Privilege</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Volume Pricing Schedule -->
+    <div class="enterprise-spec-card">
+      <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>💰</span> <span id="sec2Title">2. Official Volume Pricing Schedule</span>
+      </h2>
+      <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem;" id="sec2Subtitle">
+        All volume tiers are sold as perpetual (one-time payment) licenses with no recurring monthly or annual seat tax. Processed via Paddle.com with immediate tax invoices and VAT receipt generation.
+      </p>
+
+      <div class="tier-table-wrapper">
+        <table class="enterprise-table">
+          <thead>
+            <tr>
+              <th id="thTier">License Tier</th>
+              <th id="thSeats">Seat Capacity</th>
+              <th id="thPrice">One-Time Fee</th>
+              <th id="thPerMac">Effective / Mac</th>
+              <th id="thSla">Support SLA</th>
+              <th id="thMdm">MDM Profile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong style="color: #fff;">Team 10 Pack</strong><br>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Small Engineering Squads</span>
+              </td>
+              <td><strong>10 Mac Seats</strong></td>
+              <td><span class="price-highlight">$179</span> <span style="font-size: 0.75rem; color: var(--text-muted);">USD</span></td>
+              <td><span class="per-unit-badge">$17.90 / seat</span></td>
+              <td>Standard Priority (24h)</td>
+              <td>Included (.mobileconfig)</td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="color: #fff;">Studio 25 Pack</strong><br>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Creative &amp; Design Studios</span>
+              </td>
+              <td><strong>25 Mac Seats</strong></td>
+              <td><span class="price-highlight">$399</span> <span style="font-size: 0.75rem; color: var(--text-muted);">USD</span></td>
+              <td><span class="per-unit-badge">$15.96 / seat</span></td>
+              <td>High Priority (12h)</td>
+              <td>Included (.mobileconfig)</td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="color: #fff;">Enterprise 50 Pack</strong><br>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Mid-Size IT Deployments</span>
+              </td>
+              <td><strong>50 Mac Seats</strong></td>
+              <td><span class="price-highlight">$699</span> <span style="font-size: 0.75rem; color: var(--text-muted);">USD</span></td>
+              <td><span class="per-unit-badge">$13.98 / seat</span></td>
+              <td>Critical Priority (4h)</td>
+              <td>Full Jamf / Mosyle Payload</td>
+            </tr>
+            <tr>
+              <td>
+                <strong style="color: #fff;">Corporate Unlimited Site License</strong><br>
+                <span style="font-size: 0.78rem; color: var(--text-muted);">Enterprise Fleet &amp; Subsidiaries</span>
+              </td>
+              <td><strong>Unlimited Macs</strong></td>
+              <td><span class="price-highlight">$1,299</span> <span style="font-size: 0.75rem; color: var(--text-muted);">USD</span></td>
+              <td><span class="per-unit-badge">Lowest Fixed Cost</span></td>
+              <td>Dedicated TAM &amp; Escalation</td>
+              <td>Customized Zero-Touch PKG</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="font-size: 0.85rem; color: var(--text-muted); background: rgba(0, 240, 255, 0.05); border: 1px solid rgba(0, 240, 255, 0.15); padding: 0.85rem 1.25rem; border-radius: var(--radius-sm); margin-top: 1rem;">
+        💡 <strong>Custom Volume Quote:</strong> If your organization requires custom seat counts (e.g. 75, 150, or 500+ seats) or purchase orders (PO), please contact our corporate billing desk at <a href="mailto:admin@rekasaujanafalah.com" style="color: var(--accent-cyan);">admin@rekasaujanafalah.com</a>. Custom Paddle checkout links are issued within 2 business hours.
+      </div>
+    </div>
+
+    <!-- Section 3: Deliverables & Enterprise Inclusions -->
+    <div class="enterprise-spec-card">
+      <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>📦</span> <span id="sec3Title">3. Key Deliverables Included with Purchase</span>
+      </h2>
+      <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem;" id="sec3Subtitle">
+        Every enterprise order includes comprehensive software packages, licensing tokens, and enterprise provisioning assets:
+      </p>
+
+      <div class="deliverable-grid">
+        <div class="deliverable-card">
+          <h4>💿 Signed &amp; Notarized DMG</h4>
+          <p>Universal Binary installer packaged in an Apple Developer ID signed disk image with zero quarantine warning issues on fresh macOS installs.</p>
+        </div>
+        <div class="deliverable-card">
+          <h4>🔑 Volume Master Token / Offline Keys</h4>
+          <p>Single master licensing token for automated network activation, plus offline air-gapped activation keys for restricted security environments.</p>
+        </div>
+        <div class="deliverable-card">
+          <h4>🛠️ MDM Zero-Touch Payloads</h4>
+          <p>Ready-to-deploy Apple Configuration Profiles (.mobileconfig) and pre-configured deployment scripts for Jamf Pro, Kandji, Mosyle, and Intune.</p>
+        </div>
+        <div class="deliverable-card">
+          <h4>🧾 Consolidated VAT / Tax Invoicing</h4>
+          <p>Official commercial invoices compliant with EU VAT, UK VAT, US Sales Tax, and international accounting standards provided by Paddle.com.</p>
+        </div>
+        <div class="deliverable-card">
+          <h4>🛡️ 30-Day Money-Back Guarantee</h4>
+          <p>Risk-free 30-day evaluation period backed by our full money-back guarantee. If the software does not suit your fleet, refund is issued promptly.</p>
+        </div>
+        <div class="deliverable-card">
+          <h4>⚡ Zero Battery Drain Guarantee</h4>
+          <p>Architectural guarantee: zero background daemons, zero battery penalty on Apple Silicon battery health, and 100% reversible presets.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Merchant of Record & Legal Entity Statement -->
+    <div class="enterprise-spec-card mor-print-seal">
+      <h2 style="font-size: 1.35rem; color: #fff; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.6rem;">
+        <span>🏛️</span> <span id="sec4Title">4. Legal Entity &amp; Merchant of Record Governance</span>
+      </h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); border-top: 2px solid var(--accent-cyan);">
+          <strong style="color: #fff; font-size: 0.95rem;">Software Engineering Publisher</strong>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin-top: 0.5rem;">
+            <strong>Legal Name:</strong> PT Reka Saujana Falah<br>
+            <strong>Operating Name:</strong> Reka Saujana Falah<br>
+            <strong>Registration:</strong> West Java, Indonesia<br>
+            <strong>Corporate Email:</strong> admin@rekasaujanafalah.com<br>
+            <strong>WhatsApp Hotline:</strong> +62 896-0101-4132
+          </p>
+        </div>
+
+        <div style="background: rgba(0,0,0,0.25); padding: 1.25rem; border-radius: var(--radius-sm); border-top: 2px solid #00a3ff;">
+          <strong style="color: #fff; font-size: 0.95rem;">Authorized Merchant of Record (MoR)</strong>
+          <p style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); margin-top: 0.5rem;">
+            <strong>Entity:</strong> Paddle.com Market Ltd<br>
+            <strong>Address:</strong> Judd House, 18-29 Mora Street, London, EC1V 8BT, United Kingdom<br>
+            <strong>Compliance:</strong> PCI-DSS Level 1, Global Tax Remittance<br>
+            <strong>Buyer Support:</strong> <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">paddle.net</a>
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.88rem;">
+        <a href="terms.html" style="color: var(--accent-cyan); text-decoration: underline;">Terms &amp; Conditions →</a>
+        <a href="privacy.html" style="color: var(--accent-cyan); text-decoration: underline;">Privacy Policy →</a>
+        <a href="refund.html" style="color: var(--accent-cyan); text-decoration: underline;">Refund Policy →</a>
+        <a href="pricing.html" style="color: var(--accent-cyan); text-decoration: underline;">Retail Pricing Page →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <img src="assets/images/logo.svg" alt="Reka Saujana Falah Logo" style="height: 36px;">
+          <p class="footer-brand-p" id="footerBrandDesc">
+            Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" id="footerNavTitle">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#about" class="footer-link">About Us</a></li>
+            <li><a href="index.html#services" class="footer-link">Services</a></li>
+            <li><a href="index.html#products" class="footer-link">LuminaTweak Glass</a></li>
+            <li><a href="pricing.html" class="footer-link">Retail Pricing</a></li>
+            <li><a href="enterprise-pricing.html" class="footer-link active" style="color: var(--accent-cyan);">Enterprise Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" id="footerLegalTitle">Policies &amp; Legal</h4>
+          <ul class="footer-links">
+            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="refund.html" class="footer-link">Refund Policy</a></li>
+            <li><a href="pricing.html" class="footer-link">Paddle Retail Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title" id="footerComplianceTitle">Compliance &amp; Contact</h4>
+          <ul class="footer-links">
+            <li class="font-mono footer-link">WA: +62 896-0101-4132</li>
+            <li class="footer-link"><a href="mailto:admin@rekasaujanafalah.com">admin@rekasaujanafalah.com</a></li>
+            <li class="footer-link"><a href="https://paddle.net" target="_blank" rel="noopener noreferrer">Paddle Buyer Portal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p id="footerCopy">&copy; 2026 PT Reka Saujana Falah. All rights reserved.</p>
+        <p class="footer-brand-desc" style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">
+          LuminaTweak Glass Edition is distributed globally through Paddle.com Market Ltd as Merchant of Record.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Language Switcher & Print Handling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const langBtns = document.querySelectorAll('.lang-btn');
+      
+      const translations = {
+        id: {
+          navHome: 'Beranda',
+          navPricing: 'Harga Retail',
+          navEnterprise: 'Harga Enterprise',
+          navTerms: 'Ketentuan Layanan',
+          navPrivacy: 'Kebijakan Privasi',
+          navRefund: 'Kebijakan Refund',
+          navContact: 'Kontak',
+          btnPrintNav: '📄 Cetak / PDF',
+          breadcrumbHome: 'Beranda',
+          breadcrumbProduct: 'LuminaTweak Glass',
+          breadcrumbCurrent: 'Lembar Harga Enterprise & Volume',
+          headerBadge: 'Spesifikasi Pengadaan Komersial & Lisensi Volume',
+          docTitle: 'Lembar Harga Lisensi Enterprise & Volume',
+          docSubtitle: 'Tingkatan lisensi volume korporat resmi, rincian deliverable, dan spesifikasi pengadaan untuk LuminaTweak Glass Edition. Diterbitkan oleh PT Reka Saujana Falah dengan distribusi resmi melalui Paddle.com Market Ltd.',
+          metaEntity: 'Pengembang: PT Reka Saujana Falah',
+          metaMoR: 'MoR: Paddle.com Market Ltd',
+          barTitle: 'Lembar Penawaran Resmi Volume & Korporasi',
+          barSub: 'Sesuai dengan Standar Domain Review Paddle & Pengadaan Perusahaan.',
+          btnPdfText: 'Simpan ke PDF / Cetak Lembar',
+          btnSalesText: 'Hubungi Tim Penjualan',
+          sec1Title: '1. Deskripsi Produk & Arsitektur Teknis',
+          sec2Title: '2. Daftar Harga Lisensi Volume Resmi',
+          sec2Subtitle: 'Semua lisensi volume adalah lisensi seumur hidup (perpetual) tanpa biaya langganan bulanan berulang. Diproses melalui Paddle.com dengan faktur pajak dan bukti pembayaran resmi seketika.',
+          sec3Title: '3. Deliverable Utama yang Disertakan',
+          sec3Subtitle: 'Setiap pesanan korporasi mencakup paket perangkat lunak lengkap, token lisensi, dan aset deployment enterprise:',
+          sec4Title: '4. Tata Kelola Badan Hukum & Merchant of Record',
+          footerCopy: '© 2026 PT Reka Saujana Falah. Hak cipta dilindungi undang-undang.'
+        },
+        en: {
+          navHome: 'Home',
+          navPricing: 'Retail Pricing',
+          navEnterprise: 'Enterprise Pricing',
+          navTerms: 'Terms',
+          navPrivacy: 'Privacy',
+          navRefund: 'Refunds',
+          navContact: 'Contact',
+          btnPrintNav: '📄 Print / PDF',
+          breadcrumbHome: 'Home',
+          breadcrumbProduct: 'LuminaTweak Glass',
+          breadcrumbCurrent: 'Enterprise & Volume Pricing Sheet',
+          headerBadge: 'Commercial Procurement & Volume Licensing Specification',
+          docTitle: 'Enterprise & Volume Pricing Sheet',
+          docSubtitle: 'Official corporate volume licensing tiers, deliverables schedule, and procurement specifications for LuminaTweak Glass Edition. Published by PT Reka Saujana Falah with authorized distribution via Paddle.com Market Ltd.',
+          metaEntity: 'Developer: PT Reka Saujana Falah',
+          metaMoR: 'MoR: Paddle.com Market Ltd',
+          barTitle: 'Official Volume Quotation Sheet',
+          barSub: 'Complies with Paddle Domain Review & Corporate Procurement Standards.',
+          btnPdfText: 'Save as PDF / Print Sheet',
+          btnSalesText: 'Inquire via Sales Desk',
+          sec1Title: '1. Product Description & Architectural Overview',
+          sec2Title: '2. Official Volume Pricing Schedule',
+          sec2Subtitle: 'All volume tiers are sold as perpetual (one-time payment) licenses with no recurring monthly or annual seat tax. Processed via Paddle.com with immediate tax invoices and VAT receipt generation.',
+          sec3Title: '3. Key Deliverables Included with Purchase',
+          sec3Subtitle: 'Every enterprise order includes comprehensive software packages, licensing tokens, and enterprise provisioning assets:',
+          sec4Title: '4. Legal Entity & Merchant of Record Governance',
+          footerCopy: '© 2026 PT Reka Saujana Falah. All rights reserved.'
+        }
+      };
+
+      function setLang(lang) {
+        localStorage.setItem('lumina_doc_lang', lang);
+        langBtns.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.docLang === lang);
+        });
+
+        const t = translations[lang] || translations.en;
+        for (const [key, value] of Object.entries(t)) {
+          const el = document.getElementById(key);
+          if (el) el.textContent = value;
+        }
+        document.documentElement.lang = lang;
+      }
+
+      langBtns.forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.dataset.docLang));
+      });
+
+      const savedLang = localStorage.getItem('lumina_doc_lang') || 'en';
+      setLang(savedLang);
+    });
+  </script>
+</body>
+</html>

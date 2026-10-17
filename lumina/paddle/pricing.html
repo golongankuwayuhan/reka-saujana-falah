@@ -29,6 +29,7 @@
         <ul class="nav-links">
           <li><a href="../../index.html" class="nav-item-link" id="navHome">Home</a></li>
           <li><a href="pricing.html" class="nav-item-link active" id="navPricing" style="color: var(--accent-cyan);">Paddle Pricing</a></li>
+          <li><a href="enterprise-pricing.html" class="nav-item-link" id="navEnterprise">Enterprise Pricing</a></li>
           <li><a href="terms.html" class="nav-item-link" id="navTerms">Terms of Service</a></li>
           <li><a href="privacy.html" class="nav-item-link" id="navPrivacy">Privacy Policy</a></li>
           <li><a href="refund.html" class="nav-item-link" id="navRefund">Refund Policy</a></li>
@@ -237,8 +238,28 @@
       </div>
     </div>
 
+    <!-- Enterprise & Custom Volume Licensing Box -->
+    <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-lg); margin-top: 2.5rem; border: 1px solid rgba(0, 240, 255, 0.35); background: linear-gradient(135deg, rgba(10, 16, 28, 0.85), rgba(18, 26, 43, 0.95));">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div>
+          <div class="legal-badge-pill" style="margin-bottom: 0.5rem;" id="entBadge">🏢 Corporate &amp; Team Volume Licensing</div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem;" id="entTitle">
+            Need LuminaTweak Glass for your Team or IT Fleet?
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 620px; line-height: 1.6; margin: 0;" id="entDesc">
+            We provide custom volume tiers (10, 25, 50, and Unlimited Site Licenses), offline volume tokens, Jamf Pro / Kandji / Mosyle MDM deployment payloads (.mobileconfig), consolidated billing, and dedicated engineering SLA via Paddle.com.
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="enterprise-pricing.html" class="btn-primary" style="padding: 0.8rem 1.4rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.5rem;" id="btnViewEnterprise">
+            <span>📄 View Enterprise Pricing Sheet</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- Merchant of Record & Verification Box -->
-    <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-lg); margin-top: 3rem; border: 1px solid rgba(0, 240, 255, 0.25);">
+    <div class="glass-panel" style="padding: 2.25rem; border-radius: var(--radius-lg); margin-top: 2rem; border: 1px solid rgba(0, 240, 255, 0.25);">
       <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
         <span style="font-size: 2rem;">🏛️</span>
         <div>
@@ -257,6 +278,7 @@
         <a href="terms.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morTerms">Terms of Service (Terms) →</a>
         <a href="privacy.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morPrivacy">Privacy Policy →</a>
         <a href="refund.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morRefund">Refund Policy (Refunds) →</a>
+        <a href="enterprise-pricing.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morEnterprise">Enterprise Pricing Sheet →</a>
       </div>
     </div>
 
@@ -291,6 +313,7 @@
             <li><a href="privacy.html" class="footer-link" id="footerPrivacy">Privacy Policy</a></li>
             <li><a href="refund.html" class="footer-link" id="footerRefund">Refund Policy</a></li>
             <li><a href="pricing.html" class="footer-link active" id="footerPricing" style="color: var(--accent-cyan);">Paddle Pricing Page</a></li>
+            <li><a href="enterprise-pricing.html" class="footer-link" id="footerEnterprise">Enterprise Pricing Sheet</a></li>
           </ul>
         </div>
 
@@ -538,11 +561,18 @@
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script type="text/javascript">
     if (typeof Paddle !== 'undefined') {
+      var storedCustomerEmail = localStorage.getItem('lumina_customer_email') || new URLSearchParams(window.location.search).get('email') || "";
+      var pwCustomerObj = storedCustomerEmail ? { email: storedCustomerEmail } : {};
+
       Paddle.Initialize({
         token: "live_0ea7a7733b317ac0938addf7798",
+        pwCustomer: pwCustomerObj,
         eventCallback: function(data) {
           console.log("Paddle Event:", data);
           if (data.name === "checkout.completed") {
+            if (data.data && data.data.customer && data.data.customer.email) {
+              localStorage.setItem('lumina_customer_email', data.data.customer.email);
+            }
             window.location.href = "thank-you.html";
           }
         }
