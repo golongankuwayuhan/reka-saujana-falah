@@ -10,9 +10,11 @@ const translations = {
     pageTitle: "Reka Saujana Falah | Studio Pengembangan Game & Rekayasa Perangkat Lunak",
     
     // Header & Navigation
+    navHome: "Beranda",
     navAbout: "Tentang Kami",
     navServices: "Layanan & Solusi",
     navProducts: "Produk Flagship",
+    navPricing: "Harga & Lisensi",
     navPrinciples: "Prinsip Kerja",
     navVerification: "Verifikasi Entitas",
     navContact: "Kontak",
@@ -120,7 +122,7 @@ const translations = {
     prodSpecDistDesc: "Berkas Installer macOS .dmg Resmi (47 MB - UDZO APFS) dengan drag-and-drop ke Applications & panduan instalasi.",
     storeStatusText: "Panduan Pencarian & Akses Toko",
     storeHeading: "Tersedia Resmi via Paddle & Lemon Squeezy (MoR Global)",
-    storeSearchHint: "LuminaTweak Glass Edition didistribusikan secara global melalui Paddle dan Lemon Squeezy sebagai Merchant of Record (MoR) resmi. Sambil menunggu ulasan final tautan langsung publikasi, Anda dapat mencari produk dengan mudah di direktori resmi Paddle atau Lemon Squeezy atau memesan akses awal prioritas melalui kami.",
+    storeSearchHint: "LuminaTweak Glass Edition didistribusikan secara global melalui Paddle dan Lemon Squeezy sebagai Merchant of Record (MoR) resmi. Sambil menunggu ulasan final tautan langsung publikasi, Anda dapat mencari produk dengan mudah di direktori resmi Paddle atau Lemon Squeezy atau menghubungi kami langsung untuk informasi lisensi.",
     searchKeywordsLabel: "Kata Kunci Pencarian Toko:",
     btnCopySearch: "Salin Kata Kunci",
     btnSearchPaddle: "Cari di Paddle",
@@ -137,7 +139,7 @@ const translations = {
     tier1Desc: "Cocok untuk solo developer, desainer grafis, dan pelajar.",
     tier1Feat1: "Akses Penuh 2.265+ Tweak macOS",
     tier1Feat2: "1:1 Live Interactive Simulator",
-    tier1Feat3: "Update Versi Gratis Selamanya",
+    tier1Feat3: "Dukungan 12 Bahasa Global & RTL",
     tier1Feat4: "Aktivasi 1 Perangkat Mac",
     tier1BtnPaddle: "Cari di Paddle ($39)",
     tier1Btn: "Cari di Lemon Squeezy ($39)",
@@ -151,7 +153,7 @@ const translations = {
     tier2Feat1: "Semua Fitur Plus Edition Lengkap",
     tier2Feat2: "Aktivasi 3 Perangkat Mac Sekaligus",
     tier2Feat3: "Zero-Drain Battery Shield & Lid-Wake Killer",
-    tier2Feat4: "Dukungan Prioritas & Ekspor Skrip .sh",
+    tier2Feat4: "Ekspor Skrip Shell .sh Otomatis & Revert",
     tier2BtnPaddle: "Cari di Paddle ($59)",
     tier2Btn: "Cari di Lemon Squeezy ($59)",
     tier3Discount: "HEMAT $50 — VALUE DEVELOPER",
@@ -163,7 +165,7 @@ const translations = {
     tier3Feat1: "Semua Fitur Pro & Domain Inspector",
     tier3Feat2: "Aktivasi Hingga 5 Perangkat Mac",
     tier3Feat3: "Fitur Ekspor Skrip Automasi Kustom",
-    tier3Feat4: "Update Mayor & Minor Seumur Hidup",
+    tier3Feat4: "Validasi Lisensi Offline & Migrasi Mesin",
     tier3BtnPaddle: "Cari di Paddle ($99)",
     tier3Btn: "Cari di Lemon Squeezy ($99)",
     guar1: "Garansi 30 Hari Uang Kembali",
@@ -243,13 +245,15 @@ const translations = {
     pageTitle: "Reka Saujana Falah | Software Engineering Studio & AI-Assisted App Development",
 
     // Header & Navigation
+    navHome: "Home",
     navAbout: "About Us",
     navServices: "Services & Solutions",
-    navProducts: "Featured Product",
+    navProducts: "LuminaTweak Glass",
+    navPricing: "Pricing & Licensing",
     navPrinciples: "Core Principles",
     navVerification: "Entity Verification",
     navContact: "Contact",
-    btnHeaderCta: "Get in Touch",
+    btnHeaderCta: "Contact Us",
 
     // Hero Section
     heroBadge: "Officially Registered Entity • Established 2026 • West Java, ID",
@@ -353,7 +357,7 @@ const translations = {
     prodSpecDistDesc: "Official macOS .dmg Installer (47 MB - UDZO APFS) with instant drag-and-drop to Applications and setup guide.",
     storeStatusText: "Store Listing & Search Guide",
     storeHeading: "Officially Available via Paddle & Lemon Squeezy (Global MoR)",
-    storeSearchHint: "LuminaTweak Glass Edition is distributed globally through Paddle and Lemon Squeezy as our official Merchants of Record (MoR). While direct listing reviews are finalizing, you can easily discover the product on Paddle or Lemon Squeezy or request priority early access from our engineering desk.",
+    storeSearchHint: "LuminaTweak Glass Edition is distributed globally through Paddle and Lemon Squeezy as our official Merchants of Record (MoR). While direct listing reviews are finalizing, you can easily discover the product on Paddle or Lemon Squeezy or contact us directly for license assistance.",
     searchKeywordsLabel: "Official Store Search Keyword:",
     btnCopySearch: "Copy Keyword",
     btnSearchPaddle: "Search on Paddle",
@@ -370,7 +374,7 @@ const translations = {
     tier1Desc: "Perfect for solo developers, UI/UX designers, and students.",
     tier1Feat1: "Full Access to 2,265+ Curated Tweaks",
     tier1Feat2: "1:1 Live Interactive Simulator",
-    tier1Feat3: "Free Lifetime Software Updates",
+    tier1Feat3: "12 Global UI Languages & RTL Matrix",
     tier1Feat4: "1 Mac Device Activation",
     tier1BtnPaddle: "Search on Paddle ($39)",
     tier1Btn: "Search on Lemon Squeezy ($39)",
@@ -384,7 +388,7 @@ const translations = {
     tier2Feat1: "Everything in Plus Edition Included",
     tier2Feat2: "Simultaneous 3 Mac Activations",
     tier2Feat3: "Zero-Drain Battery Shield & Lid-Wake Killer",
-    tier2Feat4: "Priority Support & Shell Script Export",
+    tier2Feat4: "Automated .sh Shell Script Export & Revert",
     tier2BtnPaddle: "Search on Paddle ($59)",
     tier2Btn: "Search on Lemon Squeezy ($59)",
     tier3Discount: "SAVE $50 — BEST DEVELOPER VALUE",
@@ -396,7 +400,7 @@ const translations = {
     tier3Feat1: "All Pro Tweaks & Domain Plist Inspector",
     tier3Feat2: "Up to 5 Mac Devices Activations",
     tier3Feat3: "Full Custom Automation Script Engine",
-    tier3Feat4: "All Future Major Updates Included",
+    tier3Feat4: "Offline License Validation & Machine Migration",
     tier3BtnPaddle: "Search on Paddle ($99)",
     tier3Btn: "Search on Lemon Squeezy ($99)",
     guar1: "30-Day Money-Back Guarantee",
@@ -473,7 +477,7 @@ const translations = {
 };
 
 // Global App State
-let currentLang = localStorage.getItem('rsf_lang') || 'id';
+let currentLang = localStorage.getItem('rsf_lang') || 'en';
 
 // Initialize DOM Events
 document.addEventListener('DOMContentLoaded', () => {
@@ -508,7 +512,7 @@ function initLanguage() {
  * Apply selected language to all data-i18n elements
  */
 function setLanguage(lang) {
-  if (!translations[lang]) lang = 'id';
+  if (!translations[lang]) lang = 'en';
   currentLang = lang;
   localStorage.setItem('rsf_lang', lang);
   document.documentElement.lang = lang;
