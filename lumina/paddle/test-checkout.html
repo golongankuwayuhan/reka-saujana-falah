@@ -142,9 +142,9 @@
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof Paddle !== 'undefined') {
-        Paddle.Environment.set("sandbox");
         Paddle.Initialize({
-          token: "test_695a3dd3ca3bddd548e64e8d80c",
+          token: "live_0ea7a7733b317ac0938addf7798",
+          pwCustomer: {},
           eventCallback: function (data) {
             console.log("Paddle Billing Event:", data);
             if (data.name === "checkout.completed") {
@@ -154,7 +154,7 @@
             }
           }
         });
-        console.log("Paddle.js Sandbox initialized with token test_695a3dd3ca3bddd548e64e8d80c");
+        console.log("Paddle.js Live Production initialized with token live_0ea7a7733b317ac0938addf7798");
       }
     });
 
@@ -256,32 +256,32 @@
 
       <!-- Action Buttons -->
       <div class="checkout-btn-list">
-        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m548a285c52jx2mtyb4a552x')">
-          <span>🧪 Test Beli: Plus Edition (1 Mac)</span>
+        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m54qmerytd57vfyt0rkay8tb')">
+          <span>🚀 Checkout: Plus Edition (1 Mac)</span>
           <span class="tier-badge-pill">$39 USD</span>
         </button>
 
-        <button type="button" class="btn-checkout-tier btn-checkout-pro" onclick="launchCheckout('pri_01m5488205fyrfta84s159saaz')">
-          <span>⭐ Test Beli: Pro Edition (3 Macs • Best Seller)</span>
+        <button type="button" class="btn-checkout-tier btn-checkout-pro" onclick="launchCheckout('pri_01m54qpy498d7wyfs4y8eydbpb')">
+          <span>⭐ Checkout: Pro Edition (3 Macs • Best Seller)</span>
           <span class="tier-badge-pill">$59 USD</span>
         </button>
 
-        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m548ca0wh6dt3rj47mn01vj3')">
-          <span>🚀 Test Beli: Power Pack (5 Macs)</span>
+        <button type="button" class="btn-checkout-tier" onclick="launchCheckout('pri_01m54qrjt8mdpn532kq78wpytp')">
+          <span>⚡ Checkout: Power Pack (5 Macs)</span>
           <span class="tier-badge-pill">$99 USD</span>
         </button>
       </div>
 
       <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;" id="footerNote">
-        💡 <strong>Alur Pembeli:</strong> Setelah pembayaran simulasi berhasil, Paddle otomatis mengarahkan ke halaman <a href="thank-you.html" style="color: var(--accent-cyan); text-decoration: underline;">Thank You Resmi</a> dan mengirimkan tanda terima digital serta kunci lisensi ke email Anda.
+        💡 <strong>Alur Pembeli:</strong> Setelah pembayaran berhasil, Paddle otomatis mengarahkan ke halaman <a href="thank-you.html" style="color: var(--accent-cyan); text-decoration: underline;">Thank You Resmi</a> dan mengirimkan tanda terima digital serta kunci lisensi ke email Anda.
       </div>
     </div>
 
     <!-- Quick Navigation Links -->
     <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem;">
       <a href="pricing.html" style="color: var(--accent-cyan); text-decoration: underline;">← Kembali ke Halaman Harga Paddle</a>
-      <a href="https://sandbox-vendors.paddle.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: underline;">Buka Paddle Sandbox Dashboard ↗</a>
-      <a href="https://sandbox-customer-portal.paddle.com/cpl_01m547725fznsrt8wgt2hmhrjw" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline;">Paddle Customer Portal ↗</a>
+      <a href="https://vendors.paddle.com" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: underline;">Buka Paddle Live Dashboard ↗</a>
+      <a href="https://customer-portal.paddle.com/cpl_01m53zw12h8q1a33g91qg96yqg" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline;">Paddle Customer Portal ↗</a>
     </div>
 
   </main>

@@ -130,7 +130,7 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m548a285c52jx2mtyb4a552x'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t1BtnPaddle">
+          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qmerytd57vfyt0rkay8tb'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t1BtnPaddle">
             <img src="../../assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
             <span>Checkout via Paddle ($39)</span>
           </a>
@@ -170,7 +170,7 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m5488205fyrfta84s159saaz'); return false;" class="btn btn-popular-paddle" id="t2BtnPaddle">
+          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qpy498d7wyfs4y8eydbpb'); return false;" class="btn btn-popular-paddle" id="t2BtnPaddle">
             <img src="../../assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
             <span>Checkout via Paddle ($59)</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
@@ -209,7 +209,7 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m548ca0wh6dt3rj47mn01vj3'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t3BtnPaddle">
+          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qrjt8mdpn532kq78wpytp'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t3BtnPaddle">
             <img src="../../assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
             <span>Checkout via Paddle ($99)</span>
           </a>
@@ -534,13 +534,13 @@
     })();
   </script>
 
-  <!-- Paddle Billing v2 CDN & Initialization -->
+  <!-- Paddle Billing v2 CDN & Initialization (LIVE PRODUCTION) -->
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script type="text/javascript">
     if (typeof Paddle !== 'undefined') {
-      Paddle.Environment.set("sandbox");
       Paddle.Initialize({
-        token: "test_695a3dd3ca3bddd548e64e8d80c"
+        token: "live_0ea7a7733b317ac0938addf7798",
+        pwCustomer: {}
       });
     }
 
