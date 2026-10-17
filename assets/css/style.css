@@ -1275,6 +1275,12 @@ section {
   color: #fde047;
 }
 
+.product-pill.battery-pill {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
 .pill-lemon-icon {
   width: 15px;
   height: 15px;

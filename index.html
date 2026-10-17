@@ -369,7 +369,7 @@
             <span class="text-gradient" data-i18n="prodTitleGradient">Ultimate macOS Deep Customizer</span>
           </h2>
           <p class="section-desc" data-i18n="prodDesc">
-            Aplikasi kustomisasi sistem macOS tercanggih dengan antarmuka Liquid Frosted Glassmorphism, 2.180+ tweak terkurasi di 11 kategori sistem, simulator interaktif 1:1 real-time, dan lisensi resmi jual putus di Lemon Squeezy.
+            Aplikasi kustomisasi sistem macOS tercanggih dengan antarmuka Liquid Frosted Glassmorphism, 2.265+ tweak di 11 kategori sistem, fitur proteksi hardware Zero-Drain Battery Shield &amp; Lid-Wake Killer, simulator interaktif 1:1 real-time, dan lisensi resmi jual putus di Lemon Squeezy.
           </p>
         </div>
 
@@ -386,13 +386,16 @@
               <span data-i18n="badgeSip">100% SIP-Safe (defaults write)</span>
             </span>
             <span class="product-pill highlight-pill">
-              ⚡ <span data-i18n="badgeTweaks">2.180+ Tweak • 382+ Domain</span>
+              ⚡ <span data-i18n="badgeTweaks">2.265+ Tweak • 382+ Domain</span>
+            </span>
+            <span class="product-pill battery-pill">
+              🔋 <span data-i18n="badgeBattery">Zero-Drain Battery Shield</span>
             </span>
             <span class="product-pill">
               🖥️ <span data-i18n="badgeSim">1:1 Live Interactive Simulator</span>
             </span>
             <span class="product-pill">
-              🌐 <span data-i18n="badgeLangs">8 Bahasa Antarmuka &amp; RTL</span>
+              🌐 <span data-i18n="badgeLangs">12 Bahasa Antarmuka &amp; RTL</span>
             </span>
             <span class="product-pill lemon-pill">
               <img src="assets/images/lemon-icon.svg" alt="" class="pill-lemon-icon">
@@ -413,7 +416,7 @@
                 <span class="mac-dot dot-max"></span>
               </div>
               <div class="window-title-text font-mono">
-                LuminaTweak Glass — Glass Edition v2.6
+                LuminaTweak Glass — Glass Edition v1.0
               </div>
               <div class="window-actions-dummy">
                 <span class="window-badge-safe font-mono">SIP SAFE</span>
@@ -428,7 +431,11 @@
               </button>
               <button class="gallery-tab" data-tab-target="categories" role="tab" aria-selected="false">
                 <span class="tab-icon">🗂️</span>
-                <span data-i18n="tabCategories">11 Kategori &amp; 2.180+ Tweak</span>
+                <span data-i18n="tabCategories">11 Kategori &amp; 2.265+ Tweak</span>
+              </button>
+              <button class="gallery-tab" data-tab-target="battery" role="tab" aria-selected="false">
+                <span class="tab-icon">🔋</span>
+                <span data-i18n="tabBattery">Zero-Drain Baterai &amp; Power</span>
               </button>
               <button class="gallery-tab" data-tab-target="pricing" role="tab" aria-selected="false">
                 <span class="tab-icon">💎</span>
@@ -436,7 +443,7 @@
               </button>
               <button class="gallery-tab" data-tab-target="arabic" role="tab" aria-selected="false">
                 <span class="tab-icon">🌍</span>
-                <span data-i18n="tabArabic">8 Bahasa &amp; Arabic RTL</span>
+                <span data-i18n="tabArabic">12 Bahasa &amp; Arabic RTL</span>
               </button>
             </div>
 
@@ -476,7 +483,24 @@
                 </div>
               </div>
 
-              <!-- Panel 3: Lemon Squeezy Pricing & Activation -->
+              <!-- Panel 3: Hardware & Zero-Drain Battery Shield -->
+              <div class="gallery-slide" id="slide-battery">
+                <div class="image-wrapper" title="Klik untuk memperbesar gambar" data-lightbox-src="assets/images/luminatweak-battery-power.png">
+                  <img src="assets/images/luminatweak-battery-power.png" alt="LuminaTweak Glass Zero-Drain Battery Shield & Hardware Power Optimization" class="gallery-img">
+                  <div class="image-zoom-overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                    <span>Perbesar Tampilan UI</span>
+                  </div>
+                </div>
+                <div class="slide-caption">
+                  <span class="caption-tag">ZERO-DRAIN BATTERY &amp; POWER</span>
+                  <p data-i18n="capBattery">
+                    Fitur proteksi perangkat keras: Deep Sleep Zero-Drain Mode untuk menghentikan kebocoran baterai saat Mac dimatikan/tidur, dan Lid-Open AutoBoot Killer untuk mencegah Mac menyala otomatis saat layar dibuka.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Panel 4: Lemon Squeezy Pricing & Activation -->
               <div class="gallery-slide" id="slide-pricing">
                 <div class="image-wrapper" title="Klik untuk memperbesar gambar" data-lightbox-src="assets/images/luminatweak-pricing-modal.png">
                   <img src="assets/images/luminatweak-pricing-modal.png" alt="LuminaTweak Glass Official Lemon Squeezy Activation Modal and Tiers" class="gallery-img">
@@ -486,26 +510,26 @@
                   </div>
                 </div>
                 <div class="slide-caption">
-                  <span class="caption-tag">LEMON SQUEEZY PRO ACTIVATION</span>
+                  <span class="caption-tag">PRO ACTIVATION TIERS</span>
                   <p data-i18n="capPricing">
-                    Modal aktivasi resmi LuminaTweak Glass PRO dengan validasi lisensi Lemon Squeezy, verifikasi mesin otomatis, dan 3 tier lisensi seumur hidup tanpa langganan.
+                    Modal aktivasi resmi LuminaTweak Glass PRO dengan validasi lisensi Lemon Squeezy, verifikasi mesin otomatis, dan 3 tier lisensi seumur hidup: Plus ($39), Pro 3-Macs ($59), dan Power Pack ($99).
                   </p>
                 </div>
               </div>
 
-              <!-- Panel 4: Global 8-Language Matrix & Arabic RTL -->
+              <!-- Panel 5: Global 12-Language Matrix & Arabic RTL -->
               <div class="gallery-slide" id="slide-arabic">
                 <div class="image-wrapper" title="Klik untuk memperbesar gambar" data-lightbox-src="assets/images/luminatweak-arabic-rtl.png">
-                  <img src="assets/images/luminatweak-arabic-rtl.png" alt="LuminaTweak Glass 8 Interface Languages with Native Arabic RTL Layout" class="gallery-img">
+                  <img src="assets/images/luminatweak-arabic-rtl.png" alt="LuminaTweak Glass 12 Interface Languages with Native Arabic RTL Layout" class="gallery-img">
                   <div class="image-zoom-overlay">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
                     <span>Perbesar Tampilan UI</span>
                   </div>
                 </div>
                 <div class="slide-caption">
-                  <span class="caption-tag">GLOBAL 8-LANG &amp; RTL</span>
+                  <span class="caption-tag">GLOBAL 12-LANG &amp; RTL</span>
                   <p data-i18n="capArabic">
-                    Dukungan penuh 8 bahasa internasional dengan tata letak native Right-to-Left (RTL) untuk Bahasa Arab (العربية) serta beralih instan ke English, Indonesia, Jepang, Jerman, Spanyol, Prancis, dan Mandarin.
+                    Dukungan penuh 12 bahasa global dengan tata letak native Right-to-Left (RTL) untuk Bahasa Arab (العربية) serta beralih instan ke English, Indonesia, Jepang, Jerman, Spanyol, Prancis, Mandarin, Korea, Portugis, Italia, dan Rusia.
                   </p>
                 </div>
               </div>
@@ -519,17 +543,17 @@
           <div class="glass-panel prod-feat-card">
             <div class="prod-feat-header">
               <div class="feat-icon-box">⚡</div>
-              <span class="feat-number font-mono">01 // TWEAK ENGINE</span>
+              <span class="feat-number font-mono">01 // TWEAK &amp; POWER ENGINE</span>
             </div>
-            <h3 class="prod-feat-title" data-i18n="prodFeat1Title">2.180+ Tweak di 11 Kategori Inti</h3>
+            <h3 class="prod-feat-title" data-i18n="prodFeat1Title">2.265+ Tweak &amp; Zero-Drain Battery Shield</h3>
             <p class="prod-feat-desc" data-i18n="prodFeat1Desc">
-              Akses ribuan optimasi performa dan kustomisasi tersembunyi macOS (Dock, Finder, Liquid Windowing, Safari, Keyboard Latency, Xcode Lab, Power Battery, hingga Keamanan).
+              Akses ribuan optimasi performa macOS (Dock, Finder, Liquid Windowing, Safari, Keyboard, Xcode Lab) plus fitur proteksi daya mutakhir: Zero-Drain Deep Sleep Mode dan Lid-Open AutoBoot Killer.
             </p>
             <div class="feat-tags">
+              <span class="feat-tag">Zero-Drain Battery</span>
+              <span class="feat-tag">Lid-Wake Killer</span>
               <span class="feat-tag">Dock &amp; Mission Control</span>
               <span class="feat-tag">Finder &amp; Dotfiles</span>
-              <span class="feat-tag">Liquid Windowing</span>
-              <span class="feat-tag">Xcode Lab</span>
             </div>
           </div>
 
@@ -597,9 +621,9 @@
 
           <div class="specs-items-grid">
             <div class="spec-col">
-              <div class="spec-label font-mono" data-i18n="prodSpecLangTitle">8 Pilihan Bahasa Antarmuka (Termasuk RTL)</div>
+              <div class="spec-label font-mono" data-i18n="prodSpecLangTitle">12 Pilihan Bahasa Antarmuka (Termasuk RTL)</div>
               <p class="spec-val" data-i18n="prodSpecLangDesc">
-                Antarmuka aplikasi dapat langsung diganti secara instan: English, Bahasa Indonesia, العربية (Arabic RTL), 日本語 (Japanese), Deutsch (German), Español (Spanish), Français (French), 简体中文 (Simplified Chinese).
+                Antarmuka aplikasi dapat langsung diganti secara instan: English, Bahasa Indonesia, العربية (Arabic RTL), 日本語, Deutsch, Español, Français, 简体中文, 한국어, Português, Italiano, dan Русский.
               </p>
               <div class="lang-pill-row">
                 <span class="lang-mini-pill">EN</span>
@@ -610,6 +634,10 @@
                 <span class="lang-mini-pill">ES</span>
                 <span class="lang-mini-pill">FR</span>
                 <span class="lang-mini-pill">ZH</span>
+                <span class="lang-mini-pill">KO</span>
+                <span class="lang-mini-pill">PT</span>
+                <span class="lang-mini-pill">IT</span>
+                <span class="lang-mini-pill">RU</span>
               </div>
             </div>
 
@@ -699,11 +727,11 @@
           </div>
 
           <div class="pricing-cards-grid">
-            <!-- Tier 1: Single Mac -->
+            <!-- Tier 1: Plus Edition -->
             <div class="glass-panel pricing-tier-card">
               <div class="tier-top">
                 <div class="tier-discount-badge" data-i18n="tier1Discount">HEMAT $10 — LAUNCH SPECIAL</div>
-                <h3 class="tier-name" data-i18n="tier1Title">Single Mac</h3>
+                <h3 class="tier-name" data-i18n="tier1Title">Plus Edition</h3>
                 <div class="tier-sub" data-i18n="tier1Sub">1 Lisensi Perangkat Mac</div>
                 <div class="tier-price-box">
                   <div class="tier-price-anchor">
@@ -722,7 +750,7 @@
               <div class="tier-divider"></div>
 
               <ul class="tier-features-list">
-                <li><span class="check-bullet">✓</span> <span data-i18n="tier1Feat1">Akses Penuh 2.180+ Tweak macOS</span></li>
+                <li><span class="check-bullet">✓</span> <span data-i18n="tier1Feat1">Akses Penuh 2.265+ Tweak macOS</span></li>
                 <li><span class="check-bullet">✓</span> <span data-i18n="tier1Feat2">1:1 Live Interactive Simulator</span></li>
                 <li><span class="check-bullet">✓</span> <span data-i18n="tier1Feat3">Update Versi Gratis Selamanya</span></li>
                 <li><span class="check-bullet">✓</span> <span data-i18n="tier1Feat4">Aktivasi 1 Perangkat Mac</span></li>
@@ -731,19 +759,19 @@
               <div class="tier-action">
                 <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy" data-i18n="tier1Btn">
                   <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-                  <span>Cari Single Mac ($39)</span>
+                  <span>Cari Plus Edition ($39)</span>
                 </a>
               </div>
             </div>
 
-            <!-- Tier 2: Dual Mac (FEATURED / MOST POPULAR) -->
+            <!-- Tier 2: Pro Edition (FEATURED / MOST POPULAR) -->
             <div class="glass-panel pricing-tier-card featured-tier">
               <div class="tier-popular-ribbon" data-i18n="tier2Badge">PALING POPULER</div>
               
               <div class="tier-top">
                 <div class="tier-discount-badge highlight-save" data-i18n="tier2Discount">HEMAT $20 — PALING POPULER</div>
-                <h3 class="tier-name" data-i18n="tier2Title">Dual Mac</h3>
-                <div class="tier-sub" data-i18n="tier2Sub">2 Lisensi Perangkat Mac</div>
+                <h3 class="tier-name" data-i18n="tier2Title">Pro Edition</h3>
+                <div class="tier-sub" data-i18n="tier2Sub">3 Lisensi Perangkat Mac</div>
                 <div class="tier-price-box">
                   <div class="tier-price-anchor">
                     <span class="price-original font-mono" data-i18n="tier2Orig">$79</span>
@@ -755,22 +783,22 @@
                   </div>
                 </div>
                 <div class="tier-save-tag highlight-save" data-i18n="tier2Save">Hemat $20 — Pilihan Favorit Pengguna</div>
-                <p class="tier-desc" data-i18n="tier2Desc">Pilihan ideal untuk kombinasi MacBook laptop dan Mac mini / Studio di meja kerja.</p>
+                <p class="tier-desc" data-i18n="tier2Desc">Pilihan paling populer untuk kombinasi MacBook, Mac mini, hingga workstation Studio.</p>
               </div>
 
               <div class="tier-divider"></div>
 
               <ul class="tier-features-list">
-                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat1">Semua Fitur Single Mac Lengkap</span></li>
-                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat2">Aktivasi 2 Perangkat Mac Sekaligus</span></li>
-                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat3">Dukungan Prioritas &amp; Ekspor Skrip .sh</span></li>
-                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat4">Hak Deaktivasi &amp; Pindah Mac Baru</span></li>
+                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat1">Semua Fitur Plus Edition Lengkap</span></li>
+                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat2">Aktivasi 3 Perangkat Mac Sekaligus</span></li>
+                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat3">Zero-Drain Battery Shield &amp; Lid-Wake Killer</span></li>
+                <li><span class="check-bullet">✓</span> <span data-i18n="tier2Feat4">Dukungan Prioritas &amp; Ekspor Skrip .sh</span></li>
               </ul>
 
               <div class="tier-action">
                 <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-popular-buy" data-i18n="tier2Btn">
                   <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-                  <span>Cari Dual Mac ($59)</span>
+                  <span>Cari Pro Edition ($59)</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                 </a>
               </div>
