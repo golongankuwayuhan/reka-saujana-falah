@@ -164,7 +164,7 @@ const translations = {
     guar1: "Garansi 30 Hari Uang Kembali",
     guar2: "Pengiriman Kunci Instan via Email",
     guar3: "Bebas Pindah Lisensi ke Mac Baru",
-    guar4: "Pembayaran Aman Global via Lemon Squeezy (MoR)",
+    guar4: "Pembayaran Aman Global via Paddle & Lemon Squeezy (MoR)",
     faqTag: "PERTANYAAN UMUM",
     faqTitle: "Tanya Jawab Seputar LuminaTweak Glass",
     faq1Q: "Mengapa LuminaTweak tidak tersedia di Mac App Store?",
@@ -221,6 +221,11 @@ const translations = {
     // Footer
     footerBrandDesc: "Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.",
     footerNavTitle: "Navigasi Cepat",
+    footerPoliciesTitle: "Kebijakan & Legal",
+    footerTerms: "Syarat & Ketentuan Layanan",
+    footerPrivacyLink: "Kebijakan Privasi",
+    footerRefund: "Kebijakan Pengembalian Dana",
+    footerPricingLink: "Halaman Harga Resmi",
     footerLegalTitle: "Kepatuhan & Kontak",
     footerCopyright: "© 2026 Reka Saujana Falah. Hak cipta dilindungi undang-undang.",
     footerPrivacy: "Kebijakan Privasi & Kepatuhan",
@@ -386,7 +391,7 @@ const translations = {
     guar1: "30-Day Money-Back Guarantee",
     guar2: "Instant Delivery to Your Inbox",
     guar3: "Transferable License to New Mac",
-    guar4: "Secure Global Checkout via Lemon Squeezy (MoR)",
+    guar4: "Secure Global Checkout via Paddle & Lemon Squeezy (MoR)",
     faqTag: "FREQUENTLY ASKED QUESTIONS",
     faqTitle: "Frequently Asked Questions About LuminaTweak Glass",
     faq1Q: "Why isn't LuminaTweak on the Mac App Store?",
@@ -443,9 +448,14 @@ const translations = {
     // Footer
     footerBrandDesc: "Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.",
     footerNavTitle: "Quick Navigation",
+    footerPoliciesTitle: "Legal & Policies",
+    footerTerms: "Terms of Service",
+    footerPrivacyLink: "Privacy Policy",
+    footerRefund: "Refund Policy",
+    footerPricingLink: "Official Pricing Page",
     footerLegalTitle: "Compliance & Inquiries",
     footerCopyright: "© 2026 Reka Saujana Falah. All rights reserved.",
-    footerPrivacy: "Privacy Policy & Compliance",
+    footerPrivacy: "Corporate Compliance & D-U-N-S Ready",
     toastCopied: "Copied to clipboard successfully!"
   }
 };

@@ -1024,10 +1024,17 @@ section {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.4fr 1fr 1.1fr 1.1fr;
+  gap: 2.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 .footer-brand-p {
@@ -2310,4 +2317,299 @@ section {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* ===================================================================
+   LEGAL & POLICY PAGES (TERMS, PRIVACY, REFUND, PRICING)
+   =================================================================== */
+.legal-page-header {
+  padding: 6.5rem 0 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.legal-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.legal-breadcrumb a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legal-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.legal-hero-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.legal-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+.legal-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Document Language Selector Bar */
+.doc-lang-selector-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.doc-lang-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.doc-lang-buttons {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doc-lang-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.doc-lang-btn:hover {
+  color: var(--text-main);
+}
+
+.doc-lang-btn.active {
+  background: var(--accent-cyan);
+  color: #050811;
+  box-shadow: 0 2px 10px rgba(0, 240, 255, 0.4);
+}
+
+/* Legal Container & Card */
+.legal-main-container {
+  max-width: 920px;
+  margin: 0 auto 5rem;
+  padding: 0 1.25rem;
+}
+
+.legal-card {
+  background: rgba(11, 17, 32, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 640px) {
+  .legal-card {
+    padding: 2rem 1.25rem;
+  }
+  .doc-lang-selector-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+}
+
+/* Callout Boxes */
+.mor-callout {
+  background: rgba(14, 165, 233, 0.08);
+  border-left: 4px solid var(--accent-cyan);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e0f2fe;
+}
+
+.refund-hero-banner {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 78, 59, 0.25) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.refund-hero-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.refund-hero-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #34d399;
+  margin-bottom: 0.5rem;
+}
+
+.refund-hero-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Table of Contents */
+.legal-toc-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.legal-toc-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.85rem;
+}
+
+.legal-toc-list {
+  list-style: decimal inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+}
+
+.legal-toc-list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.legal-toc-list a:hover {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+
+/* Typography in Legal Content */
+.legal-content h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 1.5rem 0 0.65rem;
+}
+
+.legal-content p {
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.legal-content ul, .legal-content ol {
+  margin: 0.75rem 0 1.25rem 1.5rem;
+  font-size: 0.925rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.legal-content li {
+  margin-bottom: 0.45rem;
+}
+
+.legal-content strong {
+  color: var(--text-main);
+}
+
+.legal-content a {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+
+.legal-entity-highlight {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #cbd5e1;
+}
+
+.legal-bottom-nav {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.875rem;
+}
+
+.legal-bottom-nav a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legal-bottom-nav a:hover {
+  text-decoration: underline;
 }
