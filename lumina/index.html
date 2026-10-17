@@ -6,7 +6,7 @@
   <title>LuminaTweak Glass Edition — macOS Deep Customizer | Reka Saujana Falah</title>
   
   <meta name="title" content="LuminaTweak Glass Edition — macOS Deep Customizer | Reka Saujana Falah">
-  <meta name="description" content="LuminaTweak Glass Edition for macOS. Over 2,265+ native tweaks across 11 system layers, Zero-Drain Battery Shield, 1:1 Live Simulator. Available on Paddle & Lemon Squeezy.">
+  <meta name="description" content="LuminaTweak Glass Edition for macOS. Over 2,265+ native tweaks across 11 system layers, Zero-Drain Battery Shield, 1:1 Live Simulator. Distributed via Paddle.com.">
   <meta name="author" content="Reka Saujana Falah">
   <meta name="robots" content="index, follow">
 
@@ -30,7 +30,8 @@
           <li><a href="../index.html" class="nav-item-link" id="navHome">Home</a></li>
           <li><a href="index.html" class="nav-item-link active" id="navProduct" style="color: var(--accent-cyan);">LuminaTweak Glass</a></li>
           <li><a href="paddle/pricing.html" class="nav-item-link" id="navPaddle">Paddle Store</a></li>
-          <li><a href="lemon/pricing.html" class="nav-item-link" id="navLemon">Lemon Squeezy Store</a></li>
+          <!-- Lemon Squeezy pending review - preserved for future reactivation -->
+          <li style="display: none;"><a href="lemon/pricing.html" class="nav-item-link" id="navLemon">Lemon Squeezy Store</a></li>
           <li><a href="../index.html#contact" class="nav-item-link" id="navContact">Contact</a></li>
         </ul>
 
@@ -69,7 +70,7 @@
       </p>
 
       <!-- Channel Selection Cards -->
-      <div id="channels" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 780px; margin: 0 auto 2.5rem; text-align: left;">
+      <div id="channels" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 600px; margin: 0 auto 2.5rem; text-align: left;">
         
         <!-- Paddle Box -->
         <div class="glass-panel" style="padding: 1.75rem; border: 1px solid rgba(0, 240, 255, 0.35); position: relative;">
@@ -93,8 +94,8 @@
           </div>
         </div>
 
-        <!-- Lemon Squeezy Box -->
-        <div class="glass-panel" style="padding: 1.75rem; border: 1px solid rgba(255, 193, 7, 0.35); position: relative;">
+        <!-- Lemon Squeezy Box (pending review - preserved for future reactivation) -->
+        <div class="glass-panel" style="padding: 1.75rem; border: 1px solid rgba(255, 193, 7, 0.35); position: relative; display: none;" id="lemonStoreCard">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
             <img src="../assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" style="height: 26px; width: auto;">
             <span class="product-pill lemon-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR</span>
@@ -194,7 +195,7 @@
         </div>
         <div>
           <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;" id="specChannelsLbl">Merchants of Record</div>
-          <div style="font-weight: 600;" id="specChannelsVal">Paddle.com &amp; Lemon Squeezy</div>
+          <div style="font-weight: 600;" id="specChannelsVal">Paddle.com</div>
         </div>
       </div>
     </div>
@@ -224,7 +225,8 @@
           <li><a href="../index.html">Studio Home</a></li>
           <li><a href="index.html" style="color: var(--accent-cyan);">LuminaTweak Overview</a></li>
           <li><a href="paddle/pricing.html">Paddle Store</a></li>
-          <li><a href="lemon/pricing.html">Lemon Squeezy Store</a></li>
+          <!-- Lemon Squeezy pending review - preserved for future reactivation -->
+          <li style="display: none;"><a href="lemon/pricing.html">Lemon Squeezy Store</a></li>
         </ul>
       </div>
 
@@ -238,7 +240,8 @@
         </ul>
       </div>
 
-      <div class="footer-col">
+      <!-- Lemon Squeezy pending review - preserved for future reactivation -->
+      <div class="footer-col" id="footerLemonCol" style="display: none;">
         <h4 class="footer-col-title" id="footerLemonTitle">Lemon Squeezy Compliance</h4>
         <ul class="footer-links-list">
           <li><a href="lemon/pricing.html">Lemon Squeezy Pricing</a></li>
@@ -348,7 +351,7 @@
         if (specLicenseLbl) specLicenseLbl.textContent = isId ? 'Model Lisensi' : 'License Model';
         if (specLicenseVal) specLicenseVal.textContent = isId ? 'Lisensi Jual Putus Seumur Hidup (Tanpa Langganan)' : 'Perpetual Lifetime License (No Subscription)';
         if (specChannelsLbl) specChannelsLbl.textContent = isId ? 'Mitra Merchant of Record' : 'Merchants of Record';
-        if (specChannelsVal) specChannelsVal.textContent = isId ? 'Paddle.com & Lemon Squeezy' : 'Paddle.com & Lemon Squeezy';
+        if (specChannelsVal) specChannelsVal.textContent = 'Paddle.com';
 
         if (backToHome) backToHome.textContent = isId ? '← Kembali ke Beranda Studio Reka Saujana Falah' : '← Return to Reka Saujana Falah Studio Homepage';
         if (footerBrandDesc) footerBrandDesc.textContent = isId ? 'Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.' : 'Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.';
