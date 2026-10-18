@@ -1,12 +1,12 @@
-# Website Company Profile — Reka Saujana Falah
+# Website Company Profile — PT Reka Saujana Falah
 *Optimized for D-U-N-S® Number Registration & International Business Verification*
 
-Website profil perusahaan modern & futuristik untuk **Reka Saujana Falah**, dirancang khusus untuk memenuhi standar audit verifikasi **Dun & Bradstreet (D-U-N-S®)**, pendaftaran Apple Developer Program / Google Play Console Organization, serta penjajakan kemitraan profesional.
+Website profil perusahaan modern & futuristik untuk **PT Reka Saujana Falah**, dirancang khusus untuk memenuhi standar audit verifikasi **Dun & Bradstreet (D-U-N-S®)**, pendaftaran Apple Developer Program / Google Play Console Organization, serta penjajakan kemitraan profesional.
 
 ---
 
 ## 🌟 Spesifikasi Entitas & Informasi Verifikasi
-- **Nama Legal Entitas**: Reka Saujana Falah
+- **Nama Legal Entitas**: PT Reka Saujana Falah
 - **Tahun Pendirian**: 2026
 - **Domisili Operasional**: Jawa Barat, Indonesia (West Java, Indonesia)
 - **Email Resmi**: `admin@rekasaujanafalah.com`
@@ -112,7 +112,7 @@ Jika Anda nanti membeli domain sendiri (misalnya `rekasaujanafalah.com` atau `re
 
 ## 📋 Tips Tambahan saat Pengajuan D-U-N-S® Number
 Ketika mengisi formulir D-U-N-S di portal Dun & Bradstreet / Apple / Google Developer:
-- **Legal Entity Name**: Masukkan persis `Reka Saujana Falah`.
+- **Legal Entity Name**: Masukkan persis `PT Reka Saujana Falah`.
 - **Website URL**: Masukkan URL GitHub Pages atau domain kustom Anda.
 - **Organization Email**: Masukkan `admin@rekasaujanafalah.com`.
 - **Work Phone**: Masukkan `+62 896-0101-4132`.

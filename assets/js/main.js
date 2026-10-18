@@ -7,7 +7,7 @@
 const translations = {
   id: {
     // Meta & Head
-    pageTitle: "Reka Saujana Falah | Studio Pengembangan Game & Rekayasa Perangkat Lunak",
+    pageTitle: "PT Reka Saujana Falah | Studio Pengembangan Game & Rekayasa Perangkat Lunak",
     
     // Header & Navigation
     navHome: "Beranda",
@@ -29,7 +29,7 @@ const translations = {
     heroTitlePrefix: "Membangun Pengalaman Interaktif &",
     heroTitleGradient: "Peluang Perangkat Lunak",
     heroTitleSuffix: "Masa Depan",
-    heroSubtitle: "Reka Saujana Falah berfokus pada pengembangan pemrograman komputer/mobile terpadu yang efisien dan berdaya guna, serta rekayasa perangkat lunak gim serta pendukung gim.",
+    heroSubtitle: "PT Reka Saujana Falah berfokus pada pengembangan pemrograman komputer/mobile terpadu yang efisien dan berdaya guna, serta rekayasa perangkat lunak gim serta pendukung gim.",
     heroCtaPrimary: "Hubungi & Kerjasama",
     heroCtaSecondary: "Pelajari Kapabilitas",
 
@@ -45,7 +45,7 @@ const translations = {
     aboutTag: "PROFIL KORPORASI",
     aboutTitle: "Dedikasi Teknis & Fondasi Rekayasa Perangkat Lunak",
     aboutDesc: "Ikhtisar resmi perusahaan untuk kepatuhan regulasi, pendaftaran direktori global (D-U-N-S), dan kemitraan strategis.",
-    aboutLead: "Reka Saujana Falah adalah entitas teknologi independen yang didirikan pada tahun 2026 di Jawa Barat, Indonesia.",
+    aboutLead: "PT Reka Saujana Falah adalah entitas teknologi independen yang didirikan pada tahun 2026 di Jawa Barat, Indonesia.",
     aboutBody: "Kami mengintegrasikan visi perancangan arsitektur perangkat lunak yang pragmatis dengan kekuatan kecerdasan buatan (AI) sebagai akselerator pengembangan. Fokus utama kami mencakup siklus hidup pembuatan aplikasi modern serta implementasi solusi digital kustom untuk menunjang kebutuhan industri, tanpa klaim berlebihan dan berpijak sepenuhnya pada eksekusi terukur.",
     
     pillar1Title: "Sinergi AI & Logika Sistem",
@@ -56,7 +56,7 @@ const translations = {
     // D-U-N-S Compliance Card
     verifyCardBadge: "D-U-N-S® COMPLIANCE READY",
     verifyItem1Lbl: "Nama Legal Entitas",
-    verifyItem1Val: "Reka Saujana Falah",
+    verifyItem1Val: "PT Reka Saujana Falah",
     verifyItem2Lbl: "Tahun Pendirian",
     verifyItem2Val: "2026",
     verifyItem3Lbl: "Klasifikasi Baku Lapangan Usaha (KBLI)",
@@ -231,7 +231,7 @@ const translations = {
     btnSendMail: "Kirim via Email",
 
     // Footer
-    footerBrandDesc: "Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.",
+    footerBrandDesc: "PT Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.",
     footerNavTitle: "Navigasi Cepat",
     footerPoliciesTitle: "Kebijakan & Legal",
     footerTerms: "Syarat & Ketentuan Layanan",
@@ -239,14 +239,14 @@ const translations = {
     footerRefund: "Kebijakan Pengembalian Dana",
     footerPricingLink: "Halaman Harga Resmi",
     footerLegalTitle: "Kepatuhan & Kontak",
-    footerCopyright: "© 2026 Reka Saujana Falah. Hak cipta dilindungi undang-undang.",
+    footerCopyright: "© 2026 PT Reka Saujana Falah. Hak cipta dilindungi undang-undang.",
     footerPrivacy: "Kebijakan Privasi & Kepatuhan",
     toastCopied: "Teks berhasil disalin ke papan klip!"
   },
 
   en: {
     // Meta & Head
-    pageTitle: "Reka Saujana Falah | Software Engineering Studio & AI-Assisted App Development",
+    pageTitle: "PT Reka Saujana Falah | Software Engineering Studio & AI-Assisted App Development",
 
     // Header & Navigation
     navHome: "Home",
@@ -268,7 +268,7 @@ const translations = {
     heroTitlePrefix: "Engineering Interactive Experiences &",
     heroTitleGradient: "Future-Ready Software",
     heroTitleSuffix: "Opportunities",
-    heroSubtitle: "Reka Saujana Falah focuses on unified, efficient, and functional computer/mobile programming, as well as video game software engineering and game-supporting software.",
+    heroSubtitle: "PT Reka Saujana Falah focuses on unified, efficient, and functional computer/mobile programming, as well as video game software engineering and game-supporting software.",
     heroCtaPrimary: "Contact & Inquire",
     heroCtaSecondary: "Explore Capabilities",
 
@@ -284,7 +284,7 @@ const translations = {
     aboutTag: "CORPORATE OVERVIEW",
     aboutTitle: "Engineering Rigor & Sustainable Software Foundations",
     aboutDesc: "Official corporate summary designed for regulatory compliance, international directory accreditation (D-U-N-S), and strategic partnerships.",
-    aboutLead: "Reka Saujana Falah is an independent digital technology enterprise established in 2026 in West Java, Indonesia.",
+    aboutLead: "PT Reka Saujana Falah is an independent digital technology enterprise established in 2026 in West Java, Indonesia.",
     aboutBody: "We integrate pragmatic software architecture disciplines with the power of Artificial Intelligence (AI) as a development accelerator. Our primary operations span the complete modern application development lifecycle and custom digital solutions for industry needs—grounded entirely in verifiable, measured execution without inflated claims.",
     
     pillar1Title: "AI Synergy & Systems Logic",
@@ -295,7 +295,7 @@ const translations = {
     // D-U-N-S Compliance Card
     verifyCardBadge: "D-U-N-S® COMPLIANCE READY",
     verifyItem1Lbl: "Legal Business Name",
-    verifyItem1Val: "Reka Saujana Falah",
+    verifyItem1Val: "PT Reka Saujana Falah",
     verifyItem2Lbl: "Year of Establishment",
     verifyItem2Val: "2026",
     verifyItem3Lbl: "Standard Industry Classification (KBLI)",
@@ -470,7 +470,7 @@ const translations = {
     btnSendMail: "Dispatch via Email",
 
     // Footer
-    footerBrandDesc: "Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.",
+    footerBrandDesc: "PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.",
     footerNavTitle: "Quick Navigation",
     footerPoliciesTitle: "Legal & Policies",
     footerTerms: "Terms of Service",
@@ -478,7 +478,7 @@ const translations = {
     footerRefund: "Refund Policy",
     footerPricingLink: "Official Pricing Page",
     footerLegalTitle: "Compliance & Inquiries",
-    footerCopyright: "© 2026 Reka Saujana Falah. All rights reserved.",
+    footerCopyright: "© 2026 PT Reka Saujana Falah. All rights reserved.",
     footerPrivacy: "Corporate Compliance & D-U-N-S Ready",
     toastCopied: "Copied to clipboard successfully!"
   }
@@ -666,7 +666,7 @@ function initInquiryDispatcher() {
       const subject = subjectInput ? subjectInput.value.trim() : "";
       const body = msgInput ? msgInput.value.trim() : "";
 
-      let text = `Halo Reka Saujana Falah,\n\n`;
+      let text = `Halo PT Reka Saujana Falah,\n\n`;
       if (sender) text += `Nama / Entitas: ${sender}\n`;
       if (subject) text += `Topik: ${subject}\n\n`;
       if (body) {
@@ -686,15 +686,15 @@ function initInquiryDispatcher() {
     btnEmail.addEventListener('click', (e) => {
       e.preventDefault();
       const sender = nameInput ? nameInput.value.trim() : "";
-      const subject = subjectInput && subjectInput.value.trim() ? subjectInput.value.trim() : "Penjajakan Kerjasama / Inquiry - Reka Saujana Falah";
+      const subject = subjectInput && subjectInput.value.trim() ? subjectInput.value.trim() : "Penjajakan Kerjasama / Inquiry - PT Reka Saujana Falah";
       const body = msgInput ? msgInput.value.trim() : "";
 
-      let emailBody = `Halo Tim Reka Saujana Falah,\n\n`;
+      let emailBody = `Halo Tim PT Reka Saujana Falah,\n\n`;
       if (sender) emailBody += `Pengirim: ${sender}\n\n`;
       if (body) {
         emailBody += `Pesan:\n${body}\n\n`;
       } else {
-        emailBody += `Saya tertarik untuk melakukan penjajakan kerjasama dengan Reka Saujana Falah.\n\n`;
+        emailBody += `Saya tertarik untuk melakukan penjajakan kerjasama dengan PT Reka Saujana Falah.\n\n`;
       }
       emailBody += `Salam,\n${sender || "Rekan Bisnis"}`;
 
