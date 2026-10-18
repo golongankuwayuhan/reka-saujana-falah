@@ -457,5 +457,20 @@
     })();
   </script>
 
+  <!-- Paddle Billing v2 CDN & Retain Initialization (LIVE PRODUCTION) -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script type="text/javascript">
+    if (typeof Paddle !== 'undefined') {
+      var customerEmail = localStorage.getItem('lumina_customer_email') || new URLSearchParams(window.location.search).get('customer_email') || "";
+      var customerId = new URLSearchParams(window.location.search).get('customer_id') || "";
+      var pwCustomer = customerId ? { id: customerId } : (customerEmail ? { email: customerEmail } : undefined);
+
+      Paddle.Initialize({
+        token: "live_0ea7a7733b317ac0938addf7798",
+        pwCustomer: pwCustomer
+      });
+    }
+  </script>
+
 </body>
 </html>

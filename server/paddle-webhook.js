@@ -164,7 +164,7 @@ app.get('/api/paddle/health', (req, res) => {
     status: 'online',
     service: 'LuminaTweak Glass — Paddle Webhook Receiver',
     company: 'PT Reka Saujana Falah',
-    environment: process.env.PADDLE_ENV || 'sandbox',
+    environment: process.env.PADDLE_ENV || 'production',
     timestamp: new Date().toISOString()
   });
 });

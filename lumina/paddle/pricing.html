@@ -564,11 +564,12 @@
   <script type="text/javascript">
     if (typeof Paddle !== 'undefined') {
       var storedCustomerEmail = localStorage.getItem('lumina_customer_email') || new URLSearchParams(window.location.search).get('email') || "";
-      var pwCustomerObj = storedCustomerEmail ? { email: storedCustomerEmail } : {};
+      var storedCustomerId = new URLSearchParams(window.location.search).get('customer_id') || "";
+      var pwCustomer = storedCustomerId ? { id: storedCustomerId } : (storedCustomerEmail ? { email: storedCustomerEmail } : undefined);
 
       Paddle.Initialize({
         token: "live_0ea7a7733b317ac0938addf7798",
-        pwCustomer: pwCustomerObj,
+        pwCustomer: pwCustomer,
         eventCallback: function(data) {
           console.log("Paddle Event:", data);
           if (data.name === "checkout.completed") {
@@ -586,16 +587,21 @@
         alert('Paddle billing script is loading. Please refresh if this persists.');
         return;
       }
+      var storedCustomerEmail = localStorage.getItem('lumina_customer_email') || new URLSearchParams(window.location.search).get('email') || "";
+      var checkoutOptions = {
+        items: [{ priceId: priceId, quantity: 1 }],
+        settings: {
+          displayMode: "overlay",
+          theme: "dark",
+          locale: "en",
+          successUrl: "https://rekasaujanafalah.com/lumina/paddle/thank-you.html"
+        }
+      };
+      if (storedCustomerEmail) {
+        checkoutOptions.customer = { email: storedCustomerEmail };
+      }
       try {
-        Paddle.Checkout.open({
-          items: [{ priceId: priceId, quantity: 1 }],
-          settings: {
-            displayMode: "overlay",
-            theme: "dark",
-            locale: "en",
-            successUrl: "https://rekasaujanafalah.com/lumina/paddle/thank-you.html"
-          }
-        });
+        Paddle.Checkout.open(checkoutOptions);
       } catch (err) {
         console.error('Paddle open checkout error:', err);
         alert('Error launching checkout: ' + err.message);
