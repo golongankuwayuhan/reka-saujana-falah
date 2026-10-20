@@ -464,36 +464,69 @@
 
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-item-link">Home</a></li>
-          <li><a href="demo.html" class="nav-item-link active" style="color: var(--accent-cyan);">Live Demo</a></li>
-          <li><a href="lumina/lemon/pricing.html" class="nav-item-link">Pricing</a></li>
-          <li><a href="lumina/lemon/terms.html" class="nav-item-link">Terms</a></li>
-          <li><a href="lumina/lemon/privacy.html" class="nav-item-link">Privacy</a></li>
-          <li><a href="lumina/lemon/refund.html" class="nav-item-link">Refund</a></li>
+          <li><a href="index.html" class="nav-item-link" id="navHome">Home</a></li>
+          <li><a href="demo.html" class="nav-item-link active" id="navDemo" style="color: var(--accent-cyan);">Live Demo &amp; Teaser</a></li>
+          <li><a href="lumina/lemon/pricing.html" class="nav-item-link" id="navPricing">Lemon Squeezy Store</a></li>
+          <li><a href="lumina/lemon/terms.html" class="nav-item-link" id="navTerms">Terms</a></li>
+          <li><a href="lumina/lemon/privacy.html" class="nav-item-link" id="navPrivacy">Privacy</a></li>
+          <li><a href="lumina/lemon/refund.html" class="nav-item-link" id="navRefund">Refund</a></li>
         </ul>
 
         <div class="nav-actions">
-          <a href="lumina/lemon/pricing.html" class="btn-header-cta">Get License ($39)</a>
+          <div class="lang-switcher" aria-label="Language Selector">
+            <button class="lang-btn" data-doc-lang="id" aria-label="Bahasa Indonesia">ID</button>
+            <button class="lang-btn active" data-doc-lang="en" aria-label="English">EN</button>
+          </div>
+          <a href="lumina/lemon/pricing.html" class="btn-header-cta" id="btnHeaderCta">Pre-Order ($39)</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero & Teaser Section -->
   <section class="demo-hero">
     <div class="container">
       <div class="badge-pill-header" style="margin-bottom: 1rem;">
         <span class="live-pulse-dot"></span>
-        <span>Interactive Web Simulator • 100% In-Browser Experience</span>
+        <span id="badgeTeaser">🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator</span>
       </div>
 
       <h1 class="legal-hero-title">
-        <span class="text-gradient">Experience LuminaTweak Glass Live</span>
+        <span class="text-gradient">Experience LuminaTweak Glass Live</span><br>
+        <span id="heroTitleSub" style="font-size: 0.68em; font-weight: 500; color: var(--text-secondary);">The Ultimate macOS Deep Customizer &amp; Battery Shield</span>
       </h1>
 
-      <p class="section-desc" style="max-width: 680px; margin: 1rem auto 2rem;">
-        Try out the live macOS simulator below. Toggle the Zero-Drain Battery Shield, test instantaneous window transitions, or press <strong>Auto-Play Walkthrough</strong> to watch an automated guided tour.
+      <p class="section-desc" style="max-width: 720px; margin: 1rem auto 2.5rem;" id="heroDesc">
+        Try out the live macOS simulator below. Toggle the Zero-Drain Battery Shield, test instantaneous window transitions, or press <strong>Auto-Play Guided Tour</strong> to watch an automated walkthrough. Official launch coming soon via Lemon Squeezy ($39 one-time).
       </p>
+
+      <!-- Launch Teaser Showcase Card -->
+      <div style="max-width: 1040px; margin: 0 auto 3rem; background: rgba(14, 20, 33, 0.75); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(0, 240, 255, 0.28); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 35px rgba(0,240,255,0.12); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: center; text-align: left;">
+        <div style="background: #090d16; overflow: hidden;">
+          <img src="assets/images/luminatweak-coming-soon.jpg" alt="LuminaTweak Glass Edition Coming Soon Poster" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+        <div style="padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" style="height: 24px; width: auto;">
+            <span class="product-pill lemon-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR Partner</span>
+          </div>
+          <h2 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3;" id="cardTitle">
+            Official Launch Teaser — Coming Soon via Lemon Squeezy
+          </h2>
+          <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;" id="cardDesc">
+            Designed and engineered by PT Reka Saujana Falah. Zero recurring monthly fees, universal binary for Apple Silicon M1-M4 &amp; Intel, and bank-grade global checkout.
+          </p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="#simulatorFrame" class="btn btn-secondary" style="border-color: rgba(0, 240, 255, 0.4); color: var(--accent-cyan);" id="btnScrollDemo">
+              🎮 Test Live Simulator ↓
+            </a>
+            <a href="lumina/lemon/pricing.html" class="btn btn-primary" id="btnTeaserPricing">
+              Pre-Order ($39) →
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -843,6 +876,58 @@
         tourBtnText.textContent = 'Stop Tour';
         runTourStep(0);
       }
+    });
+
+    // Bilingual toggle
+    document.querySelectorAll('[data-doc-lang]').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetLang = this.getAttribute('data-doc-lang');
+        const isId = (targetLang === 'id');
+        document.documentElement.lang = targetLang;
+
+        const navHome = document.getElementById('navHome');
+        const navDemo = document.getElementById('navDemo');
+        const navPricing = document.getElementById('navPricing');
+        const btnHeaderCta = document.getElementById('btnHeaderCta');
+        const badgeTeaser = document.getElementById('badgeTeaser');
+        const heroTitleSub = document.getElementById('heroTitleSub');
+        const heroDesc = document.getElementById('heroDesc');
+        const cardTitle = document.getElementById('cardTitle');
+        const cardDesc = document.getElementById('cardDesc');
+        const btnScrollDemo = document.getElementById('btnScrollDemo');
+        const btnTeaserPricing = document.getElementById('btnTeaserPricing');
+
+        if (navHome) navHome.textContent = isId ? 'Beranda' : 'Home';
+        if (navDemo) navDemo.textContent = isId ? 'Demo Langsung' : 'Live Demo & Teaser';
+        if (navPricing) navPricing.textContent = isId ? 'Toko Lemon Squeezy' : 'Lemon Squeezy Store';
+        if (btnHeaderCta) btnHeaderCta.textContent = isId ? 'Pre-Order ($39)' : 'Pre-Order ($39)';
+        if (badgeTeaser) badgeTeaser.textContent = isId
+          ? '🚀 Segera Rilis di Lemon Squeezy • Simulator Langsung di Peramban'
+          : '🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator';
+        if (heroTitleSub) heroTitleSub.textContent = isId
+          ? 'Pengatur Sistem Mendalam & Pelindung Baterai macOS Tercanggih'
+          : 'The Ultimate macOS Deep Customizer & Battery Shield';
+        if (heroDesc) heroDesc.textContent = isId
+          ? 'Coba simulator macOS langsung di bawah ini. Uji sakelar Zero-Drain Battery Shield, minimalkan animasi jendela, atau klik Tur Panduan Otomatis.'
+          : 'Try out the live macOS simulator below. Toggle the Zero-Drain Battery Shield, test instantaneous window transitions, or press Auto-Play Guided Tour to watch an automated walkthrough. Official launch coming soon via Lemon Squeezy ($39 one-time).';
+        if (cardTitle) cardTitle.textContent = isId
+          ? 'Teaser Peluncuran Resmi — Segera Hadir via Lemon Squeezy'
+          : 'Official Launch Teaser — Coming Soon via Lemon Squeezy';
+        if (cardDesc) cardDesc.textContent = isId
+          ? 'Dirancang & direkayasa oleh PT Reka Saujana Falah. Tanpa biaya langganan bulanan berulang, universal binary untuk Apple Silicon & Intel.'
+          : 'Designed and engineered by PT Reka Saujana Falah. Zero recurring monthly fees, universal binary for Apple Silicon M1-M4 & Intel, and bank-grade global checkout.';
+        if (btnScrollDemo) btnScrollDemo.textContent = isId ? '🎮 Coba Simulator Langsung ↓' : '🎮 Test Live Simulator ↓';
+        if (btnTeaserPricing) btnTeaserPricing.textContent = isId ? 'Pre-Order ($39) →' : 'Pre-Order ($39) →';
+
+        document.querySelectorAll('[data-doc-lang]').forEach(b => {
+          if (b.getAttribute('data-doc-lang') === targetLang) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+      });
     });
   </script>
 

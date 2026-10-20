@@ -3,15 +3,486 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuminaTweak Glass Edition — macOS Deep Customizer | PT Reka Saujana Falah</title>
+  <title>LuminaTweak Glass Edition — Live Interactive Demo &amp; Official Teaser | PT Reka Saujana Falah</title>
   
-  <meta name="title" content="LuminaTweak Glass Edition — macOS Deep Customizer | PT Reka Saujana Falah">
-  <meta name="description" content="LuminaTweak Glass Edition for macOS. Over 2,265+ native tweaks across 11 system layers, Zero-Drain Battery Shield, 1:1 Live Simulator. Distributed via Paddle.com.">
+  <meta name="title" content="LuminaTweak Glass Edition — Live Interactive Demo &amp; Official Teaser | PT Reka Saujana Falah">
+  <meta name="description" content="Experience LuminaTweak Glass Edition live in your browser. Interactive macOS simulator featuring Zero-Drain Battery Shield, 2,265+ native system tweaks, liquid frosted glass UI, and one-time lifetime licensing. Launching soon via Lemon Squeezy.">
   <meta name="author" content="PT Reka Saujana Falah">
   <meta name="robots" content="index, follow">
 
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    /* Demo & Teaser Custom Styling */
+    .teaser-section {
+      padding: 7rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .teaser-card {
+      max-width: 1040px;
+      margin: 0 auto 3rem;
+      background: rgba(14, 20, 33, 0.75);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(0, 240, 255, 0.28);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 240, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      align-items: center;
+      text-align: left;
+    }
+
+    .teaser-image-wrap {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #090d16;
+    }
+
+    .teaser-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .teaser-card:hover .teaser-img {
+      transform: scale(1.03);
+    }
+
+    .teaser-content {
+      padding: 2.5rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .demo-stage-wrapper {
+      max-width: 1200px;
+      margin: 0 auto 5rem;
+      padding: 0 1.25rem;
+      position: relative;
+    }
+
+    /* Apple Studio Display Mockup Frame */
+    .display-frame {
+      background: #11141c;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 28px;
+      box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(0, 240, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16 / 10;
+      min-height: 680px;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    /* macOS Top Menu Bar */
+    .macos-menubar {
+      height: 32px;
+      background: rgba(18, 24, 38, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      z-index: 40;
+    }
+
+    .menubar-left, .menubar-right {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+    }
+
+    .menubar-item {
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .menubar-item:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* macOS Desktop Wallpaper & Stage Area */
+    .macos-desktop {
+      flex: 1;
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, #172136 0%, #090d16 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .desktop-ambient-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(99, 102, 241, 0.05) 60%, transparent 80%);
+      filter: blur(60px);
+      pointer-events: none;
+      animation: pulseGlow 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.9) translate(-20px, -20px); }
+      100% { transform: scale(1.1) translate(20px, 20px); }
+    }
+
+    /* LuminaTweak Glass Window */
+    .lumina-window {
+      width: 92%;
+      max-width: 960px;
+      height: 540px;
+      background: rgba(14, 20, 33, 0.72);
+      backdrop-filter: blur(35px);
+      -webkit-backdrop-filter: blur(35px);
+      border: 1px solid rgba(0, 240, 255, 0.28);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(0, 240, 255, 0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      z-index: 10;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+    }
+
+    .lumina-window:hover {
+      box-shadow: 0 25px 75px rgba(0, 0, 0, 0.75), 0 0 50px rgba(0, 240, 255, 0.22);
+    }
+
+    .window-header {
+      height: 48px;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .traffic-lights {
+      display: flex;
+      gap: 8px;
+    }
+
+    .traffic-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .traffic-dot.close { background: #ff5f56; }
+    .traffic-dot.min { background: #ffbd2e; }
+    .traffic-dot.max { background: #27c93f; }
+
+    .window-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .window-badge {
+      background: rgba(0, 240, 255, 0.12);
+      border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--accent-cyan);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .window-body {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      overflow: hidden;
+    }
+
+    .app-sidebar {
+      background: rgba(10, 15, 26, 0.5);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .sidebar-section-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 0.5rem 0.65rem 0.25rem;
+      font-weight: 700;
+    }
+
+    .nav-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      transition: all 0.18s;
+    }
+
+    .nav-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-btn.active {
+      background: rgba(0, 240, 255, 0.14);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      font-weight: 600;
+    }
+
+    .app-main {
+      padding: 1.25rem 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+    }
+
+    .tweak-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      transition: all 0.2s;
+    }
+
+    .tweak-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(0, 240, 255, 0.2);
+    }
+
+    .tweak-card.highlighted {
+      border-color: var(--accent-cyan);
+      background: rgba(0, 240, 255, 0.08);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .tweak-info {
+      flex: 1;
+    }
+
+    .tweak-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #f8fafc;
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tweak-desc {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      line-height: 1.45;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 48px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.16);
+      border-radius: 34px;
+      cursor: pointer;
+      transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toggle-slider::before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .toggle-switch input:checked + .toggle-slider {
+      background-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+    }
+
+    .toggle-switch input:checked + .toggle-slider::before {
+      transform: translateX(22px);
+      background-color: #07090e;
+    }
+
+    .macos-dock {
+      position: absolute;
+      bottom: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 6px 10px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      z-index: 30;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s;
+    }
+
+    .dock-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .dock-icon:hover {
+      transform: scale(1.25) translateY(-8px);
+    }
+
+    .virtual-cursor {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+      z-index: 100;
+      display: none;
+      transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .virtual-cursor svg {
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+    }
+
+    .demo-spotlight-card {
+      position: absolute;
+      background: rgba(13, 18, 29, 0.95);
+      border: 1px solid var(--accent-cyan);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 240, 255, 0.3);
+      border-radius: 14px;
+      padding: 1rem 1.25rem;
+      max-width: 320px;
+      z-index: 90;
+      pointer-events: none;
+      display: none;
+      animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.85) translateY(10px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .demo-controller-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      background: rgba(16, 23, 38, 0.88);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      border-radius: 9999px;
+      padding: 0.75rem 1.75rem;
+      margin: 1.5rem auto 0;
+      max-width: 760px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .controller-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-play-tour {
+      background: linear-gradient(135deg, #00f0ff 0%, #3b82f6 100%);
+      color: #07090e;
+      font-weight: 700;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      transition: all 0.2s;
+    }
+
+    .btn-play-tour:hover {
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .timeline-progress {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 900px) {
+      .teaser-card { grid-template-columns: 1fr; }
+      .window-body { grid-template-columns: 1fr; }
+      .app-sidebar { display: none; }
+      .display-frame { aspect-ratio: auto; min-height: 640px; }
+      .demo-controller-bar { flex-direction: column; border-radius: 20px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,10 +499,12 @@
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="../index.html" class="nav-item-link" id="navHome">Home</a></li>
-          <li><a href="index.html" class="nav-item-link active" id="navProduct" style="color: var(--accent-cyan);">LuminaTweak Glass</a></li>
-          <li><a href="paddle/pricing.html" class="nav-item-link" id="navPaddle">Paddle Store</a></li>
-          <!-- Lemon Squeezy pending review - preserved for future reactivation -->
-          <li style="display: none;"><a href="lemon/pricing.html" class="nav-item-link" id="navLemon">Lemon Squeezy Store</a></li>
+          <li><a href="index.html" class="nav-item-link active" id="navDemo" style="color: var(--accent-cyan);">Live Demo &amp; Teaser</a></li>
+          <li><a href="lemon/pricing.html" class="nav-item-link" id="navPricing">Lemon Squeezy Store</a></li>
+          <!-- Paddle temporarily hidden for Lemon Squeezy onboarding -->
+          <li style="display: none;"><a href="paddle/pricing.html" class="nav-item-link" id="navPaddle">Paddle Store</a></li>
+          <li><a href="lemon/terms.html" class="nav-item-link" id="navTerms">Terms</a></li>
+          <li><a href="lemon/privacy.html" class="nav-item-link" id="navPrivacy">Privacy</a></li>
           <li><a href="../index.html#contact" class="nav-item-link" id="navContact">Contact</a></li>
         </ul>
 
@@ -40,142 +513,306 @@
             <button class="lang-btn" data-doc-lang="id" aria-label="Bahasa Indonesia">ID</button>
             <button class="lang-btn active" data-doc-lang="en" aria-label="English">EN</button>
           </div>
-          <a href="#channels" class="btn-header-cta" id="btnHeaderCta">Buy License</a>
+          <a href="lemon/pricing.html" class="btn-header-cta" id="btnHeaderCta">Pre-Order ($39)</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="legal-page-header" style="padding-bottom: 3.5rem;">
+  <!-- Teaser Hero Section -->
+  <section class="teaser-section">
     <div class="container">
       <div class="legal-breadcrumb">
-        <a href="../index.html" id="breadcrumbHome">Home</a>
+        <a href="../index.html" id="bcHome">Home</a>
         <span>/</span>
-        <span id="breadcrumbCurrent">LuminaTweak Glass</span>
+        <span id="bcCurrent">LuminaTweak Glass &amp; Live Demo</span>
       </div>
 
-      <div class="badge-pill-header" style="margin-bottom: 0.85rem;">
+      <div class="badge-pill-header" style="margin-bottom: 1rem;">
         <span class="live-pulse-dot"></span>
-        <span id="badgeCommercial">Commercial Software Product by PT Reka Saujana Falah</span>
+        <span id="badgeTeaser">🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator</span>
       </div>
 
       <h1 class="legal-hero-title">
         <span class="text-gradient">LuminaTweak Glass Edition</span><br>
-        <span id="heroTitleSub" style="font-size: 0.72em; font-weight: 500; color: var(--text-secondary);">The Ultimate macOS Deep Customizer &amp; Battery Shield</span>
+        <span id="heroTitleSub" style="font-size: 0.68em; font-weight: 500; color: var(--text-secondary);">The Ultimate macOS Deep Customizer &amp; Battery Shield</span>
       </h1>
 
-      <p class="section-desc" style="max-width: 780px; margin: 1rem auto 2.25rem;" id="heroDesc">
-        Designed and engineered by PT Reka Saujana Falah. Take total command of macOS with 2,265+ native tweaks across 11 system layers, liquid frosted glass UI, 1:1 Live Interactive Simulator, and perpetual one-time licensing. Distributed worldwide through verified Merchant of Record partners.
+      <p class="section-desc" style="max-width: 760px; margin: 1rem auto 2.5rem;" id="heroDesc">
+        Designed &amp; engineered by PT Reka Saujana Falah. Take total command of macOS with 2,265+ native tweaks across 11 system layers, liquid frosted glass UI, 1:1 Live Interactive Simulator, and perpetual one-time licensing ($39). Zero monthly subscriptions.
       </p>
 
-      <!-- Channel Selection Cards -->
-      <div id="channels" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 600px; margin: 0 auto 2.5rem; text-align: left;">
-        
-        <!-- Paddle Box -->
-        <div class="glass-panel" style="padding: 1.75rem; border: 1px solid rgba(0, 240, 255, 0.35); position: relative;">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-            <img src="../assets/images/paddle-logo.svg" alt="Paddle" style="height: 26px; width: auto;">
-            <span class="product-pill paddle-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR</span>
+      <!-- Launch Teaser Showcase Card -->
+      <div class="teaser-card">
+        <div class="teaser-image-wrap">
+          <img src="../assets/images/luminatweak-coming-soon.jpg" alt="LuminaTweak Glass Edition Official Coming Soon Poster" class="teaser-img">
+        </div>
+        <div class="teaser-content">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="../assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" style="height: 24px; width: auto;">
+            <span class="product-pill lemon-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR Partner</span>
           </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">Paddle.com Store</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;" id="paddleStoreDesc">
-            Global checkout with instant delivery, credit cards, Apple Pay, PayPal, and full tax/VAT compliance.
+
+          <h2 style="font-size: 1.45rem; font-weight: 700; line-height: 1.3;" id="cardTitle">
+            Official Premiere Teaser — Launching Soon via Lemon Squeezy
+          </h2>
+
+          <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;" id="cardDesc">
+            We built LuminaTweak Glass for Mac power users, developers, and designers who demand instant responsiveness without subscription fatigue. Try our fully interactive live simulator below before public rollout.
           </p>
-          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-            <a href="paddle/pricing.html" class="btn btn-primary" style="padding: 0.65rem 1rem; font-size: 0.9rem; justify-content: center;" id="btnPaddlePricing">
-              Explore Paddle Pricing ($39 / $59 / $99) →
+
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem; color: #94a3b8;">
+            <div>⚡ <strong>2,265+ Native macOS Tweaks:</strong> 11 system categories, 100% SIP-safe.</div>
+            <div>🔋 <strong>Zero-Drain Battery Shield:</strong> 0% overnight loss inside your backpack.</div>
+            <div>💎 <strong>$39 One-Time Purchase:</strong> Perpetual license, owned forever.</div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+            <a href="#simulator" class="btn btn-secondary" style="border-color: rgba(0, 240, 255, 0.4); color: var(--accent-cyan);" id="btnScrollDemo">
+              🎮 Test Live Simulator ↓
             </a>
-            <div style="display: flex; gap: 0.75rem; font-size: 0.8rem; justify-content: center; color: var(--text-muted);">
-              <a href="paddle/terms.html" style="color: var(--text-secondary);">Terms</a> •
-              <a href="paddle/privacy.html" style="color: var(--text-secondary);">Privacy</a> •
-              <a href="paddle/refund.html" style="color: var(--text-secondary);">Refunds</a>
-            </div>
+            <a href="lemon/pricing.html" class="btn btn-primary" id="btnTeaserPricing">
+              Lemon Squeezy Store ($39) →
+            </a>
           </div>
         </div>
-
-        <!-- Lemon Squeezy Box (pending review - preserved for future reactivation) -->
-        <div class="glass-panel" style="padding: 1.75rem; border: 1px solid rgba(255, 193, 7, 0.35); position: relative; display: none;" id="lemonStoreCard">
-          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-            <img src="../assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" style="height: 26px; width: auto;">
-            <span class="product-pill lemon-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR</span>
-          </div>
-          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem;">Lemon Squeezy Store</h3>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;" id="lemonStoreDesc">
-            Seamless multi-currency checkout, instant software license dispatch, and customer portal.
-          </p>
-          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
-            <a href="lemon/pricing.html" class="btn btn-primary" style="padding: 0.65rem 1rem; font-size: 0.9rem; justify-content: center; background: linear-gradient(135deg, #f59e0b, #d97706); border-color: #f59e0b;" id="btnLemonPricing">
-              Explore Lemon Squeezy Pricing →
-            </a>
-            <div style="display: flex; gap: 0.75rem; font-size: 0.8rem; justify-content: center; color: var(--text-muted);">
-              <a href="lemon/terms.html" style="color: var(--text-secondary);">Terms</a> •
-              <a href="lemon/privacy.html" style="color: var(--text-secondary);">Privacy</a> •
-              <a href="lemon/refund.html" style="color: var(--text-secondary);">Refunds</a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="legal-meta-row">
-        <span>⚡ Apple Silicon M1-M4 &amp; Intel</span>
-        <span>•</span>
-        <span>🔋 Zero-Drain Battery Shield</span>
-        <span>•</span>
-        <span>🛡️ 30-Day Money-Back Guarantee</span>
-        <span>•</span>
-        <span>🌍 12 UI Languages &amp; RTL</span>
-      </div>
     </div>
   </section>
 
-  <!-- Main Product Highlights & Features -->
-  <main class="container" style="max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.25rem;">
+  <!-- Interactive Live Simulator Stage -->
+  <main class="demo-stage-wrapper" id="simulator">
 
-    <!-- Document Language Switcher Bar -->
-    <div class="doc-lang-selector-bar" style="margin-bottom: 3rem;">
-      <div class="doc-lang-label">
-        <span>🌐</span>
-        <span id="docLangPrompt">Select Display Language / Pilih Bahasa:</span>
-      </div>
-      <div class="doc-lang-buttons">
-        <button class="doc-lang-btn" data-doc-lang="id">🇮🇩 Bahasa Indonesia</button>
-        <button class="doc-lang-btn active" data-doc-lang="en">🇬🇧 English</button>
-      </div>
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h2 style="font-size: 1.85rem; font-weight: 700;" id="simHeading">1:1 In-Browser macOS Simulator</h2>
+      <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 620px; margin: 0.5rem auto 0;" id="simSub">
+        Toggle real settings below or click <strong>Auto-Play Guided Tour</strong> to see how LuminaTweak Glass optimizes your MacBook experience in real time.
+      </p>
     </div>
 
-    <!-- Features Highlights Grid -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+    <!-- Apple Studio Display Frame -->
+    <div class="display-frame" id="simulatorFrame">
       
-      <div class="glass-panel" style="padding: 1.75rem;">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">🖥️</div>
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;" id="f1Title">1:1 Live Interactive Simulator</h3>
-        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;" id="f1Desc">
-          Preview real-time Dock animations, Mission Control speeds, window drop shadow dimensions, and hidden file toggles on screen before applying changes to your macOS defaults.
-        </p>
+      <!-- macOS Top Menu Bar -->
+      <div class="macos-menubar">
+        <div class="menubar-left">
+          <span style="font-size: 1.1rem; cursor: pointer;"></span>
+          <span style="font-weight: 700; color: #fff;">LuminaTweak</span>
+          <span class="menubar-item">File</span>
+          <span class="menubar-item">Edit</span>
+          <span class="menubar-item">View</span>
+          <span class="menubar-item">Window</span>
+          <span class="menubar-item">Help</span>
+        </div>
+        <div class="menubar-right font-mono">
+          <span id="menuBattery" style="display: flex; align-items: center; gap: 4px;">
+            <span style="color: #10b981;">🔋</span> 100%
+          </span>
+          <span>Wi-Fi</span>
+          <span>Tue 9:41 AM</span>
+        </div>
       </div>
 
-      <div class="glass-panel" style="padding: 1.75rem;">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">🔋</div>
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;" id="f2Title">Zero-Drain Battery Shield</h3>
-        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;" id="f2Desc">
-          Eliminate overnight battery leakage with Deep Sleep Mode and silence aggressive background wakeups with Lid-Open AutoBoot Killer. Optimized for MacBook Pro &amp; MacBook Air.
-        </p>
-      </div>
+      <!-- Desktop Canvas Area -->
+      <div class="macos-desktop" id="desktopArea">
+        <div class="desktop-ambient-glow"></div>
 
-      <div class="glass-panel" style="padding: 1.75rem;">
-        <div style="font-size: 2rem; margin-bottom: 1rem;">⚡</div>
-        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;" id="f3Title">2,265+ Tweaks across 11 Layers</h3>
-        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;" id="f3Desc">
-          Full control across Dock, Finder, Safari, Windowing, Screenshots, Keyboard, Hardware, Terminal, Battery, and Security — all 100% SIP-safe with instant 1-click restore.
-        </p>
+        <!-- Virtual Cursor for Tour -->
+        <div class="virtual-cursor" id="virtualCursor">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M4 3L11 20L14 13L21 10L4 3Z" fill="#00f0ff" stroke="#000" stroke-width="1.5"/>
+          </svg>
+        </div>
+
+        <!-- Spotlight Tooltip Card -->
+        <div class="demo-spotlight-card" id="spotlightCard">
+          <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.25rem;" id="spotlightStep">FEATURE HIGHLIGHT</div>
+          <div style="font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.35rem;" id="spotlightTitle">Zero-Drain Battery Shield</div>
+          <div style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4;" id="spotlightDesc">Prevents lid-open auto-wakeups and aggressive background maintenance when sleeping. Preserves 100% charge overnight.</div>
+        </div>
+
+        <!-- LuminaTweak Glass Main Window -->
+        <div class="lumina-window" id="luminaWindow">
+          
+          <!-- Window Header -->
+          <div class="window-header">
+            <div class="traffic-lights">
+              <span class="traffic-dot close"></span>
+              <span class="traffic-dot min"></span>
+              <span class="traffic-dot max"></span>
+            </div>
+            <div class="window-title">
+              <span>LuminaTweak Glass</span>
+              <span class="window-badge">2,265+ Tweaks Unlocked</span>
+            </div>
+            <div class="font-mono" style="font-size: 0.75rem; color: #10b981; display: flex; align-items: center; gap: 5px;">
+              <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+              Pro (3 Macs)
+            </div>
+          </div>
+
+          <!-- Window Body -->
+          <div class="window-body">
+            
+            <!-- Sidebar Navigation -->
+            <div class="app-sidebar">
+              <div class="sidebar-section-title">System Tuning</div>
+              <button class="nav-btn active" id="tabBattery">
+                <span>🔋</span> Battery &amp; Power
+              </button>
+              <button class="nav-btn" id="tabAnim">
+                <span>⚡</span> Speed &amp; Window Snapping
+              </button>
+              <button class="nav-btn" id="tabDock">
+                <span>🖥️</span> Dock &amp; Mission Control
+              </button>
+              <button class="nav-btn" id="tabDev">
+                <span>🛠️</span> Developer &amp; Finder
+              </button>
+
+              <div class="sidebar-section-title" style="margin-top: 1rem;">Licensing</div>
+              <button class="nav-btn" id="tabLicense" style="color: #fbbf24;">
+                <span>🍋</span> Lemon Squeezy Store
+              </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="app-main" id="appMainPanel">
+
+              <!-- Battery Card 1 -->
+              <div class="tweak-card" id="cardBatteryShield">
+                <div class="tweak-info">
+                  <div class="tweak-name">
+                    <span>Zero-Drain Battery Shield</span>
+                    <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 6px; border-radius: 4px;">PATENTED LOGIC</span>
+                  </div>
+                  <div class="tweak-desc">Suppresses aggressive macOS PowerNap &amp; maintenance wakeups. Ensures 0% battery loss overnight while your MacBook lid is closed in your backpack.</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="toggleBatteryShield" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Battery Card 2 -->
+              <div class="tweak-card" id="cardAutoBoot">
+                <div class="tweak-info">
+                  <div class="tweak-name">Lid-Wake AutoBoot Killer</div>
+                  <div class="tweak-desc">Prevents MacBook from booting up automatically every time you open the display lid or plug in the MagSafe cable. Clean, intentional power on.</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="toggleAutoBoot" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Animation Card 1 -->
+              <div class="tweak-card" id="cardInstantAnim">
+                <div class="tweak-info">
+                  <div class="tweak-name">Zero-Latency Window Snapping</div>
+                  <div class="tweak-desc">Removes the default 250ms macOS window open/close animation delay for an instantaneous response on Apple Silicon M1-M4.</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="toggleInstantAnim" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- Dock Card 1 -->
+              <div class="tweak-card" id="cardDockDelay">
+                <div class="tweak-info">
+                  <div class="tweak-name">Instant Dock Auto-Hide (0ms Delay)</div>
+                  <div class="tweak-desc">Eliminates hover delay when mouse approaches the screen edge. The Dock appears immediately without sluggish waiting.</div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="toggleDockDelay" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+
+              <!-- System Status Summary -->
+              <div style="background: rgba(0, 240, 255, 0.05); border: 1px dashed rgba(0, 240, 255, 0.25); border-radius: 12px; padding: 0.85rem 1.15rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem;">
+                <div>
+                  <span style="color: var(--accent-cyan); font-weight: 600;">⚡ Active Tweaks:</span> <span id="activeCount">18</span> / 2,265
+                </div>
+                <div>
+                  <span style="color: #94a3b8;">RAM Usage:</span> <span class="font-mono" style="color: #fff;">18 MB</span>
+                </div>
+                <div>
+                  <span style="color: #94a3b8;">CPU Overhead:</span> <span class="font-mono" style="color: #10b981;">0.02%</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Simulated macOS Dock -->
+        <div class="macos-dock" id="simulatedDock">
+          <div class="dock-icon" style="background: linear-gradient(135deg, #00f0ff, #0070f3);" title="Finder">📁</div>
+          <div class="dock-icon" style="background: linear-gradient(135deg, #10b981, #059669);" title="Terminal">⌨️</div>
+          <div class="dock-icon" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); border: 2px solid var(--accent-cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);" title="LuminaTweak Glass">✨</div>
+          <div class="dock-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);" title="System Settings">⚙️</div>
+          <div class="dock-icon" style="background: linear-gradient(135deg, #ec4899, #be185d);" title="Music">🎵</div>
+        </div>
+
       </div>
 
     </div>
 
-    <!-- Technical Specifications -->
-    <div class="glass-panel" style="padding: 2.25rem; margin-bottom: 3rem;">
+    <!-- Floating Tour Controller Bar -->
+    <div class="demo-controller-bar">
+      <div class="controller-left">
+        <button class="btn-play-tour" id="btnTour">
+          <span id="tourIcon">▶️</span>
+          <span id="tourBtnText">Auto-Play Guided Tour</span>
+        </button>
+        <span class="timeline-progress" id="tourProgress">Status: Interactive Sandbox</span>
+      </div>
+
+      <div style="display: flex; gap: 0.85rem; align-items: center;">
+        <a href="lemon/pricing.html" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.85rem; background: linear-gradient(135deg, #f59e0b, #d97706); border-color: #f59e0b;">
+          Pre-Order on Lemon Squeezy ($39) →
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Technical Specifications & MoR Section -->
+  <section class="container" style="max-width: 1100px; margin: 0 auto 5rem; padding: 0 1.25rem;">
+    
+    <!-- MoR Compliance Box -->
+    <div class="glass-panel" style="padding: 2rem; border: 1px solid rgba(255, 193, 7, 0.35); border-radius: 20px; margin-bottom: 3rem;">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+        <img src="../assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" style="height: 32px; width: auto;">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin: 0;" id="morTitle">
+            Official Global Merchant of Record (MoR) Partnership
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;" id="morSub">
+            PT Reka Saujana Falah distributes LuminaTweak Glass Edition globally via Lemon Squeezy.
+          </p>
+        </div>
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.65; color: var(--text-body); margin: 0 0 1.25rem;" id="morDesc">
+        Transactions are processed securely by Lemon Squeezy as our authorized Merchant of Record. Lemon Squeezy handles international sales tax, VAT/GST compliance, bank-grade PCI-DSS encryption, and guarantees our 30-day money-back policy worldwide.
+      </p>
+      <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem;">
+        <a href="lemon/pricing.html" style="color: #fbbf24; font-weight: 600; text-decoration: underline;" id="linkLemonPricing">Explore Lemon Squeezy Pricing ($39 / $59 / $99) →</a>
+        <a href="lemon/terms.html" style="color: var(--accent-cyan); text-decoration: underline;" id="linkTerms">Terms of Service →</a>
+        <a href="lemon/privacy.html" style="color: var(--accent-cyan); text-decoration: underline;" id="linkPrivacy">Privacy Policy →</a>
+        <a href="lemon/refund.html" style="color: var(--accent-cyan); text-decoration: underline;" id="linkRefund">Refund Policy →</a>
+        <!-- Paddle links preserved for future reactivation -->
+        <a href="paddle/pricing.html" style="display: none; color: #38bdf8;" id="linkPaddlePricing">Paddle Store (Internal)</a>
+      </div>
+    </div>
+
+    <!-- Technical Specs -->
+    <div class="glass-panel" style="padding: 2.25rem; border-radius: 20px;">
       <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem;">
         <span>💻</span>
         <span id="specTitle">Technical Specifications &amp; Compatibility</span>
@@ -194,18 +831,13 @@
           <div style="font-weight: 600;" id="specLicenseVal">Perpetual Lifetime License (No Subscription)</div>
         </div>
         <div>
-          <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;" id="specChannelsLbl">Merchants of Record</div>
-          <div style="font-weight: 600;" id="specChannelsVal">Paddle.com</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;" id="specMoRLbl">Merchant of Record</div>
+          <div style="font-weight: 600;" id="specMoRVal">Lemon Squeezy</div>
         </div>
       </div>
     </div>
 
-    <!-- Quick Back to Studio Link -->
-    <div style="text-align: center; padding-top: 1rem;">
-      <a href="../index.html" class="btn-legal-back" id="backToHome">← Return to PT Reka Saujana Falah Studio Homepage</a>
-    </div>
-
-  </main>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -214,8 +846,8 @@
         <a href="../index.html" class="footer-brand-link">
           <img src="../assets/images/logo.svg" alt="PT Reka Saujana Falah Logo" class="footer-logo-img">
         </a>
-        <p class="footer-desc" id="footerBrandDesc">
-          PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.
+        <p class="footer-desc" id="footerDesc">
+          PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Official commercial software developer.
         </p>
       </div>
 
@@ -223,31 +855,19 @@
         <h4 class="footer-col-title" id="footerNavTitle">Product Links</h4>
         <ul class="footer-links-list">
           <li><a href="../index.html">Studio Home</a></li>
-          <li><a href="index.html" style="color: var(--accent-cyan);">LuminaTweak Overview</a></li>
-          <li><a href="paddle/pricing.html">Paddle Store</a></li>
-          <!-- Lemon Squeezy pending review - preserved for future reactivation -->
-          <li style="display: none;"><a href="lemon/pricing.html">Lemon Squeezy Store</a></li>
+          <li><a href="index.html" style="color: var(--accent-cyan);">Live Demo &amp; Teaser</a></li>
+          <li><a href="lemon/pricing.html">Lemon Squeezy Store</a></li>
+          <li><a href="../enterprise-pricing.html">Enterprise Pricing Sheet</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-col-title" id="footerPaddleTitle">Paddle Compliance</h4>
+        <h4 class="footer-col-title" id="footerLegalTitle">Lemon Squeezy Compliance</h4>
         <ul class="footer-links-list">
-          <li><a href="paddle/pricing.html">Paddle Pricing ($39/$59/$99)</a></li>
-          <li><a href="paddle/terms.html">Terms of Service (Paddle)</a></li>
-          <li><a href="paddle/privacy.html">Privacy Policy (Paddle)</a></li>
-          <li><a href="paddle/refund.html">Refund Policy (Paddle)</a></li>
-        </ul>
-      </div>
-
-      <!-- Lemon Squeezy pending review - preserved for future reactivation -->
-      <div class="footer-col" id="footerLemonCol" style="display: none;">
-        <h4 class="footer-col-title" id="footerLemonTitle">Lemon Squeezy Compliance</h4>
-        <ul class="footer-links-list">
-          <li><a href="lemon/pricing.html">Lemon Squeezy Pricing</a></li>
-          <li><a href="lemon/terms.html">Terms of Service (Lemon)</a></li>
-          <li><a href="lemon/privacy.html">Privacy Policy (Lemon)</a></li>
-          <li><a href="lemon/refund.html">Refund Policy (Lemon)</a></li>
+          <li><a href="lemon/pricing.html">Pricing &amp; Licensing ($39 / $59 / $99)</a></li>
+          <li><a href="lemon/terms.html">Terms of Service</a></li>
+          <li><a href="lemon/privacy.html">Privacy Policy</a></li>
+          <li><a href="lemon/refund.html">Refund Policy (30-Day Guarantee)</a></li>
         </ul>
       </div>
     </div>
@@ -257,11 +877,161 @@
     </div>
   </footer>
 
-  <!-- Script for Language Toggle and Dynamic UI Updates -->
+  <!-- Interactive Simulator & Tour Script with Language Toggle -->
   <script>
     (function() {
       let currentLang = 'en';
 
+      const btnTour = document.getElementById('btnTour');
+      const tourIcon = document.getElementById('tourIcon');
+      const tourBtnText = document.getElementById('tourBtnText');
+      const tourProgress = document.getElementById('tourProgress');
+      const virtualCursor = document.getElementById('virtualCursor');
+      const spotlightCard = document.getElementById('spotlightCard');
+      const spotlightStep = document.getElementById('spotlightStep');
+      const spotlightTitle = document.getElementById('spotlightTitle');
+      const spotlightDesc = document.getElementById('spotlightDesc');
+      const simulatedDock = document.getElementById('simulatedDock');
+      const activeCount = document.getElementById('activeCount');
+
+      let isTourRunning = false;
+      let tourTimeouts = [];
+
+      // Toggle counters
+      const toggles = document.querySelectorAll('.toggle-switch input');
+      toggles.forEach(t => {
+        t.addEventListener('change', () => {
+          let count = Array.from(toggles).filter(x => x.checked).length;
+          activeCount.textContent = 14 + count;
+        });
+      });
+
+      // Tour Step Definitions
+      const tourSteps = [
+        {
+          elementId: 'cardBatteryShield',
+          stepText: 'STEP 1 OF 4 • HARDWARE DEFENSE',
+          title: 'Zero-Drain Battery Shield',
+          desc: 'Stops MacBook battery drain inside your backpack. Preserves 100% battery overnight by silencing unneeded maintenance cycles.',
+          action: () => {
+            const t = document.getElementById('toggleBatteryShield');
+            t.checked = !t.checked;
+            t.dispatchEvent(new Event('change'));
+          }
+        },
+        {
+          elementId: 'cardAutoBoot',
+          stepText: 'STEP 2 OF 4 • POWER MANAGEMENT',
+          title: 'Lid-Wake AutoBoot Killer',
+          desc: 'Prevents automatic power-on every time the screen is opened or charger plugged in. Clean, controlled startup.',
+          action: () => {
+            const t = document.getElementById('toggleAutoBoot');
+            t.checked = !t.checked;
+            t.dispatchEvent(new Event('change'));
+          }
+        },
+        {
+          elementId: 'cardInstantAnim',
+          stepText: 'STEP 3 OF 4 • LIGHTNING RESPONSE',
+          title: 'Instant Window Snapping',
+          desc: 'Removes the default 250ms macOS animation barrier. Window operations snap open in 0ms without micro-stutters.',
+          action: () => {
+            const t = document.getElementById('toggleInstantAnim');
+            t.checked = !t.checked;
+            t.dispatchEvent(new Event('change'));
+          }
+        },
+        {
+          elementId: 'cardDockDelay',
+          stepText: 'STEP 4 OF 4 • DESKTOP SPEED',
+          title: 'Instant Dock Appearance',
+          desc: 'Eliminates the hover delay on the macOS Dock so shortcuts and app switchers reveal instantly.',
+          action: () => {
+            const t = document.getElementById('toggleDockDelay');
+            t.checked = !t.checked;
+            t.dispatchEvent(new Event('change'));
+            simulatedDock.style.transform = 'translateY(-10px)';
+            setTimeout(() => simulatedDock.style.transform = 'translateY(0)', 800);
+          }
+        }
+      ];
+
+      function stopTour() {
+        isTourRunning = false;
+        tourTimeouts.forEach(clearTimeout);
+        tourTimeouts = [];
+        virtualCursor.style.display = 'none';
+        spotlightCard.style.display = 'none';
+        tourIcon.textContent = '▶️';
+        tourBtnText.textContent = (currentLang === 'id') ? 'Putar Tur Panduan Otomatis' : 'Auto-Play Guided Tour';
+        tourProgress.textContent = (currentLang === 'id') ? 'Status: Kotak Pasir Interaktif' : 'Status: Interactive Sandbox';
+        document.querySelectorAll('.tweak-card').forEach(c => c.classList.remove('highlighted'));
+      }
+
+      function runTourStep(index) {
+        if (!isTourRunning || index >= tourSteps.length) {
+          tourProgress.textContent = (currentLang === 'id') ? 'Tur Selesai! 🎉' : 'Tour Completed! 🎉';
+          setTimeout(stopTour, 3000);
+          return;
+        }
+
+        const step = tourSteps[index];
+        const targetEl = document.getElementById(step.elementId);
+        const desktopArea = document.getElementById('desktopArea');
+        
+        document.querySelectorAll('.tweak-card').forEach(c => c.classList.remove('highlighted'));
+        targetEl.classList.add('highlighted');
+
+        const deskRect = desktopArea.getBoundingClientRect();
+        const targetRect = targetEl.getBoundingClientRect();
+
+        const targetX = targetRect.right - deskRect.left - 50;
+        const targetY = targetRect.top - deskRect.top + targetRect.height / 2;
+
+        virtualCursor.style.display = 'block';
+        virtualCursor.style.transform = `translate(${targetX}px, ${targetY}px)`;
+
+        spotlightStep.textContent = step.stepText;
+        spotlightTitle.textContent = step.title;
+        spotlightDesc.textContent = step.desc;
+        spotlightCard.style.display = 'block';
+        spotlightCard.style.left = `${Math.max(20, targetX - 320)}px`;
+        spotlightCard.style.top = `${Math.max(20, targetY - 40)}px`;
+
+        tourProgress.textContent = (currentLang === 'id')
+          ? `Memutar: Langkah ${index + 1} dari ${tourSteps.length}`
+          : `Playing: Step ${index + 1} of ${tourSteps.length}`;
+
+        const clickTimer = setTimeout(() => {
+          if (!isTourRunning) return;
+          step.action();
+          virtualCursor.style.transform = `translate(${targetX}px, ${targetY}px) scale(0.85)`;
+          setTimeout(() => {
+            virtualCursor.style.transform = `translate(${targetX}px, ${targetY}px) scale(1)`;
+          }, 150);
+
+          const nextTimer = setTimeout(() => {
+            runTourStep(index + 1);
+          }, 2200);
+          tourTimeouts.push(nextTimer);
+
+        }, 800);
+
+        tourTimeouts.push(clickTimer);
+      }
+
+      btnTour.addEventListener('click', () => {
+        if (isTourRunning) {
+          stopTour();
+        } else {
+          isTourRunning = true;
+          tourIcon.textContent = '⏹️';
+          tourBtnText.textContent = (currentLang === 'id') ? 'Hentikan Tur' : 'Stop Tour';
+          runTourStep(0);
+        }
+      });
+
+      // Bilingual toggle
       document.querySelectorAll('[data-doc-lang]').forEach(button => {
         button.addEventListener('click', function(e) {
           e.preventDefault();
@@ -275,90 +1045,82 @@
       function setLanguage(lang) {
         currentLang = lang;
         const isId = (lang === 'id');
-
         document.documentElement.lang = isId ? 'id' : 'en';
 
-        // Nav
         const navHome = document.getElementById('navHome');
-        const navProduct = document.getElementById('navProduct');
-        const navPaddle = document.getElementById('navPaddle');
-        const navLemon = document.getElementById('navLemon');
+        const navDemo = document.getElementById('navDemo');
+        const navPricing = document.getElementById('navPricing');
+        const navTerms = document.getElementById('navTerms');
+        const navPrivacy = document.getElementById('navPrivacy');
         const navContact = document.getElementById('navContact');
         const btnHeaderCta = document.getElementById('btnHeaderCta');
-        const breadcrumbHome = document.getElementById('breadcrumbHome');
-        const breadcrumbCurrent = document.getElementById('breadcrumbCurrent');
-        const badgeCommercial = document.getElementById('badgeCommercial');
+        const bcHome = document.getElementById('bcHome');
+        const bcCurrent = document.getElementById('bcCurrent');
+        const badgeTeaser = document.getElementById('badgeTeaser');
         const heroTitleSub = document.getElementById('heroTitleSub');
         const heroDesc = document.getElementById('heroDesc');
-        const paddleStoreDesc = document.getElementById('paddleStoreDesc');
-        const lemonStoreDesc = document.getElementById('lemonStoreDesc');
-        const btnPaddlePricing = document.getElementById('btnPaddlePricing');
-        const btnLemonPricing = document.getElementById('btnLemonPricing');
-        const docLangPrompt = document.getElementById('docLangPrompt');
-
-        const f1Title = document.getElementById('f1Title');
-        const f1Desc = document.getElementById('f1Desc');
-        const f2Title = document.getElementById('f2Title');
-        const f2Desc = document.getElementById('f2Desc');
-        const f3Title = document.getElementById('f3Title');
-        const f3Desc = document.getElementById('f3Desc');
-
-        const specTitle = document.getElementById('specTitle');
-        const specArchLbl = document.getElementById('specArchLbl');
-        const specOsLbl = document.getElementById('specOsLbl');
-        const specLicenseLbl = document.getElementById('specLicenseLbl');
-        const specLicenseVal = document.getElementById('specLicenseVal');
-        const specChannelsLbl = document.getElementById('specChannelsLbl');
-        const specChannelsVal = document.getElementById('specChannelsVal');
-
-        const backToHome = document.getElementById('backToHome');
-        const footerBrandDesc = document.getElementById('footerBrandDesc');
-        const footerNavTitle = document.getElementById('footerNavTitle');
-        const footerPaddleTitle = document.getElementById('footerPaddleTitle');
-        const footerLemonTitle = document.getElementById('footerLemonTitle');
+        const cardTitle = document.getElementById('cardTitle');
+        const cardDesc = document.getElementById('cardDesc');
+        const btnScrollDemo = document.getElementById('btnScrollDemo');
+        const btnTeaserPricing = document.getElementById('btnTeaserPricing');
+        const simHeading = document.getElementById('simHeading');
+        const simSub = document.getElementById('simSub');
+        const morTitle = document.getElementById('morTitle');
+        const morSub = document.getElementById('morSub');
+        const morDesc = document.getElementById('morDesc');
+        const footerDesc = document.getElementById('footerDesc');
         const footerCopy = document.getElementById('footerCopy');
 
         if (navHome) navHome.textContent = isId ? 'Beranda' : 'Home';
-        if (navProduct) navProduct.textContent = isId ? 'LuminaTweak Glass' : 'LuminaTweak Glass';
-        if (navPaddle) navPaddle.textContent = isId ? 'Toko Paddle' : 'Paddle Store';
-        if (navLemon) navLemon.textContent = isId ? 'Toko Lemon Squeezy' : 'Lemon Squeezy Store';
+        if (navDemo) navDemo.textContent = isId ? 'Demo Langsung & Teaser' : 'Live Demo & Teaser';
+        if (navPricing) navPricing.textContent = isId ? 'Toko Lemon Squeezy' : 'Lemon Squeezy Store';
+        if (navTerms) navTerms.textContent = isId ? 'Ketentuan' : 'Terms';
+        if (navPrivacy) navPrivacy.textContent = isId ? 'Privasi' : 'Privacy';
         if (navContact) navContact.textContent = isId ? 'Kontak' : 'Contact';
-        if (btnHeaderCta) btnHeaderCta.textContent = isId ? 'Beli Lisensi' : 'Buy License';
-        if (breadcrumbHome) breadcrumbHome.textContent = isId ? 'Beranda' : 'Home';
-        if (breadcrumbCurrent) breadcrumbCurrent.textContent = isId ? 'LuminaTweak Glass' : 'LuminaTweak Glass';
+        if (btnHeaderCta) btnHeaderCta.textContent = isId ? 'Pre-Order ($39)' : 'Pre-Order ($39)';
+        if (bcHome) bcHome.textContent = isId ? 'Beranda' : 'Home';
+        if (bcCurrent) bcCurrent.textContent = isId ? 'LuminaTweak Glass & Demo Langsung' : 'LuminaTweak Glass & Live Demo';
 
-        if (badgeCommercial) badgeCommercial.textContent = isId ? 'Produk Perangkat Lunak Komersial oleh PT Reka Saujana Falah' : 'Commercial Software Product by PT Reka Saujana Falah';
-        if (heroTitleSub) heroTitleSub.textContent = isId ? 'Pengatur Sistem Mendalam & Pelindung Baterai macOS Tercanggih' : 'The Ultimate macOS Deep Customizer & Battery Shield';
-        if (heroDesc) heroDesc.textContent = isId ? 'Dirancang dan direkayasa oleh PT Reka Saujana Falah. Ambil kendali penuh atas sistem macOS dengan 2.265+ tweak bawaan di 11 kategori sistem, UI liquid frosted glassmorphism, simulator interaktif 1:1, dan lisensi jual putus resmi via mitra Merchant of Record terpercaya.' : 'Designed and engineered by PT Reka Saujana Falah. Take total command of macOS with 2,265+ native tweaks across 11 system layers, liquid frosted glass UI, 1:1 Live Interactive Simulator, and perpetual one-time licensing. Distributed worldwide through verified Merchant of Record partners.';
-        if (paddleStoreDesc) paddleStoreDesc.textContent = isId ? 'Checkout global instan dengan kartu kredit, Apple Pay, PayPal, dan kepatuhan pajak/PPN internasional penuh.' : 'Global checkout with instant delivery, credit cards, Apple Pay, PayPal, and full tax/VAT compliance.';
-        if (lemonStoreDesc) lemonStoreDesc.textContent = isId ? 'Checkout mulus dengan dukungan multi-mata uang, pengiriman lisensi otomatis, dan portal pembeli terintegrasi.' : 'Seamless multi-currency checkout, instant software license dispatch, and customer portal.';
-        if (btnPaddlePricing) btnPaddlePricing.textContent = isId ? 'Buka Harga Paddle ($39 / $59 / $99) →' : 'Explore Paddle Pricing ($39 / $59 / $99) →';
-        if (btnLemonPricing) btnLemonPricing.textContent = isId ? 'Buka Harga Lemon Squeezy →' : 'Explore Lemon Squeezy Pricing →';
-        if (docLangPrompt) docLangPrompt.textContent = isId ? 'Pilih Bahasa Tampilan / Select Display Language:' : 'Select Display Language / Pilih Bahasa:';
+        if (badgeTeaser) badgeTeaser.textContent = isId
+          ? '🚀 Segera Rilis di Lemon Squeezy • Simulator Langsung di Peramban'
+          : '🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator';
+        if (heroTitleSub) heroTitleSub.textContent = isId
+          ? 'Pengatur Sistem Mendalam & Pelindung Baterai macOS Tercanggih'
+          : 'The Ultimate macOS Deep Customizer & Battery Shield';
+        if (heroDesc) heroDesc.textContent = isId
+          ? 'Dirancang & direkayasa oleh PT Reka Saujana Falah. Ambil kendali penuh atas sistem macOS dengan 2.265+ tweak di 11 layer sistem, antarmuka liquid frosted glass, simulator interaktif langsung, dan lisensi jual putus ($39). Tanpa biaya langganan bulanan.'
+          : 'Designed & engineered by PT Reka Saujana Falah. Take total command of macOS with 2,265+ native tweaks across 11 system layers, liquid frosted glass UI, 1:1 Live Interactive Simulator, and perpetual one-time licensing ($39). Zero monthly subscriptions.';
+        
+        if (cardTitle) cardTitle.textContent = isId
+          ? 'Teaser Resmi Peluncuran — Segera Hadir via Lemon Squeezy'
+          : 'Official Premiere Teaser — Launching Soon via Lemon Squeezy';
+        if (cardDesc) cardDesc.textContent = isId
+          ? 'Kami merancang LuminaTweak Glass bagi pengguna pro Mac, developer, dan desainer yang mendambakan sistem super responsif tanpa jeratan langganan bulanan. Uji coba simulator interaktif kami di bawah ini sebelum peluncuran resmi.'
+          : 'We built LuminaTweak Glass for Mac power users, developers, and designers who demand instant responsiveness without subscription fatigue. Try our fully interactive live simulator below before public rollout.';
+        
+        if (btnScrollDemo) btnScrollDemo.textContent = isId ? '🎮 Coba Simulator Langsung ↓' : '🎮 Test Live Simulator ↓';
+        if (btnTeaserPricing) btnTeaserPricing.textContent = isId ? 'Toko Lemon Squeezy ($39) →' : 'Lemon Squeezy Store ($39) →';
+        if (simHeading) simHeading.textContent = isId ? 'Simulator macOS 1:1 di Peramban' : '1:1 In-Browser macOS Simulator';
+        if (simSub) simSub.textContent = isId
+          ? 'Uji tombol konfigurasi nyata di bawah atau klik Putar Tur Panduan Otomatis untuk menyaksikan optimasi LuminaTweak Glass secara real-time.'
+          : 'Toggle real settings below or click Auto-Play Guided Tour to see how LuminaTweak Glass optimizes your MacBook experience in real time.';
 
-        if (f1Title) f1Title.textContent = isId ? 'Simulator Interaktif 1:1 Real-Time' : '1:1 Live Interactive Simulator';
-        if (f1Desc) f1Desc.textContent = isId ? 'Pratinjau visual langsung untuk Dock, kecepatan Mission Control, transparansi bayangan jendela, dan file tersembunyi sebelum dieksekusi ke sistem macOS.' : 'Preview real-time Dock changes, Mission Control speeds, window drop shadow dimensions, and hidden file toggles on screen before applying changes to your macOS defaults.';
+        if (morTitle) morTitle.textContent = isId
+          ? 'Kemitraan Resmi Merchant of Record (MoR) Global'
+          : 'Official Global Merchant of Record (MoR) Partnership';
+        if (morSub) morSub.textContent = isId
+          ? 'PT Reka Saujana Falah mendistribusikan LuminaTweak Glass Edition secara global melalui Lemon Squeezy.'
+          : 'PT Reka Saujana Falah distributes LuminaTweak Glass Edition globally via Lemon Squeezy.';
+        if (morDesc) morDesc.textContent = isId
+          ? 'Transaksi diproses secara aman oleh Lemon Squeezy sebagai Merchant of Record resmi. Lemon Squeezy menangani kepatuhan pajak/PPN internasional, enkripsi standar perbankan PCI-DSS, serta menjamin garansi uang kembali 30 hari di seluruh dunia.'
+          : 'Transactions are processed securely by Lemon Squeezy as our authorized Merchant of Record. Lemon Squeezy handles international sales tax, VAT/GST compliance, bank-grade PCI-DSS encryption, and guarantees our 30-day money-back policy worldwide.';
 
-        if (f2Title) f2Title.textContent = isId ? 'Pelindung Baterai Zero-Drain Shield' : 'Zero-Drain Battery Shield';
-        if (f2Desc) f2Desc.textContent = isId ? 'Hentikan kebocoran daya baterai saat Mac tidur dengan Deep Sleep Mode, serta nonaktifkan nyala otomatis layar saat dibuka dengan Lid-Open AutoBoot Killer.' : 'Eliminate overnight battery leakage with Deep Sleep Mode and silence aggressive background wakeups with Lid-Open AutoBoot Killer. Optimized for MacBook Pro & MacBook Air.';
-
-        if (f3Title) f3Title.textContent = isId ? '2.265+ Tweak di 11 Kategori Sistem' : '2,265+ Tweaks across 11 Layers';
-        if (f3Desc) f3Desc.textContent = isId ? 'Kendali penuh atas Dock, Finder, Safari, Windowing, Screenshots, Keyboard, Hardware, Terminal, Baterai, dan Keamanan — 100% SIP-safe dengan 1 klik kembali ke default.' : 'Full control across Dock, Finder, Safari, Windowing, Screenshots, Keyboard, Hardware, Terminal, Battery, and Security — all 100% SIP-safe with instant 1-click restore.';
-
-        if (specTitle) specTitle.textContent = isId ? 'Spesifikasi Teknis & Kompatibilitas' : 'Technical Specifications & Compatibility';
-        if (specArchLbl) specArchLbl.textContent = isId ? 'Arsitektur Perangkat Keras' : 'Architecture';
-        if (specOsLbl) specOsLbl.textContent = isId ? 'Sistem Operasi' : 'Operating System';
-        if (specLicenseLbl) specLicenseLbl.textContent = isId ? 'Model Lisensi' : 'License Model';
-        if (specLicenseVal) specLicenseVal.textContent = isId ? 'Lisensi Jual Putus Seumur Hidup (Tanpa Langganan)' : 'Perpetual Lifetime License (No Subscription)';
-        if (specChannelsLbl) specChannelsLbl.textContent = isId ? 'Mitra Merchant of Record' : 'Merchants of Record';
-        if (specChannelsVal) specChannelsVal.textContent = 'Paddle.com';
-
-        if (backToHome) backToHome.textContent = isId ? '← Kembali ke Beranda Studio PT Reka Saujana Falah' : '← Return to PT Reka Saujana Falah Studio Homepage';
-        if (footerBrandDesc) footerBrandDesc.textContent = isId ? 'PT Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026.' : 'PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.';
-        if (footerNavTitle) footerNavTitle.textContent = isId ? 'Tautan Produk' : 'Product Links';
-        if (footerPaddleTitle) footerPaddleTitle.textContent = isId ? 'Kepatuhan Paddle' : 'Paddle Compliance';
-        if (footerLemonTitle) footerLemonTitle.textContent = isId ? 'Kepatuhan Lemon Squeezy' : 'Lemon Squeezy Compliance';
-        if (footerCopy) footerCopy.textContent = isId ? '© 2026 PT Reka Saujana Falah. Hak cipta dilindungi undang-undang.' : '© 2026 PT Reka Saujana Falah. All rights reserved.';
+        if (footerDesc) footerDesc.textContent = isId
+          ? 'PT Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Pengembang perangkat lunak komersial resmi.'
+          : 'PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Official commercial software developer.';
+        if (footerCopy) footerCopy.textContent = isId
+          ? '© 2026 PT Reka Saujana Falah. Hak cipta dilindungi undang-undang.'
+          : '© 2026 PT Reka Saujana Falah. All rights reserved.';
 
         document.querySelectorAll('[data-doc-lang]').forEach(b => {
           if (b.getAttribute('data-doc-lang') === lang) {

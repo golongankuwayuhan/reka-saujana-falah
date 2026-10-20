@@ -75,7 +75,7 @@
           <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services &amp; Solutions</a></li>
           <li><a href="#products" class="nav-item-link" data-i18n="navProducts">LuminaTweak Glass</a></li>
           <li><a href="demo.html" class="nav-item-link" style="color: var(--accent-cyan);">Live Demo</a></li>
-          <li><a href="lumina/paddle/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
+          <li><a href="lumina/lemon/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
           <li><a href="terms.html" class="nav-item-link" data-i18n="navTerms">Terms</a></li>
           <li><a href="privacy.html" class="nav-item-link" data-i18n="navPrivacy">Privacy</a></li>
           <li><a href="refund.html" class="nav-item-link" data-i18n="navRefund">Refund Policy</a></li>
@@ -113,7 +113,8 @@
         <li><a href="#about" class="nav-item-link" data-i18n="navAbout">About Us</a></li>
         <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services &amp; Solutions</a></li>
         <li><a href="#products" class="nav-item-link" data-i18n="navProducts">LuminaTweak Glass</a></li>
-        <li><a href="lumina/paddle/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
+        <li><a href="demo.html" class="nav-item-link" style="color: var(--accent-cyan);">Live Demo</a></li>
+        <li><a href="lumina/lemon/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
         <li><a href="enterprise-pricing.html" class="nav-item-link" data-i18n="navEnterprise">Enterprise Pricing</a></li>
         <li><a href="terms.html" class="nav-item-link" data-i18n="navTerms">Terms</a></li>
         <li><a href="privacy.html" class="nav-item-link" data-i18n="navPrivacy">Privacy</a></li>
@@ -369,12 +370,8 @@
         <!-- Section Header -->
         <div class="section-header">
           <div class="product-commercial-badge">
-            <img src="assets/images/paddle-logo.svg" alt="Paddle Official MoR" class="lemon-badge-logo">
-            <!-- [LEMON PENDING - TEMPORARILY HIDDEN]
-            <span style="color: rgba(255,255,255,0.25); margin: 0 0.35rem;">|</span>
             <img src="assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy Official MoR" class="lemon-badge-logo">
-            -->
-            <span data-i18n="prodTag">PRODUK KOMERSIAL RESMI • DIJUAL DI PADDLE.COM</span>
+            <span data-i18n="prodTag">PRODUK KOMERSIAL RESMI • DIJUAL DI LEMON SQUEEZY</span>
           </div>
           <h2 class="section-title">
             <span data-i18n="prodTitlePrefix">LuminaTweak Glass Edition —</span>
@@ -409,12 +406,11 @@
             <span class="product-pill">
               🌐 <span data-i18n="badgeLangs">12 UI Languages &amp; RTL</span>
             </span>
-            <span class="product-pill paddle-pill">
+            <span class="product-pill paddle-pill" style="display: none;">
               <img src="assets/images/paddle-icon.svg" alt="" class="pill-paddle-icon">
               <span data-i18n="badgePaddle">Lisensi Jual Putus Paddle</span>
             </span>
-            <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-            <span class="product-pill lemon-pill" style="display: none;" id="badgeLemonPending">
+            <span class="product-pill lemon-pill" id="badgeLemonPending">
               <img src="assets/images/lemon-icon.svg" alt="" class="pill-lemon-icon">
               <span data-i18n="badgeLemon">Lisensi Jual Putus Lemon Squeezy</span>
             </span>
@@ -699,14 +695,10 @@
           <div class="store-banner-inner">
             <div class="store-banner-left">
               <div class="store-banner-brand">
-                <img src="assets/images/paddle-logo.svg" alt="Paddle Official MoR" class="store-paddle-logo">
-                <!-- [LEMON PENDING - TEMPORARILY HIDDEN]
-                <span class="store-brand-separator" style="color: rgba(255,255,255,0.2); font-size: 1.25rem; font-weight: 300;">|</span>
-                <img src="assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy Official" class="store-lemon-logo">
-                -->
+                <img src="assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy Official MoR" class="store-lemon-logo">
                 <div class="store-status-pill">
                   <span class="live-pulse-dot"></span>
-                  <span data-i18n="storeStatusText">Panduan Pencarian &amp; Akses Toko</span>
+                  <span data-i18n="storeStatusText">Panduan Akses Toko Resmi</span>
                 </div>
               </div>
               <h3 class="store-banner-title" data-i18n="storeHeading">
@@ -725,15 +717,14 @@
               </div>
             </div>
             <div class="store-banner-right">
-              <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-paddle-primary">
+              <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-paddle-primary" style="display: none;">
                 <img src="assets/images/paddle-icon.svg" alt="" class="btn-lemon-svg-icon">
                 <span data-i18n="btnSearchPaddle">Cari di Paddle</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
-              <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-              <a href="https://www.lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-lemon-primary" style="display: none;" id="btnSearchLemon">
+              <a href="lumina/lemon/pricing.html" class="btn btn-lemon-primary" id="btnSearchLemon">
                 <img src="assets/images/lemon-icon.svg" alt="" class="btn-lemon-svg-icon">
-                <span data-i18n="btnSearchLemon">Cari di Lemon Squeezy</span>
+                <span data-i18n="btnSearchLemon">Buka Toko Lemon Squeezy</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
               <a href="#contact" class="btn btn-glass-secondary">
@@ -784,14 +775,13 @@
               </ul>
 
               <div class="tier-action">
-                <a href="lumina/paddle/pricing.html" class="btn btn-tier-buy btn-tier-paddle" data-i18n="tier1BtnPaddle">
+                <a href="lumina/paddle/pricing.html" class="btn btn-tier-buy btn-tier-paddle" style="display: none;" data-i18n="tier1BtnPaddle">
                   <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
                   <span>Beli via Paddle ($39)</span>
                 </a>
-                <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-                <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy" style="display: none;" data-i18n="tier1Btn">
+                <a href="lumina/lemon/pricing.html" class="btn btn-tier-buy" data-i18n="tier1Btn">
                   <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-                  <span>Cari di Lemon Squeezy ($39)</span>
+                  <span>Beli di Lemon Squeezy ($39)</span>
                 </a>
               </div>
             </div>
@@ -828,15 +818,14 @@
               </ul>
 
               <div class="tier-action">
-                <a href="lumina/paddle/pricing.html" class="btn btn-popular-paddle" data-i18n="tier2BtnPaddle">
+                <a href="lumina/paddle/pricing.html" class="btn btn-popular-paddle" style="display: none;" data-i18n="tier2BtnPaddle">
                   <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
                   <span>Beli via Paddle ($59)</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                 </a>
-                <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-                <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-popular-buy" style="display: none;" data-i18n="tier2Btn">
+                <a href="lumina/lemon/pricing.html" class="btn btn-primary btn-popular-buy" data-i18n="tier2Btn">
                   <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-                  <span>Cari di Lemon Squeezy ($59)</span>
+                  <span>Beli di Lemon Squeezy ($59)</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                 </a>
               </div>
@@ -872,14 +861,13 @@
               </ul>
 
               <div class="tier-action">
-                <a href="lumina/paddle/pricing.html" class="btn btn-tier-buy btn-tier-paddle" data-i18n="tier3BtnPaddle">
+                <a href="lumina/paddle/pricing.html" class="btn btn-tier-buy btn-tier-paddle" style="display: none;" data-i18n="tier3BtnPaddle">
                   <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
                   <span>Beli via Paddle ($99)</span>
                 </a>
-                <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-                <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-tier-buy" style="display: none;" data-i18n="tier3Btn">
+                <a href="lumina/lemon/pricing.html" class="btn btn-tier-buy" data-i18n="tier3Btn">
                   <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
-                  <span>Cari di Lemon Squeezy ($99)</span>
+                  <span>Beli di Lemon Squeezy ($99)</span>
                 </a>
               </div>
             </div>
@@ -968,28 +956,23 @@
         <div class="glass-panel product-cta-banner">
           <div class="cta-banner-content">
             <div class="cta-lemon-inline-brand">
-              <img src="assets/images/paddle-logo.svg" alt="Paddle" class="cta-lemon-mini-logo">
-              <!-- [LEMON PENDING - TEMPORARILY HIDDEN]
-              <span style="color: rgba(255,255,255,0.25); margin: 0 0.5rem;">|</span>
               <img src="assets/images/lemon-squeezy-logo.svg" alt="Lemon Squeezy" class="cta-lemon-mini-logo">
-              -->
-              <span class="cta-lemon-inline-text font-mono" data-i18n="ctaLemonHeader">DISTRIBUSI RESMI GLOBAL • PADDLE.COM MERCHANT OF RECORD</span>
+              <span class="cta-lemon-inline-text font-mono" data-i18n="ctaLemonHeader">DISTRIBUSI RESMI GLOBAL • LEMON SQUEEZY MERCHANT OF RECORD</span>
             </div>
             <h3 class="cta-banner-title" data-i18n="ctaProdTitle">Siap Mengoptimalkan Pengalaman macOS Anda?</h3>
             <p class="cta-banner-desc" data-i18n="ctaProdDesc">
-              Dapatkan LuminaTweak Glass Edition via Paddle mulai $39 (Launch Special) atau diskusikan kebutuhan lisensi tim dengan kami.
+              Dapatkan LuminaTweak Glass Edition via Lemon Squeezy mulai $39 (Launch Special) atau uji coba simulator live kami.
             </p>
           </div>
           <div class="cta-banner-actions">
-            <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-paddle-store" data-i18n="ctaBuyPaddle">
+            <a href="https://paddle.com" target="_blank" rel="noopener noreferrer" class="btn btn-paddle-store" style="display: none;" data-i18n="ctaBuyPaddle">
               <img src="assets/images/paddle-icon.svg" alt="" class="btn-lemon-svg-icon">
               <span>Cari di Paddle ($39 - $99)</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
-            <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-            <a href="https://lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-lemon-store" style="display: none;" data-i18n="ctaBuyLemon">
+            <a href="lumina/lemon/pricing.html" class="btn btn-lemon-store" data-i18n="ctaBuyLemon">
               <img src="assets/images/lemon-icon.svg" alt="" class="btn-lemon-svg-icon">
-              <span>Cari di Lemon Squeezy ($39 - $99)</span>
+              <span>Beli di Lemon Squeezy ($39 - $99)</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
             <a href="#contact" class="btn btn-secondary" data-i18n="ctaContactSales">
@@ -1215,9 +1198,8 @@
             <li><a href="privacy.html" class="footer-link" data-i18n="footerPrivacyLink">Privacy Policy</a></li>
             <li><a href="refund.html" class="footer-link" data-i18n="footerRefund">Refund Policy</a></li>
             <li><a href="pricing.html" class="footer-link" data-i18n="footerPricingLink">Official Pricing Page</a></li>
-            <li><a href="lumina/paddle/pricing.html" class="footer-link">Paddle Verification Suite</a></li>
-            <!-- [LEMON PENDING - TEMPORARILY HIDDEN] -->
-            <li style="display: none;"><a href="lumina/lemon/pricing.html" class="footer-link">Lemon Squeezy Store</a></li>
+            <li><a href="lumina/lemon/pricing.html" class="footer-link">Lemon Squeezy Store</a></li>
+            <li style="display: none;"><a href="lumina/paddle/pricing.html" class="footer-link">Paddle Verification Suite</a></li>
           </ul>
         </div>
 
