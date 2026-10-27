@@ -477,7 +477,7 @@
             <button class="lang-btn" data-doc-lang="id" aria-label="Bahasa Indonesia">ID</button>
             <button class="lang-btn active" data-doc-lang="en" aria-label="English">EN</button>
           </div>
-          <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn-header-cta" id="btnHeaderCta">Pre-Order ($39)</a>
+          <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn-header-cta" id="btnHeaderCta">Get License ($39)</a>
         </div>
       </nav>
     </div>
@@ -488,7 +488,7 @@
     <div class="container">
       <div class="badge-pill-header" style="margin-bottom: 1rem;">
         <span class="live-pulse-dot"></span>
-        <span id="badgeTeaser">🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator</span>
+        <span id="badgeTeaser">🚀 Official Global Launch • 1:1 Live macOS Simulator</span>
       </div>
 
       <h1 class="legal-hero-title">
@@ -497,13 +497,13 @@
       </h1>
 
       <p class="section-desc" style="max-width: 720px; margin: 1rem auto 2.5rem;" id="heroDesc">
-        Try out the live macOS simulator below. Toggle the Near-Zero Battery Shield, test instantaneous window transitions, or press <strong>Auto-Play Guided Tour</strong> to watch an automated walkthrough. Official launch coming soon via Lemon Squeezy ($39 one-time).
+        Try out the live macOS simulator below. Toggle the Near-Zero Battery Shield, test instantaneous window transitions, or press <strong>Auto-Play Guided Tour</strong> to watch an automated walkthrough. Available now via Lemon Squeezy ($39 one-time).
       </p>
 
       <!-- Launch Teaser Showcase Card -->
       <div style="max-width: 1040px; margin: 0 auto 3rem; background: rgba(14, 20, 33, 0.75); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(0, 240, 255, 0.28); border-radius: 24px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.7), 0 0 35px rgba(0,240,255,0.12); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: center; text-align: left;">
         <div style="background: #090d16; overflow: hidden;">
-          <img src="assets/images/luminatweak-coming-soon.jpg" alt="LuminaTweak Glass Edition Coming Soon Poster" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <img src="assets/images/luminatweak-social-promo.jpg" alt="LuminaTweak Glass Edition Official 3D Launch Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
         <div style="padding: 2.25rem 2rem; display: flex; flex-direction: column; gap: 1rem;">
           <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -511,7 +511,7 @@
             <span class="product-pill lemon-pill" style="margin: 0; font-size: 0.75rem;">Verified MoR Partner</span>
           </div>
           <h2 style="font-size: 1.35rem; font-weight: 700; line-height: 1.3;" id="cardTitle">
-            Official Launch Teaser — Coming Soon via Lemon Squeezy
+            Official Global Premiere — Available Now via Lemon Squeezy
           </h2>
           <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;" id="cardDesc">
             Designed and engineered by PT Reka Saujana Falah. Zero recurring monthly fees, universal binary for Apple Silicon M1-M4 &amp; Intel, and bank-grade global checkout.
@@ -521,7 +521,7 @@
               🎮 Test Live Simulator ↓
             </a>
             <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn btn-primary" id="btnTeaserPricing">
-              Pre-Order ($39) →
+              Buy License ($39) →
             </a>
           </div>
         </div>
@@ -899,26 +899,26 @@
         const btnTeaserPricing = document.getElementById('btnTeaserPricing');
 
         if (navHome) navHome.textContent = isId ? 'Beranda' : 'Home';
-        if (navDemo) navDemo.textContent = isId ? 'Demo Langsung' : 'Live Demo & Teaser';
+        if (navDemo) navDemo.textContent = isId ? 'Demo Langsung' : 'Live Demo & Showcase';
         if (navPricing) navPricing.textContent = isId ? 'Toko Lemon Squeezy' : 'Lemon Squeezy Store';
-        if (btnHeaderCta) btnHeaderCta.textContent = isId ? 'Pre-Order ($39)' : 'Pre-Order ($39)';
+        if (btnHeaderCta) btnHeaderCta.textContent = isId ? 'Beli Lisensi ($39)' : 'Get License ($39)';
         if (badgeTeaser) badgeTeaser.textContent = isId
-          ? '🚀 Segera Rilis di Lemon Squeezy • Simulator Langsung di Peramban'
-          : '🚀 Coming Soon on Lemon Squeezy • Official In-Browser Simulator';
+          ? '🚀 Peluncuran Global Resmi • Simulator 1:1 di Peramban'
+          : '🚀 Official Global Launch • 1:1 Live macOS Simulator';
         if (heroTitleSub) heroTitleSub.textContent = isId
           ? 'Pengatur Sistem Mendalam & Pelindung Baterai macOS Tercanggih'
           : 'The Ultimate macOS Deep Customizer & Battery Shield';
         if (heroDesc) heroDesc.textContent = isId
           ? 'Coba simulator macOS langsung di bawah ini. Uji sakelar Near-Zero Battery Shield, minimalkan animasi jendela, atau klik Tur Panduan Otomatis.'
-          : 'Try out the live macOS simulator below. Toggle the Near-Zero Battery Shield, test instantaneous window transitions, or press Auto-Play Guided Tour to watch an automated walkthrough. Official launch coming soon via Lemon Squeezy ($39 one-time).';
+          : 'Try out the live macOS simulator below. Toggle the Near-Zero Battery Shield, test instantaneous window transitions, or press Auto-Play Guided Tour to watch an automated walkthrough. Available now via Lemon Squeezy ($39 one-time).';
         if (cardTitle) cardTitle.textContent = isId
-          ? 'Teaser Peluncuran Resmi — Segera Hadir via Lemon Squeezy'
-          : 'Official Launch Teaser — Coming Soon via Lemon Squeezy';
+          ? 'Peluncuran Global Resmi — Tersedia Sekarang via Lemon Squeezy'
+          : 'Official Global Premiere — Available Now via Lemon Squeezy';
         if (cardDesc) cardDesc.textContent = isId
           ? 'Dirancang & direkayasa oleh PT Reka Saujana Falah. Tanpa biaya langganan bulanan berulang, universal binary untuk Apple Silicon & Intel.'
           : 'Designed and engineered by PT Reka Saujana Falah. Zero recurring monthly fees, universal binary for Apple Silicon M1-M4 & Intel, and bank-grade global checkout.';
         if (btnScrollDemo) btnScrollDemo.textContent = isId ? '🎮 Coba Simulator Langsung ↓' : '🎮 Test Live Simulator ↓';
-        if (btnTeaserPricing) btnTeaserPricing.textContent = isId ? 'Pre-Order ($39) →' : 'Pre-Order ($39) →';
+        if (btnTeaserPricing) btnTeaserPricing.textContent = isId ? 'Beli Lisensi ($39) →' : 'Buy License ($39) →';
 
         document.querySelectorAll('[data-doc-lang]').forEach(b => {
           if (b.getAttribute('data-doc-lang') === targetLang) {
