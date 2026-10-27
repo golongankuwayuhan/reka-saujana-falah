@@ -477,7 +477,7 @@
             <button class="lang-btn" data-doc-lang="id" aria-label="Bahasa Indonesia">ID</button>
             <button class="lang-btn active" data-doc-lang="en" aria-label="English">EN</button>
           </div>
-          <a href="lumina/lemon/pricing.html" class="btn-header-cta" id="btnHeaderCta">Pre-Order ($39)</a>
+          <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn-header-cta" id="btnHeaderCta">Pre-Order ($39)</a>
         </div>
       </nav>
     </div>
@@ -520,7 +520,7 @@
             <a href="#simulatorFrame" class="btn btn-secondary" style="border-color: rgba(0, 240, 255, 0.4); color: var(--accent-cyan);" id="btnScrollDemo">
               🎮 Test Live Simulator ↓
             </a>
-            <a href="lumina/lemon/pricing.html" class="btn btn-primary" id="btnTeaserPricing">
+            <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn btn-primary" id="btnTeaserPricing">
               Pre-Order ($39) →
             </a>
           </div>
@@ -931,5 +931,14 @@
     });
   </script>
 
+  <!-- Official Lemon Squeezy Modal Checkout SDK (Lemon.js) -->
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+  <script>
+    window.addEventListener('load', function() {
+      if (window.createLemonSqueezy) {
+        window.createLemonSqueezy();
+      }
+    });
+  </script>
 </body>
 </html>
