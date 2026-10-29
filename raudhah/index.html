@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raudhah — Islamic Worship &amp; Sacred Knowledge Companion | PT Reka Saujana Falah</title>
+  
+  <meta name="title" content="Raudhah — Islamic Worship &amp; Sacred Knowledge Companion | PT Reka Saujana Falah">
+  <meta name="description" content="Raudhah is a complete, ad-free Islamic worship &amp; sacred knowledge companion. Qur'an 30 Juz word-by-word, 62,169 Hadiths, Sifat Shalat Nabi, Hisnul Muslim adhkar, 3D Hajj simulator &amp; Faraidh inheritance calculator. Available for Android &amp; Windows.">
+  <meta name="author" content="PT Reka Saujana Falah">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .raudhah-page-header {
+      padding: 7rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .raudhah-showcase-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .raudhah-banner-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      background: rgba(14, 20, 33, 0.75);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 24px;
+      padding: 2.5rem;
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(16, 185, 129, 0.15);
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 960px) {
+      .raudhah-banner-grid {
+        grid-template-columns: 1fr;
+        padding: 1.75rem;
+      }
+    }
+
+    .raudhah-banner-cover {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s ease;
+    }
+
+    .raudhah-banner-cover:hover {
+      transform: scale(1.02);
+    }
+
+    .raudhah-tab-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all var(--transition-fast);
+    }
+
+    .raudhah-tab-btn:hover {
+      color: #fff;
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .raudhah-tab-btn.active {
+      color: #fff;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.35) 100%);
+      border-color: #10b981;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+    }
+
+    .raudhah-tab-content {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .raudhah-tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .raudhah-feature-box {
+      background: rgba(14, 20, 33, 0.65);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .raudhah-feature-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .raudhah-preview-img {
+      width: 100%;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+
+    .edition-card {
+      background: rgba(16, 23, 38, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      transition: all var(--transition-fast);
+    }
+
+    .edition-card:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .edition-card.featured {
+      border-color: #10b981;
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.12) 0%, rgba(14, 20, 33, 0.8) 100%);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(16, 185, 129, 0.15);
+    }
+
+    .gift-notice-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      color: #fde68a;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Cyber Lighting & Grid Background -->
+  <div class="bg-ambient" style="background: radial-gradient(circle at 50% 10%, rgba(16, 185, 129, 0.12) 0%, transparent 70%);"></div>
+  <div class="cyber-grid"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="../index.html" class="brand-link" aria-label="PT Reka Saujana Falah">
+        <img src="../assets/images/logo.svg" alt="PT Reka Saujana Falah Logo" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-item-link" data-i18n="rNavHome">← Company Profile</a></li>
+          <li><a href="#overview" class="nav-item-link" data-i18n="rNavOverview">Overview</a></li>
+          <li><a href="#features" class="nav-item-link" data-i18n="rNavFeatures">8 Core Features</a></li>
+          <li><a href="#editions" class="nav-item-link" data-i18n="rNavEditions">Editions</a></li>
+          <li><a href="#download" class="nav-item-link" data-i18n="rNavDownload">Download / Gift</a></li>
+          <li><a href="#install" class="nav-item-link" data-i18n="rNavInstall">Installation</a></li>
+          <li><a href="../index.html#contact" class="nav-item-link" data-i18n="rNavContact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="lang-switcher" aria-label="Language Selector">
+            <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+            <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+          </div>
+
+          <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1" 
+             class="lemonsqueezy-button btn-raudhah-lemon" 
+             style="padding: 0.55rem 1.15rem; font-size: 0.85rem;" 
+             data-i18n="rBtnHeader">
+            Get Raudhah ($0 / Gift)
+          </a>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="Menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer">
+      <ul class="nav-links">
+        <li><a href="../index.html" class="nav-item-link" data-i18n="rNavHome">← Company Profile</a></li>
+        <li><a href="#overview" class="nav-item-link" data-i18n="rNavOverview">Overview</a></li>
+        <li><a href="#features" class="nav-item-link" data-i18n="rNavFeatures">8 Core Features</a></li>
+        <li><a href="#editions" class="nav-item-link" data-i18n="rNavEditions">Editions</a></li>
+        <li><a href="#download" class="nav-item-link" data-i18n="rNavDownload">Download / Gift</a></li>
+        <li><a href="#install" class="nav-item-link" data-i18n="rNavInstall">Installation</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="id">ID</button>
+          <button class="lang-btn active" data-lang="en">EN</button>
+        </div>
+        <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1" 
+           class="lemonsqueezy-button btn-raudhah-lemon" 
+           data-i18n="rBtnHeader">
+          Get Raudhah ($0 / Gift)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / OVERVIEW SECTION -->
+    <section class="raudhah-page-header" id="overview">
+      <div class="container">
+        <div class="raudhah-badge-wakaf">
+          <span class="pulse-dot-emerald"></span>
+          <span data-i18n="rBadge">DIGITAL WAQF • 100% FREE &amp; AD-FREE • NO SUBSCRIPTIONS</span>
+        </div>
+
+        <h1 class="hero-title" style="max-width: 950px; margin: 0 auto 1.25rem;">
+          <span data-i18n="rTitlePrefix">Raudhah: Islamic Worship &amp;</span>
+          <span class="text-gradient-emerald" data-i18n="rTitleGradient">Sacred Knowledge Companion</span>
+        </h1>
+
+        <p class="hero-subtitle" style="max-width: 820px; margin: 0 auto 2.5rem;" data-i18n="rSubtitle">
+          A complete, ultra-lightweight, and 100% ad-free offline companion. Featuring Holy Qur'an 30 Juz word-by-word with dynamic tajweed, 62,169 Hadiths of 9 Imams, Sifat Shalat Nabi, Hisnul Muslim adhkar, 3D Hajj simulator, and automated Faraidh inheritance engine.
+        </p>
+
+        <!-- Platform Badges -->
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 2.5rem;">
+          <span class="product-pill raudhah-pill">
+            📱 <span data-i18n="rPillAndroid">Android APK (Lite &amp; Full)</span>
+          </span>
+          <span class="product-pill raudhah-pill">
+            💻 <span data-i18n="rPillWindows">Windows PC (Single Portable EXE &amp; ZIP)</span>
+          </span>
+          <span class="product-pill raudhah-pill-gold">
+            🛡️ <span data-i18n="rPillSecurity">AES-256-CBC Encrypted &amp; Signed</span>
+          </span>
+          <span class="product-pill raudhah-pill">
+            ⚡ <span data-i18n="rPillOffline">100% Offline-First Architecture</span>
+          </span>
+          <span class="product-pill raudhah-pill-gold">
+            🎁 <span data-i18n="rPillWaqf">Digital Waqf ($0 Free / Voluntary Gift)</span>
+          </span>
+        </div>
+
+        <!-- Banner Card -->
+        <div class="raudhah-banner-grid">
+          <div>
+            <img src="../assets/images/raudhah-cover-hero.png" alt="Raudhah Official Showcase Cover" class="raudhah-banner-cover">
+          </div>
+          <div style="text-align: left;">
+            <div style="display: inline-block; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 1rem;" data-i18n="rBannerVersion">
+              OFFICIAL RELEASE v1.0.0 (BUILD 48)
+            </div>
+            <h2 style="font-size: 1.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.3;" data-i18n="rBannerTitle">
+              Crafted with Utmost Care for Your Spiritual Journey
+            </h2>
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;" data-i18n="rBannerDesc">
+              Developed by PT Reka Saujana Falah as a perpetual digital waqf. Zero ads, zero background tracking, and zero hidden subscriptions. Designed to be fast, elegant, and spiritually uplifting.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1" 
+                 class="lemonsqueezy-button btn-raudhah-lemon" data-i18n="rBannerCta">
+                Get on Lemon Squeezy ($0 / Voluntary Gift) →
+              </a>
+              <span style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="rBannerHint">
+                * Type $0 in the price field for completely free access, or voluntarily contribute any gift amount.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 CORE FEATURES SHOWCASE WITH TABS -->
+    <section id="features" style="padding: 4rem 0;">
+      <div class="container raudhah-showcase-container">
+        <div class="section-header">
+          <span class="section-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);" data-i18n="rFeatTag">8 CORE PILLARS</span>
+          <h2 class="section-title">
+            <span data-i18n="rFeatTitlePrefix">Comprehensive Sacred</span>
+            <span class="text-gradient-emerald" data-i18n="rFeatTitleGradient">Knowledge &amp; Worship Suite</span>
+          </h2>
+          <p class="section-desc" data-i18n="rFeatDesc">
+            Explore the 8 integrated modules developed with rigorous scholarly references and high-performance modern user interfaces.
+          </p>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; justify-content: center; margin-bottom: 2.5rem;" role="tablist">
+          <button class="raudhah-tab-btn active" data-tab="tab-quran" role="tab" aria-selected="true">
+            📖 <span data-i18n="rTabQuran">Holy Qur'an 30 Juz</span>
+          </button>
+          <button class="raudhah-tab-btn" data-tab="tab-hadith" role="tab" aria-selected="false">
+            📚 <span data-i18n="rTabHadith">62,169 Hadiths (9 Imams)</span>
+          </button>
+          <button class="raudhah-tab-btn" data-tab="tab-prayer" role="tab" aria-selected="false">
+            🤲 <span data-i18n="rTabPrayer">Prophet's Prayer &amp; Adhkar</span>
+          </button>
+          <button class="raudhah-tab-btn" data-tab="tab-hajj" role="tab" aria-selected="false">
+            🕋 <span data-i18n="rTabHajj">3D Hajj &amp; Umrah Simulator</span>
+          </button>
+          <button class="raudhah-tab-btn" data-tab="tab-faraidh" role="tab" aria-selected="false">
+            💰 <span data-i18n="rTabFaraidh">Faraidh Inheritance Calculator</span>
+          </button>
+          <button class="raudhah-tab-btn" data-tab="tab-audio" role="tab" aria-selected="false">
+            🎧 <span data-i18n="rTabAudio">Audio Murottal &amp; Muraja'ah</span>
+          </button>
+        </div>
+
+        <!-- Tab Content 1: Holy Qur'an -->
+        <div class="raudhah-tab-content active" id="tab-quran">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rQ1Sub">
+                MODULE 01 // WORD-BY-WORD TAFSIR &amp; TAJWEED
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rQ1Title">
+                Interactive Holy Qur'an 30 Juz (Word-by-Word)
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rQ1Desc">
+                Complete 114 Surahs and 30 Juz with word-by-word grammatical breakdown (I'rab), dynamic phonetic Tajweed color-coding (Madd, Ghunnah, Qalqalah, Ikhfa), smooth lookahead auto-scrolling, and multi-source classical commentaries (Tafsir Ibn Kathir, As-Sa'di, Muyassar).
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rQ1Cap1">Word-by-word translation &amp; linguistic breakdown for deep understanding.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rQ1Cap2">Dynamic Tajweed highlighting with customizable color thresholds.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rQ1Cap3">Single-screen Madinah Mushaf layout with zero lagging.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">114 Surahs</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">30 Juz</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Color Tajweed</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Multi-Tafsir</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-quran-interactive.png" alt="Qur'an Word by Word Tajweed" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-quran.jpg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 2: Hadith Library -->
+        <div class="raudhah-tab-content" id="tab-hadith">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rH1Sub">
+                MODULE 02 // ENCYCLOPEDIC HADITH COMPENDIUM
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rH1Title">
+                62,169 Hadiths of 9 Major Imams (Kutubut Tis'ah)
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rH1Desc">
+                Comprehensive offline searchable database covering the 9 canonical Hadith collections: Sahih al-Bukhari (7,008), Sahih Muslim (5,362), Sunan Abu Daud (4,590), Jami` at-Tirmidhi (3,891), Sunan an-Nasa'i (5,662), Sunan Ibn Majah (4,332), Muwatta Malik (1,594), Musnad Ahmad (26,363), and Sunan ad-Darimi (3,367).
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rH1Cap1">Full Arabic text with authentic classification (Sahih, Hasan, etc.).</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rH1Cap2">Word-by-word vocabulary breakdowns for Hadith study.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rH1Cap3">Instant chapter indexing and multi-keyword offline search.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Kutubut Tis'ah</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">62,169 Hadiths</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Narrator Index</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-hadith-arabic.png" alt="Hadith Library 9 Imams" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-hadith.jpg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 3: Prayer & Adhkar -->
+        <div class="raudhah-tab-content" id="tab-prayer">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rP1Sub">
+                MODULE 03 // SUNNAH WORSHIP &amp; SUPPLICATIONS
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rP1Title">
+                Prophet's Prayer Described &amp; Hisnul Muslim Adhkar
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rP1Desc">
+                Step-by-step guidance strictly according to the Sunnah from Takbir, Iftitah, Ruku', Sujud, to Tashahhud &amp; Salam. Includes morning/evening adhkar with digital tasbih counter and hundreds of verified Qur'anic and prophetic supplications.
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rP1Cap1">Complete Sifat Shalat Nabi with authentic references (dalil) and virtues.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rP1Cap2">Morning &amp; Evening remembrances with haptic digital tasbih.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rP1Cap3">17 Sunnah Post-Prayer Adhkar with pause markers (•) for tajweed pauses.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Sifat Shalat Nabi</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Hisnul Muslim</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Digital Tasbih</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-prayer-adhkar.png" alt="Prophet's Prayer and Adhkar" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-menu.jpg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 4: Hajj & Umrah 3D -->
+        <div class="raudhah-tab-content" id="tab-hajj">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rJ1Sub">
+                MODULE 04 // 3D VISUAL PILGRIMAGE TRACKER
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rJ1Title">
+                Interactive 3D Visual Hajj &amp; Umrah Simulator
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rJ1Desc">
+                Visual pilgrimage route simulator with dynamic 3D satellite tracking covering Masjidil Haram (Mataf Kaaba), Madinah, Mina, Arafah, and Muzdalifah. Accompanied by authentic ritual step-by-step checklists and recommended supplications.
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rJ1Cap1">3D Tracking Active with interactive station-by-station navigation.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rJ1Cap2">Complete guide: Ihram, Tawaf, Sa'i, Wukuf, and Jamarat.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rJ1Cap3">Authentic du'as from Hadith for each holy site.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">3D Dinamis</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Mataf Kaaba</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Hajj &amp; Umrah</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-screen-hajj.jpg" alt="3D Hajj Simulator Mataf Kaaba" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-hajj.jpg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 5: Faraidh Calculator -->
+        <div class="raudhah-tab-content" id="tab-faraidh">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rF1Sub">
+                MODULE 05 // SHARIAH ESTATE DIVISION
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rF1Title">
+                Automated Islamic Inheritance Calculator (Faraidh)
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rF1Desc">
+                Shariah-compliant automated estate calculation engine following classical Islamic jurisprudence (*Mawaris*). Accurately calculates itemized assets (Tirkah), funeral expenses, debts, and valid bequests with transparent breakdown of legal shares (*Ashab al-Furud*) and residuary heirs (*Asabah*).
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rF1Cap1">Itemized asset calculation (houses, land, gold, savings, business, etc.).</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rF1Cap2">Clear deductive order: funeral expenses, settlement of debts, valid bequests.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rF1Cap3">Mathematical division according to the Qur'an and authentic Sunnah.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Faraidh Engine</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Estate &amp; Tirkah</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Ashab al-Furud</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-screen-inheritance.jpg" alt="Faraidh Islamic Inheritance Calculator" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-inheritance.jpg">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Content 6: Audio Murottal -->
+        <div class="raudhah-tab-content" id="tab-audio">
+          <div class="raudhah-feature-box">
+            <div>
+              <div style="font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; color: #34d399; margin-bottom: 0.5rem;" data-i18n="rA1Sub">
+                MODULE 06 // QURANIC AUDIO &amp; MEMORIZATION
+              </div>
+              <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;" data-i18n="rA1Title">
+                Audio Murottal &amp; Muraja'ah (15 Famous Sheikhs)
+              </h3>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="rA1Desc">
+                Play and study Qur'an recitation with 15 world-renowned reciters (Mishary Rashid Al-Afasy, etc.). Features flexible repetition controls (1 to 30 times per ayah), customizable recitation ranges, and offline download management for all 114 Surahs.
+              </p>
+              <ul class="service-capabilities" style="margin-bottom: 1.5rem;">
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rA1Cap1">15 renowned Sheikhs with high-fidelity studio recordings.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rA1Cap2">Targeted Muraja'ah ayah range repetition for memorizers.</span></li>
+                <li class="capability-item"><span class="capability-bullet" style="color: #34d399;">▶</span> <span data-i18n="rA1Cap3">Offline caching and background audio playback.</span></li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">15 Sheikhs</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Mishary Al-Afasy</span>
+                <span class="tech-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7;">Muraja'ah Tool</span>
+              </div>
+            </div>
+            <div>
+              <img src="../assets/images/raudhah-screen-audio.jpg" alt="Audio Murottal and Muraja'ah" class="raudhah-preview-img" data-lightbox-src="../assets/images/raudhah-screen-audio.jpg">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDITIONS COMPARISON SECTION -->
+    <section id="editions" style="padding: 4rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+      <div class="container raudhah-showcase-container">
+        <div class="section-header">
+          <span class="section-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);" data-i18n="rEdTag">TWO DISTRIBUTIONS</span>
+          <h2 class="section-title">
+            <span data-i18n="rEdTitlePrefix">Choose Your</span>
+            <span class="text-gradient-emerald" data-i18n="rEdTitleGradient">Preferred Edition</span>
+          </h2>
+          <p class="section-desc" data-i18n="rEdDesc">
+            Both editions are completely free and ad-free. Choose the Lite Edition to conserve storage or the Full Offline Edition for the complete encyclopedic experience.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          <!-- Lite Edition Card -->
+          <div class="edition-card">
+            <div style="display: inline-block; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.08); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: #cbd5e1; margin-bottom: 0.85rem;" data-i18n="rLiteBadge">
+              LITE EDITION (~40 MB)
+            </div>
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;" data-i18n="rLiteTitle">Compact &amp; Ultra-Fast</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="rLiteDesc">
+              Optimized for smaller device storage. Focuses on the core worship tools with rapid downloads.
+            </p>
+            <ul class="tier-features-list" style="margin-bottom: 2rem;">
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rLiteF1">Complete 114 Surahs &amp; 30 Juz Qur'an (Word-by-word)</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rLiteF2">Prophet's Prayer Guidance &amp; Sunnah Adhkar</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rLiteF3">Hisnul Muslim &amp; Verified Authentic Du'as</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rLiteF4">Durusul Lughah Arabic Grammar &amp; Vocabulary</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rLiteF5">3D Hajj Route Simulator &amp; Faraidh Calculator</span></li>
+              <li><span class="check-bullet" style="color: var(--text-muted);">✕</span> <span style="color: var(--text-muted);" data-i18n="rLiteF6">Hadiths library &amp; offline tafsirs excluded to save storage</span></li>
+            </ul>
+            <div style="font-size: 0.85rem; color: #6ee7b7; font-family: 'JetBrains Mono', monospace;" data-i18n="rLiteFiles">
+              📦 APK: ~41 MB • Windows EXE: ~40 MB
+            </div>
+          </div>
+
+          <!-- Full Edition Card -->
+          <div class="edition-card featured">
+            <div style="display: inline-block; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.25); border: 1px solid #10b981; font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: #a7f3d0; margin-bottom: 0.85rem;" data-i18n="rFullBadge">
+              FULL OFFLINE EDITION (~193 MB) • RECOMMENDED
+            </div>
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;" data-i18n="rFullTitle">The Complete Encyclopedia</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;" data-i18n="rFullDesc">
+              The ultimate 100% offline Islamic library. Zero internet connection required after initial download.
+            </p>
+            <ul class="tier-features-list" style="margin-bottom: 2rem;">
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rFullF1">Everything included in the Lite Edition</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rFullF2">All 62,169 Hadiths of 9 Imams (Kutubut Tis'ah)</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rFullF3">Complete offline Tafsir libraries built-in</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rFullF4">Full narration chains &amp; vocabulary definitions</span></li>
+              <li><span class="check-bullet" style="color: #34d399;">✓</span> <span data-i18n="rFullF5">100% self-contained: works everywhere, even off-grid</span></li>
+            </ul>
+            <div style="font-size: 0.85rem; color: #a7f3d0; font-family: 'JetBrains Mono', monospace;" data-i18n="rFullFiles">
+              📦 APK: ~193 MB • Windows EXE: ~192 MB
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <img src="../assets/images/raudhah-editions-comparison.png" alt="Raudhah Editions Comparison" style="max-width: 800px; width: 100%; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.1);">
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD / VOLUNTARY GIFT SECTION -->
+    <section id="download" class="raudhah-section">
+      <div class="container raudhah-showcase-container">
+        
+        <div class="raudhah-gift-box">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; border-radius: var(--radius-full); background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem;" data-i18n="rGiftBadge">
+              🎁 DIGITAL WAQF &amp; VOLUNTARY GIFT
+            </div>
+            <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 1rem; line-height: 1.25;" data-i18n="rGiftTitle">
+              Free for Everyone. Supported by Pure Appreciation.
+            </h2>
+            <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;" data-i18n="rGiftDesc1">
+              Raudhah is distributed as a <strong>Digital Waqf</strong> to empower Muslims and seekers of knowledge worldwide without any subscription or advertisement barrier.
+            </p>
+            <div class="gift-notice-box" data-i18n="rGiftNotice">
+              <strong>Catatan Integritas &amp; Apresiasi:</strong><br>
+              Aplikasi ini adalah wakaf digital dan dapat diunduh <strong>100% GRATIS</strong>. Bagi Anda yang ingin menyampaikan hadiah / tanda terima kasih (Gift) atas jerih payah rekayasa teknologi ini, Anda dapat menyertakan nominal seikhlasnya melalui Lemon Squeezy atau menu apresiasi di dalam aplikasi. Ini murni sebagai hadiah / apresiasi karya, bukan infak atau sedekah.
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; text-align: center; background: rgba(0, 0, 0, 0.35); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(16, 185, 129, 0.3);">
+            <div style="font-size: 0.85rem; color: #34d399; font-family: 'JetBrains Mono', monospace;" data-i18n="rCheckoutHeader">
+              OFFICIAL LEMON SQUEEZY CHECKOUT
+            </div>
+            <div style="font-size: 2.5rem; font-weight: 800; color: #fff;">
+              $0 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;" data-i18n="rPriceSuffix">/ Free or Pay What You Want</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;" data-i18n="rPriceHint">
+              Enter 0 to download freely, or type any gift amount ($3, $5, $10, etc.) to support.
+            </p>
+
+            <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1" 
+               class="lemonsqueezy-button btn-raudhah-lemon" 
+               style="width: 100%;" 
+               data-i18n="rBtnBuy">
+              Buy / Download on Lemon Squeezy
+            </a>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 0.5rem;">
+              <span style="font-size: 0.75rem; color: var(--text-muted);">🔒 SSL 256-Bit</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">⚡ Instant Delivery</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">🛡️ Official MoR</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INSTALLATION GUIDE SECTION -->
+    <section id="install" style="padding: 4.5rem 0; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+      <div class="container raudhah-showcase-container">
+        <div class="section-header">
+          <span class="section-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);" data-i18n="rInstTag">USER GUIDE</span>
+          <h2 class="section-title">
+            <span data-i18n="rInstTitlePrefix">Quick &amp; Easy</span>
+            <span class="text-gradient-emerald" data-i18n="rInstTitleGradient">Installation Guide</span>
+          </h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+          <!-- Android Guide -->
+          <div class="glass-panel" style="padding: 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(16, 185, 129, 0.3);">
+            <div style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              📱 <span data-i18n="rInstAndroidTitle">For Android Users (.apk)</span>
+            </div>
+            <ol style="color: var(--text-body); font-size: 0.95rem; line-height: 1.8; padding-left: 1.25rem;">
+              <li data-i18n="rInstAndStep1">Download the APK file (Lite for fast download or Full for complete offline Hadiths).</li>
+              <li data-i18n="rInstAndStep2">Open the downloaded APK in your device file manager.</li>
+              <li data-i18n="rInstAndStep3">If Android prompts "Install unknown apps", allow installation for your browser/file manager.</li>
+              <li data-i18n="rInstAndStep4">Launch Raudhah and enjoy a peaceful, 100% ad-free experience!</li>
+            </ol>
+          </div>
+
+          <!-- Windows Guide -->
+          <div class="glass-panel" style="padding: 2rem; border-radius: var(--radius-lg); border: 1px solid rgba(0, 240, 255, 0.3);">
+            <div style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              💻 <span data-i18n="rInstWinTitle">For Windows PC Users (.exe / .zip)</span>
+            </div>
+            <ol style="color: var(--text-body); font-size: 0.95rem; line-height: 1.8; padding-left: 1.25rem;">
+              <li data-i18n="rInstWinStep1">Download the standalone .exe (or extract the portable .zip folder).</li>
+              <li data-i18n="rInstWinStep2">Double-click to launch Raudhah directly — no installer or admin setup required.</li>
+              <li data-i18n="rInstWinStep3">If Windows SmartScreen displays "Windows protected your PC", simply click "More info" and then "Run anyway".</li>
+              <li data-i18n="rInstWinStep4">All settings and offline data are safely stored on your local machine.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" style="border-top: 1px solid rgba(16, 185, 129, 0.2);">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <img src="../assets/images/logo.svg" alt="PT Reka Saujana Falah" class="footer-logo">
+        <p class="footer-desc" data-i18n="rFooterDesc">
+          PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-nav">
+          <li><a href="../index.html">← Company Profile</a></li>
+          <li><a href="../demo.html">LuminaTweak Simulator</a></li>
+          <li><a href="../lumina/lemon/pricing.html">LuminaTweak Store</a></li>
+          <li><a href="#overview">Raudhah Overview</a></li>
+          <li><a href="#download">Download Raudhah</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Legal &amp; Policies</h4>
+        <ul class="footer-nav">
+          <li><a href="../terms.html">Terms of Service</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../refund.html">Refund Policy</a></li>
+          <li><a href="../index.html#contact">Contact Support</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">© 2026 PT Reka Saujana Falah. All rights reserved.</p>
+      <p class="footer-duns-tag">Digital Waqf &bull; Raudhah v1.0.0 (Build 48)</p>
+    </div>
+  </footer>
+
+  <!-- Lemon Squeezy Official SDK -->
+  <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+
+  <!-- Interactive Logic & Language Switcher -->
+  <script>
+    // Raudhah Bilingual Dictionary
+    const raudhahI18n = {
+      en: {
+        rNavHome: "← Company Profile",
+        rNavOverview: "Overview",
+        rNavFeatures: "8 Core Features",
+        rNavEditions: "Editions",
+        rNavDownload: "Download / Gift",
+        rNavInstall: "Installation",
+        rNavContact: "Contact",
+        rBtnHeader: "Get Raudhah ($0 / Gift)",
+        rBadge: "DIGITAL WAQF • 100% FREE & AD-FREE • NO SUBSCRIPTIONS",
+        rTitlePrefix: "Raudhah: Islamic Worship &",
+        rTitleGradient: "Sacred Knowledge Companion",
+        rSubtitle: "A complete, ultra-lightweight, and 100% ad-free offline companion. Featuring Holy Qur'an 30 Juz word-by-word with dynamic tajweed, 62,169 Hadiths of 9 Imams, Sifat Shalat Nabi, Hisnul Muslim adhkar, 3D Hajj simulator, and automated Faraidh inheritance engine.",
+        rPillAndroid: "Android APK (Lite & Full)",
+        rPillWindows: "Windows PC (Single Portable EXE & ZIP)",
+        rPillSecurity: "AES-256-CBC Encrypted & Signed",
+        rPillOffline: "100% Offline-First Architecture",
+        rPillWaqf: "Digital Waqf ($0 Free / Voluntary Gift)",
+        rBannerVersion: "OFFICIAL RELEASE v1.0.0 (BUILD 48)",
+        rBannerTitle: "Crafted with Utmost Care for Your Spiritual Journey",
+        rBannerDesc: "Developed by PT Reka Saujana Falah as a perpetual digital waqf. Zero ads, zero background tracking, and zero hidden subscriptions. Designed to be fast, elegant, and spiritually uplifting.",
+        rBannerCta: "Get on Lemon Squeezy ($0 / Voluntary Gift) →",
+        rBannerHint: "* Type $0 in the price field for completely free access, or voluntarily contribute any gift amount.",
+        rFeatTag: "8 CORE PILLARS",
+        rFeatTitlePrefix: "Comprehensive Sacred",
+        rFeatTitleGradient: "Knowledge & Worship Suite",
+        rFeatDesc: "Explore the 8 integrated modules developed with rigorous scholarly references and high-performance modern user interfaces.",
+        rTabQuran: "Holy Qur'an 30 Juz",
+        rTabHadith: "62,169 Hadiths (9 Imams)",
+        rTabPrayer: "Prophet's Prayer & Adhkar",
+        rTabHajj: "3D Hajj & Umrah Simulator",
+        rTabFaraidh: "Faraidh Inheritance Calculator",
+        rTabAudio: "Audio Murottal & Muraja'ah",
+        rQ1Sub: "MODULE 01 // WORD-BY-WORD TAFSIR & TAJWEED",
+        rQ1Title: "Interactive Holy Qur'an 30 Juz (Word-by-Word)",
+        rQ1Desc: "Complete 114 Surahs and 30 Juz with word-by-word grammatical breakdown (I'rab), dynamic phonetic Tajweed color-coding (Madd, Ghunnah, Qalqalah, Ikhfa), smooth lookahead auto-scrolling, and multi-source classical commentaries (Tafsir Ibn Kathir, As-Sa'di, Muyassar).",
+        rQ1Cap1: "Word-by-word translation & linguistic breakdown for deep understanding.",
+        rQ1Cap2: "Dynamic Tajweed highlighting with customizable color thresholds.",
+        rQ1Cap3: "Single-screen Madinah Mushaf layout with zero lagging.",
+        rH1Sub: "MODULE 02 // ENCYCLOPEDIC HADITH COMPENDIUM",
+        rH1Title: "62,169 Hadiths of 9 Major Imams (Kutubut Tis'ah)",
+        rH1Desc: "Comprehensive offline searchable database covering the 9 canonical Hadith collections: Sahih al-Bukhari (7,008), Sahih Muslim (5,362), Sunan Abu Daud (4,590), Jami` at-Tirmidhi (3,891), Sunan an-Nasa'i (5,662), Sunan Ibn Majah (4,332), Muwatta Malik (1,594), Musnad Ahmad (26,363), and Sunan ad-Darimi (3,367).",
+        rH1Cap1: "Full Arabic text with authentic classification (Sahih, Hasan, etc.).",
+        rH1Cap2: "Word-by-word vocabulary breakdowns for Hadith study.",
+        rH1Cap3: "Instant chapter indexing and multi-keyword offline search.",
+        rP1Sub: "MODULE 03 // SUNNAH WORSHIP & SUPPLICATIONS",
+        rP1Title: "Prophet's Prayer Described & Hisnul Muslim Adhkar",
+        rP1Desc: "Step-by-step guidance strictly according to the Sunnah from Takbir, Iftitah, Ruku', Sujud, to Tashahhud & Salam. Includes morning/evening adhkar with digital tasbih counter and hundreds of verified Qur'anic and prophetic supplications.",
+        rP1Cap1: "Complete Sifat Shalat Nabi with authentic references (dalil) and virtues.",
+        rP1Cap2: "Morning & Evening remembrances with haptic digital tasbih.",
+        rP1Cap3: "17 Sunnah Post-Prayer Adhkar with pause markers (•) for tajweed pauses.",
+        rJ1Sub: "MODULE 04 // 3D VISUAL PILGRIMAGE TRACKER",
+        rJ1Title: "Interactive 3D Visual Hajj & Umrah Simulator",
+        rJ1Desc: "Visual pilgrimage route simulator with dynamic 3D satellite tracking covering Masjidil Haram (Mataf Kaaba), Madinah, Mina, Arafah, and Muzdalifah. Accompanied by authentic ritual step-by-step checklists and recommended supplications.",
+        rJ1Cap1: "3D Tracking Active with interactive station-by-station navigation.",
+        rJ1Cap2: "Complete guide: Ihram, Tawaf, Sa'i, Wukuf, and Jamarat.",
+        rJ1Cap3: "Authentic du'as from Hadith for each holy site.",
+        rF1Sub: "MODULE 05 // SHARIAH ESTATE DIVISION",
+        rF1Title: "Automated Islamic Inheritance Calculator (Faraidh)",
+        rF1Desc: "Shariah-compliant automated estate calculation engine following classical Islamic jurisprudence (*Mawaris*). Accurately calculates itemized assets (Tirkah), funeral expenses, debts, and valid bequests with transparent breakdown of legal shares (*Ashab al-Furud*) and residuary heirs (*Asabah*).",
+        rF1Cap1: "Itemized asset calculation (houses, land, gold, savings, business, etc.).",
+        rF1Cap2: "Clear deductive order: funeral expenses, settlement of debts, valid bequests.",
+        rF1Cap3: "Mathematical division according to the Qur'an and authentic Sunnah.",
+        rA1Sub: "MODULE 06 // QURANIC AUDIO & MEMORIZATION",
+        rA1Title: "Audio Murottal & Muraja'ah (15 Famous Sheikhs)",
+        rA1Desc: "Play and study Qur'an recitation with 15 world-renowned reciters (Mishary Rashid Al-Afasy, etc.). Features flexible repetition controls (1 to 30 times per ayah), customizable recitation ranges, and offline download management for all 114 Surahs.",
+        rA1Cap1: "15 renowned Sheikhs with high-fidelity studio recordings.",
+        rA1Cap2: "Targeted Muraja'ah ayah range repetition for memorizers.",
+        rA1Cap3: "Offline caching and background audio playback.",
+        rEdTag: "TWO DISTRIBUTIONS",
+        rEdTitlePrefix: "Choose Your",
+        rEdTitleGradient: "Preferred Edition",
+        rEdDesc: "Both editions are completely free and ad-free. Choose the Lite Edition to conserve storage or the Full Offline Edition for the complete encyclopedic experience.",
+        rLiteBadge: "LITE EDITION (~40 MB)",
+        rLiteTitle: "Compact & Ultra-Fast",
+        rLiteDesc: "Optimized for smaller device storage. Focuses on the core worship tools with rapid downloads.",
+        rLiteF1: "Complete 114 Surahs & 30 Juz Qur'an (Word-by-word)",
+        rLiteF2: "Prophet's Prayer Guidance & Sunnah Adhkar",
+        rLiteF3: "Hisnul Muslim & Verified Authentic Du'as",
+        rLiteF4: "Durusul Lughah Arabic Grammar & Vocabulary",
+        rLiteF5: "3D Hajj Route Simulator & Faraidh Calculator",
+        rLiteF6: "Hadiths library & offline tafsirs excluded to save storage",
+        rLiteFiles: "📦 APK: ~41 MB • Windows EXE: ~40 MB",
+        rFullBadge: "FULL OFFLINE EDITION (~193 MB) • RECOMMENDED",
+        rFullTitle: "The Complete Encyclopedia",
+        rFullDesc: "The ultimate 100% offline Islamic library. Zero internet connection required after initial download.",
+        rFullF1: "Everything included in the Lite Edition",
+        rFullF2: "All 62,169 Hadiths of 9 Imams (Kutubut Tis'ah)",
+        rFullF3: "Complete offline Tafsir libraries built-in",
+        rFullF4: "Full narration chains & vocabulary definitions",
+        rFullF5: "100% self-contained: works everywhere, even off-grid",
+        rFullFiles: "📦 APK: ~193 MB • Windows EXE: ~192 MB",
+        rGiftBadge: "🎁 DIGITAL WAQF & VOLUNTARY GIFT",
+        rGiftTitle: "Free for Everyone. Supported by Pure Appreciation.",
+        rGiftDesc1: "Raudhah is distributed as a Digital Waqf to empower Muslims and seekers of knowledge worldwide without any subscription or advertisement barrier.",
+        rGiftNotice: "<strong>Integrity & Appreciation Note:</strong><br>This application is a digital waqf and can be downloaded <strong>100% FREE</strong>. For those who wish to express gratitude or offer a voluntary gift (hadiah) for the technological dedication invested, you are welcome to contribute any nominal amount via Lemon Squeezy or through the in-app appreciation menu. This is purely a voluntary token of appreciation / gift for the craft, not an infak or charity.",
+        rCheckoutHeader: "OFFICIAL LEMON SQUEEZY CHECKOUT",
+        rPriceSuffix: "/ Free or Pay What You Want",
+        rPriceHint: "Enter 0 to download freely, or type any gift amount ($3, $5, $10, etc.) to support.",
+        rBtnBuy: "Buy / Download on Lemon Squeezy",
+        rInstTag: "USER GUIDE",
+        rInstTitlePrefix: "Quick & Easy",
+        rInstTitleGradient: "Installation Guide",
+        rInstAndroidTitle: "For Android Users (.apk)",
+        rInstAndStep1: "Download the APK file (Lite for fast download or Full for complete offline Hadiths).",
+        rInstAndStep2: "Open the downloaded APK in your device file manager.",
+        rInstAndStep3: "If Android prompts 'Install unknown apps', allow installation for your browser/file manager.",
+        rInstAndStep4: "Launch Raudhah and enjoy a peaceful, 100% ad-free experience!",
+        rInstWinTitle: "For Windows PC Users (.exe / .zip)",
+        rInstWinStep1: "Download the standalone .exe (or extract the portable .zip folder).",
+        rInstWinStep2: "Double-click to launch Raudhah directly — no installer or admin setup required.",
+        rInstWinStep3: "If Windows SmartScreen displays 'Windows protected your PC', simply click 'More info' and then 'Run anyway'.",
+        rInstWinStep4: "All settings and offline data are safely stored on your local machine.",
+        rFooterDesc: "PT Reka Saujana Falah — Software engineering studio based in West Java, Indonesia. Founded in 2026."
+      },
+      id: {
+        rNavHome: "← Profil Perusahaan",
+        rNavOverview: "Ringkasan",
+        rNavFeatures: "8 Fitur Utama",
+        rNavEditions: "Varian Edisi",
+        rNavDownload: "Unduh / Hadiah",
+        rNavInstall: "Panduan Pasang",
+        rNavContact: "Kontak",
+        rBtnHeader: "Dapatkan Raudhah ($0 / Hadiah)",
+        rBadge: "WAKAF DIGITAL • 100% GRATIS & BEBAS IKLAN • TANPA LANGGANAN",
+        rTitlePrefix: "Raudhah: Sahabat Ibadah &",
+        rTitleGradient: "Penuntut Ilmu Syar'i",
+        rSubtitle: "Aplikasi pendamping ibadah dan penuntut ilmu syar'i 100% bebas iklan dan offline. Memuat Al-Qur'an 30 Juz perkata & tajwid warna, 62.169 Hadits 9 Imam, Sifat Shalat Nabi, Dzikir Hisnul Muslim, Simulator Manasik 3D, dan Kalkulator Waris Faraidh.",
+        rPillAndroid: "Android APK (Lite & Full)",
+        rPillWindows: "Windows PC (Single Portable EXE & ZIP)",
+        rPillSecurity: "Enkripsi Militer AES-256-CBC & Release Signed",
+        rPillOffline: "100% Arsitektur Offline-First",
+        rPillWaqf: "Wakaf Digital ($0 Gratis / Hadiah Sukarela)",
+        rBannerVersion: "RILIS RESMI v1.0.0 (BUILD 48)",
+        rBannerTitle: "Dirancang Penuh Dedikasi untuk Ketenangan Ibadah Anda",
+        rBannerDesc: "Dihadiahkan oleh PT Reka Saujana Falah sebagai wakaf digital berkelanjutan. Sepenuhnya bebas iklan, tanpa pelacak data, dan tanpa langganan tersembunyi. Dibuat sangat ringan, elegan, dan menyejukkan hati.",
+        rBannerCta: "Dapatkan di Lemon Squeezy ($0 / Hadiah) →",
+        rBannerHint: "* Masukkan angka 0 pada kolom harga untuk unduh gratis, atau masukkan nominal hadiah seikhlasnya.",
+        rFeatTag: "8 PILAR UTAMA",
+        rFeatTitlePrefix: "Ensiklopedia Ibadah &",
+        rFeatTitleGradient: "Ilmu Syar'i Terpadu",
+        rFeatDesc: "Eksplorasi 8 modul komprehensif yang disusun dengan rujukan ilmiah shahih dan antarmuka modern berperforma tinggi.",
+        rTabQuran: "Al-Qur'an 30 Juz",
+        rTabHadith: "62.169 Hadits (9 Imam)",
+        rTabPrayer: "Sifat Shalat & Dzikir",
+        rTabHajj: "Simulator Haji 3D",
+        rTabFaraidh: "Kalkulator Waris Faraidh",
+        rTabAudio: "Audio Murottal & Muraja'ah",
+        rQ1Sub: "MODUL 01 // TAFSIR PERKATA & TAJWID DINAMIS",
+        rQ1Title: "Al-Qur'an 30 Juz Interaktif (Perkata & Tajwid)",
+        rQ1Desc: "Lengkap 114 Surah dan 30 Juz dengan terjemahan perkata, analisis tata bahasa (I'rab), penanda tajwid warna fonetik (Mad, Ghunnah, Qalqalah, Ikhfa), auto-scroll pintar tanpa lompat layar, dan pilihan tafsir terpercaya (Ibnu Katsir, As-Sa'di, Muyassar).",
+        rQ1Cap1: "Terjemahan perkata dan telaah akar kata untuk pemahaman mendalam.",
+        rQ1Cap2: "Tajwid warna dinamis dengan setelan penyesuaian kontras.",
+        rQ1Cap3: "Tampilan Mushaf Madinah satu layar yang responsif dan sangat ringan.",
+        rH1Sub: "MODUL 02 // ENSIKLOPEDIA HADITS TERLENGKAP",
+        rH1Title: "62.169 Hadits dari 9 Imam Besar (Kutubut Tis'ah)",
+        rH1Desc: "Database offline komplit 9 kitab hadits rujukan utama: Shahih Al-Bukhari (7.008), Shahih Muslim (5.362), Sunan Abu Daud (4.590), Jami' At-Tirmidzi (3.891), Sunan An-Nasa'i (5.662), Sunan Ibnu Majah (4.332), Muwatta Malik (1.594), Musnad Ahmad (26.363), dan Sunan Ad-Darimi (3.367).",
+        rH1Cap1: "Teks Arab lengkap dengan derajat keshahihan (Shahih, Hasan, dll).",
+        rH1Cap2: "Pemisahan kata Arab dan terjemahan perkata hadits.",
+        rH1Cap3: "Indeks bab terstruktur dan pencarian multi-kata kunci instan.",
+        rP1Sub: "MODUL 03 // BACAAN SHALAT SUNNAH & DOA SHAHIH",
+        rP1Title: "Sifat Shalat Nabi & Dzikir Hisnul Muslim",
+        rP1Desc: "Tuntunan shalat langkah demi langkah sesuai Sunnah mulai Takbir, Iftitah, Ruku', Sujud, hingga Tasyahhud & Salam. Dilengkapi dzikir pagi petang dengan tasbih digital taktil dan ratusan doa harian shahih pilihan.",
+        rP1Cap1: "Panduan Sifat Shalat Nabi lengkap dengan dalil hadits dan fadhilahnya.",
+        rP1Cap2: "Dzikir pagi petang rujukan Hisnul Muslim dengan counter tasbih digital.",
+        rP1Cap3: "17 Dzikir Ba'da Shalat Fardhu dengan penanda jeda nafas (•) tajwid.",
+        rJ1Sub: "MODUL 04 // SIMULATOR MANASIK 3D INTERAKTIF",
+        rJ1Title: "Simulator Rute Manasik Haji & Umrah 3D Dinamis",
+        rJ1Desc: "Panduan visual rute manasik dengan pelacakan satelit 3D mencakup Masjidil Haram (Mataf Ka'bah), Madinah, Mina, Arafah, dan Muzdalifah. Dilengkapi checklist amalan rukun dan doa-doa ma'tsur di setiap pos.",
+        rJ1Cap1: "Pelacakan 3D aktif dengan navigasi pos demi pos yang interaktif.",
+        rJ1Cap2: "Tuntunan lengkap: Ihram, Thawaf, Sa'i, Wukuf, dan Lempar Jumrah.",
+        rJ1Cap3: "Doa shahih bersumber dari hadits untuk setiap tempat mustajab.",
+        rF1Sub: "MODUL 05 // PEMBAGIAN HARTA PUSAKA SESUAI SYARI'AT",
+        rF1Title: "Kalkulator Waris Islam Otomatis (Faraidh / Mawaris)",
+        rF1Desc: "Mesin kalkulasi pembagian warisan otomatis berlandaskan syari'at Islam dan kaidah 4 mazhab. Menghitung rinci harta peninggalan (Tirkah), biaya jenazah, hutang piutang, dan wasiat yang sah secara transparan untuk Ashabul Furudh dan 'Ashabah.",
+        rF1Cap1: "Inventarisasi aset waris (rumah, tanah, emas, tabungan, usaha, dll).",
+        rF1Cap2: "Urutan deduksi syar'i: pengurusan jenazah, pelunasan hutang, wasiat 1/3.",
+        rF1Cap3: "Pembagian matematis presisi sesuai nash Al-Qur'an dan Sunnah.",
+        rA1Sub: "MODUL 06 // AUDIO AL-QUR'AN & ALAT HAFALAN",
+        rA1Title: "Audio Murottal & Muraja'ah (15 Qari Terkemuka)",
+        rA1Desc: "Dengarkan lantunan merdu 15 Qari dunia (Misyari Rasyid Al-Afasy, dll). Dilengkapi fitur pengulangan ayat fleksibel (1 hingga 30 kali), rentang surah/ayat untuk hafalan (muraja'ah), dan manajemen unduhan offline.",
+        rA1Cap1: "15 Syaikh ternama dengan kualitas rekaman audio studio jernih.",
+        rA1Cap2: "Pengulangan rentang ayat khusus untuk membantu penghafal Qur'an.",
+        rA1Cap3: "Penyimpanan offline lokal dan pemutaran audio di latar belakang.",
+        rEdTag: "DUA PILIHAN EDISI",
+        rEdTitlePrefix: "Pilih Edisi yang",
+        rEdTitleGradient: "Sesuai Kebutuhan Anda",
+        rEdDesc: "Kedua edisi 100% gratis dan bebas iklan. Pilih Edisi Lite untuk hemat kuota dan memori, atau Edisi Full Offline untuk database ensiklopedia lengkap.",
+        rLiteBadge: "EDISI LITE (~40 MB)",
+        rLiteTitle: "Ringan, Cepat & Hemat Memori",
+        rLiteDesc: "Didesain optimal untuk perangkat dengan ruang penyimpanan terbatas. Fokus pada ibadah harian.",
+        rLiteF1: "Al-Qur'an 30 Juz & 114 Surah lengkap perkata",
+        rLiteF2: "Panduan Sifat Shalat Nabi & Dzikir Sunnah",
+        rLiteF3: "Dzikir Pagi Petang Hisnul Muslim & Doa Shahih",
+        rLiteF4: "Tata Bahasa Arab Durusul Lughah & Kosakata",
+        rLiteF5: "Simulator Rute Haji 3D & Kalkulator Waris",
+        rLiteF6: "Database hadits & tafsir lengkap tidak disertakan demi hemat memori",
+        rLiteFiles: "📦 APK: ~41 MB • Windows EXE: ~40 MB",
+        rFullBadge: "EDISI FULL OFFLINE (~193 MB) • SANGAT DIREKOMENDASIKAN",
+        rFullTitle: "Ensiklopedia Syar'i Komplit 100% Offline",
+        rFullDesc: "Perpustakaan digital Islam mandiri terlengkap. Tidak memerlukan koneksi internet setelah diunduh.",
+        rFullF1: "Seluruh fitur pada Edisi Lite lengkap tanpa kurang",
+        rFullF2: "Lengkap 62.169 Hadits 9 Imam Besar (Kutubut Tis'ah)",
+        rFullF3: "Database Tafsir Al-Qur'an offline terintegrasi",
+        rFullF4: "Sanad hadits lengkap dan kamus kosakata penjelas",
+        rFullF5: "100% mandiri: tetap berfungsi di daerah terpencil tanpa sinyal",
+        rFullFiles: "📦 APK: ~193 MB • Windows EXE: ~192 MB",
+        rGiftBadge: "🎁 WAKAF DIGITAL & HADIAH SUKARELA",
+        rGiftTitle: "Gratis untuk Semua. Didukung Apresiasi Sukarela.",
+        rGiftDesc1: "Aplikasi Raudhah dipersembahkan sebagai Wakaf Digital demi kemaslahatan kaum muslimin tanpa halangan biaya langganan atau tayangan iklan.",
+        rGiftNotice: "<strong>Catatan Integritas & Apresiasi:</strong><br>Aplikasi ini adalah wakaf digital dan dapat diunduh <strong>100% GRATIS</strong>. Bagi Anda yang ingin menyampaikan hadiah / tanda terima kasih (Gift) atas jerih payah rekayasa teknologi ini, Anda dapat menyertakan nominal seikhlasnya melalui Lemon Squeezy atau menu apresiasi di dalam aplikasi. Ini murni sebagai hadiah / apresiasi karya, bukan infak atau sedekah.",
+        rCheckoutHeader: "CHECKOUT RESMI LEMON SQUEEZY",
+        rPriceSuffix: "/ Gratis atau Bayar Seikhlasnya",
+        rPriceHint: "Ketik angka 0 untuk unduh gratis, atau isi nominal hadiah ($3, $5, $10, dst) untuk apresiasi.",
+        rBtnBuy: "Beli / Unduh di Lemon Squeezy",
+        rInstTag: "PANDUAN PENGGUNA",
+        rInstTitlePrefix: "Panduan Pemasangan",
+        rInstTitleGradient: "Cepat & Mudah",
+        rInstAndroidTitle: "Untuk Pengguna Android (.apk)",
+        rInstAndStep1: "Unduh berkas APK (pilih Lite untuk hemat kuota, atau Full untuk database hadits komplit).",
+        rInstAndStep2: "Buka berkas APK yang telah diunduh di File Manager HP Anda.",
+        rInstAndStep3: "Jika muncul peringatan 'Sumber tidak dikenal / Unknown apps', aktifkan izin instalasi untuk peramban Anda.",
+        rInstAndStep4: "Buka aplikasi Raudhah dan nikmati ibadah yang tenang tanpa gangguan iklan!",
+        rInstWinTitle: "Untuk Pengguna Windows PC (.exe / .zip)",
+        rInstWinStep1: "Unduh file mandiri .exe (atau ekstrak file portabel .zip).",
+        rInstWinStep2: "Klik ganda file untuk langsung membuka Raudhah — tanpa perlu instalasi rumit.",
+        rInstWinStep3: "Jika Windows SmartScreen memunculkan pesan peringatan, klik 'More info' lalu klik 'Run anyway'.",
+        rInstWinStep4: "Seluruh pengaturan dan data tersimpan aman di komputer lokal Anda.",
+        rFooterDesc: "PT Reka Saujana Falah — Studio rekayasa perangkat lunak berkedudukan di Jawa Barat, Indonesia. Berdiri tahun 2026."
+      }
+    };
+
+    // State & Init
+    let raudhahLang = localStorage.getItem('rsf_lang') || 'en';
+
+    function setRaudhahLanguage(lang) {
+      raudhahLang = lang;
+      localStorage.setItem('rsf_lang', lang);
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (raudhahI18n[lang] && raudhahI18n[lang][key]) {
+          el.innerHTML = raudhahI18n[lang][key];
+        }
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setRaudhahLanguage(raudhahLang);
+
+      // Language Switcher clicks
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setRaudhahLanguage(btn.getAttribute('data-lang'));
+        });
+      });
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.querySelector('.mobile-toggle');
+      const mobileDrawer = document.querySelector('.mobile-nav-drawer');
+      if (mobileBtn && mobileDrawer) {
+        mobileBtn.addEventListener('click', () => {
+          mobileDrawer.classList.toggle('active');
+        });
+      }
+
+      // Feature Tabs
+      const tabBtns = document.querySelectorAll('.raudhah-tab-btn');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          document.querySelectorAll('.raudhah-tab-content').forEach(c => c.classList.remove('active'));
+
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          const targetId = btn.getAttribute('data-tab');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) targetEl.classList.add('active');
+        });
+      });
+
+      // Lemon Squeezy SDK initialization
+      window.addEventListener('load', () => {
+        if (window.createLemonSqueezy) {
+          window.createLemonSqueezy();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

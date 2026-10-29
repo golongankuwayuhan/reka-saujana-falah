@@ -2713,3 +2713,151 @@ section {
 .legal-bottom-nav a:hover {
   text-decoration: underline;
 }
+
+
+/* ===================================================================
+   RAUDHAH APP - DIGITAL WAQF & SACRED KNOWLEDGE COMPANION
+   Emerald & Gold Islamic High-Tech Theme
+   =================================================================== */
+
+:root {
+  --accent-emerald: #10b981;
+  --accent-emerald-rgb: 16, 185, 129;
+  --accent-gold: #f59e0b;
+  --accent-gold-rgb: 245, 158, 11;
+  --bg-emerald-glow: rgba(16, 185, 129, 0.15);
+}
+
+.raudhah-section {
+  position: relative;
+  padding: 6.5rem 0 5rem;
+  border-top: 1px solid rgba(16, 185, 129, 0.22);
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+}
+
+.raudhah-badge-wakaf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.15rem;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: var(--radius-full);
+  color: #34d399;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+}
+
+.raudhah-badge-wakaf .pulse-dot-emerald {
+  width: 8px;
+  height: 8px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #34d399;
+  animation: pulse-emerald 2s infinite;
+}
+
+@keyframes pulse-emerald {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #facc15 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.raudhah-hero-card {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(16, 185, 129, 0.12);
+}
+
+.raudhah-pill {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+.raudhah-pill-gold {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fde047;
+}
+
+.raudhah-gift-box {
+  background: linear-gradient(135deg, rgba(16, 23, 38, 0.85) 0%, rgba(13, 30, 26, 0.9) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(16, 185, 129, 0.12);
+}
+
+@media (max-width: 900px) {
+  .raudhah-gift-box {
+    grid-template-columns: 1fr;
+    padding: 1.75rem;
+  }
+}
+
+.btn-raudhah-lemon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.btn-raudhah-lemon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.45);
+  background: linear-gradient(135deg, #047857 0%, #059669 100%);
+  color: #fff;
+}
+
+.raudhah-platforms-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.65rem;
+  color: #e2e8f0;
+}

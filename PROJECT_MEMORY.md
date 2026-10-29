@@ -101,6 +101,20 @@ Website mengimplementasikan checkout modal elegan in-browser tanpa me-redirect p
 
 ---
 
+
+### C. Produk Kedua: Raudhah (Islamic Worship & Sacred Knowledge Companion)
+* **Product Name**: Raudhah - Qur'an, Sunnah Prayers, Hajj, Hadith
+* **Product ID Lemon**: `1483526`
+* **Model Distribusi**: **Wakaf Digital (100% Free & Ad-Free / Pay What You Want min $0)**
+* **Prinsip**: Kontribusi berbayar adalah **Hadiah / Apresiasi Sukarela** (bukan infak).
+* **Direct Checkout URL**: `https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1`
+* **Deliverables**:
+  - Android APK (Lite ~41 MB & Full ~193 MB)
+  - Windows Portable EXE & ZIP (Lite ~40 MB & Full ~192 MB)
+* **Live Showcase**: `https://rekasaujanafalah.com/raudhah/index.html`
+
+---
+
 ## 🚀 5. RIWAYAT KAMPANYE PELUNCURAN (OFFICIAL LAUNCH TWEET)
 
 Pada **28 Oktober 2026, 04:54 AM WIB**, LuminaTweak Glass Edition resmi diluncurkan melalui akun resmi X (**@apexvistastudio**):
@@ -164,7 +178,10 @@ Try our interactive live simulator:
 │   ├── 03_STOREFRONT_AND_CHECKOUT_SETUP.md
 │   ├── 04_MARKETING_ASSETS_AND_LAUNCH.md
 │   ├── 05_DEVELOPMENT_HISTORY_AND_CHANGELOG.md
-│   └── 06_HOW_TO_RESUME_ON_ANOTHER_PC.md
+│   ├── 06_HOW_TO_RESUME_ON_ANOTHER_PC.md
+│   └── 07_RAUDHAH_APP_AND_LEMON_SETUP.md
+├── raudhah/
+│   └── index.html              # Showcase & portal resmi Raudhah
 ├── lumina/
 │   ├── index.html              # Showcase & Live simulator (URL: rekasaujanafalah.com/lumina)
 │   ├── demo.html               # Showcase & Live simulator (URL: rekasaujanafalah.com/lumina/demo.html)
