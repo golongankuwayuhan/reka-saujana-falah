@@ -67,30 +67,61 @@
         <img src="assets/images/logo.svg" alt="PT Reka Saujana Falah Logo" class="brand-logo-img">
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation with Equal Products & Dropdowns -->
       <nav class="nav-desktop" aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#hero" class="nav-item-link" data-i18n="navHome">Home</a></li>
           <li><a href="#about" class="nav-item-link" data-i18n="navAbout">About Us</a></li>
-          <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services &amp; Solutions</a></li>
-          <li><a href="#products" class="nav-item-link" data-i18n="navProducts">LuminaTweak Glass</a></li>
-          <li><a href="demo.html" class="nav-item-link" style="color: var(--accent-cyan);">Live Demo</a></li>
-          <li><a href="#raudhah" class="nav-item-link" style="color: #34d399;" data-i18n="navRaudhah">Raudhah App</a></li>
-          <li><a href="raudhah/index.html" class="nav-item-link" style="color: #10b981;" data-i18n="navRaudhahShowcase">Raudhah Showcase</a></li>
-          <li><a href="#raudhah" class="nav-item-link" style="color: #34d399;" data-i18n="navRaudhah">Raudhah App</a></li>
-          <li><a href="raudhah/index.html" class="nav-item-link" style="color: #10b981;" data-i18n="navRaudhahShowcase">Raudhah Showcase</a></li>
-          <li><a href="lumina/lemon/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
-          <li><a href="terms.html" class="nav-item-link" data-i18n="navTerms">Terms</a></li>
-          <li><a href="privacy.html" class="nav-item-link" data-i18n="navPrivacy">Privacy</a></li>
-          <li><a href="refund.html" class="nav-item-link" data-i18n="navRefund">Refund Policy</a></li>
+          <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services</a></li>
+
+          <!-- Product 1: LuminaTweak Glass (Dropdown) -->
+          <li class="nav-item-dropdown">
+            <a href="#products" class="nav-item-link dropdown-toggle" data-i18n="navLuminaParent">
+              LuminaTweak Glass <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#products" class="dropdown-link" data-i18n="navLuminaOverview">Overview &amp; Features</a></li>
+              <li><a href="demo.html" class="dropdown-link highlight-cyan" data-i18n="navLuminaDemo">1:1 Live Simulator ↗</a></li>
+              <li><a href="lumina/lemon/pricing.html" class="dropdown-link" data-i18n="navLuminaPricing">Pricing &amp; Licensing</a></li>
+              <li><a href="enterprise-pricing.html" class="dropdown-link" data-i18n="navLuminaEnterprise">Enterprise Fleet</a></li>
+            </ul>
+          </li>
+
+          <!-- Product 2: Raudhah App (Dropdown) - EQUAL LEVEL -->
+          <li class="nav-item-dropdown">
+            <a href="#raudhah" class="nav-item-link dropdown-toggle" style="color: #34d399;" data-i18n="navRaudhahParent">
+              Raudhah App <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#raudhah" class="dropdown-link" data-i18n="navRaudhahOverview">Overview &amp; Digital Waqf</a></li>
+              <li><a href="raudhah/index.html" class="dropdown-link highlight-emerald" data-i18n="navRaudhahShowcase">Official Showcase &amp; Guide ↗</a></li>
+              <li><a href="raudhah/index.html#editions" class="dropdown-link" data-i18n="navRaudhahEditions">Lite vs Full Editions</a></li>
+              <li><a href="raudhah/index.html#download" class="dropdown-link" data-i18n="navRaudhahDownload">Download ($0 / Gift)</a></li>
+            </ul>
+          </li>
+
+          <!-- Company & Legal (Dropdown) -->
+          <li class="nav-item-dropdown">
+            <a href="#verification" class="nav-item-link dropdown-toggle" data-i18n="navCompanyParent">
+              Company &amp; Legal <span class="dropdown-chevron">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#verification" class="dropdown-link" data-i18n="navVerification">D-U-N-S® Verification</a></li>
+              <li><a href="terms.html" class="dropdown-link" data-i18n="navTerms">Terms of Service</a></li>
+              <li><a href="privacy.html" class="dropdown-link" data-i18n="navPrivacy">Privacy Policy</a></li>
+              <li><a href="refund.html" class="dropdown-link" data-i18n="navRefund">Refund Policy</a></li>
+            </ul>
+          </li>
+
           <li><a href="#contact" class="nav-item-link" data-i18n="navContact">Contact</a></li>
         </ul>
 
         <div class="nav-actions">
-          <!-- Language Switcher -->
+          <!-- Prominent Language Switcher with Globe Icon -->
           <div class="lang-switcher" aria-label="Language Selector">
-            <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+            <span class="lang-globe-icon">🌐</span>
             <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+            <button class="lang-btn" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
           </div>
 
           <!-- Header CTA -->
@@ -112,25 +143,43 @@
 
     <!-- Mobile Drawer -->
     <div class="mobile-nav-drawer">
+      <div style="padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-size: 0.8rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">LANGUAGE</span>
+        <div class="lang-switcher">
+          <span class="lang-globe-icon">🌐</span>
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="id">ID</button>
+        </div>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#hero" class="nav-item-link" data-i18n="navHome">Home</a></li>
         <li><a href="#about" class="nav-item-link" data-i18n="navAbout">About Us</a></li>
-        <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services &amp; Solutions</a></li>
-        <li><a href="#products" class="nav-item-link" data-i18n="navProducts">LuminaTweak Glass</a></li>
-        <li><a href="demo.html" class="nav-item-link" style="color: var(--accent-cyan);">Live Demo</a></li>
-        <li><a href="lumina/lemon/pricing.html" class="nav-item-link" data-i18n="navPricing">Pricing &amp; Licensing</a></li>
-        <li><a href="enterprise-pricing.html" class="nav-item-link" data-i18n="navEnterprise">Enterprise Pricing</a></li>
-        <li><a href="terms.html" class="nav-item-link" data-i18n="navTerms">Terms</a></li>
-        <li><a href="privacy.html" class="nav-item-link" data-i18n="navPrivacy">Privacy</a></li>
-        <li><a href="refund.html" class="nav-item-link" data-i18n="navRefund">Refund Policy</a></li>
+        <li><a href="#services" class="nav-item-link" data-i18n="navServices">Services</a></li>
+
+        <li class="mobile-nav-group-title">LuminaTweak Glass</li>
+        <li><a href="#products" class="nav-item-link mobile-sub-link" data-i18n="navLuminaOverview">Overview &amp; Features</a></li>
+        <li><a href="demo.html" class="nav-item-link mobile-sub-link" style="color: var(--accent-cyan);" data-i18n="navLuminaDemo">1:1 Live Simulator ↗</a></li>
+        <li><a href="lumina/lemon/pricing.html" class="nav-item-link mobile-sub-link" data-i18n="navLuminaPricing">Pricing &amp; Licensing</a></li>
+        <li><a href="enterprise-pricing.html" class="nav-item-link mobile-sub-link" data-i18n="navLuminaEnterprise">Enterprise Fleet</a></li>
+
+        <li class="mobile-nav-group-title" style="color: #34d399;">Raudhah App</li>
+        <li><a href="#raudhah" class="nav-item-link mobile-sub-link" style="color: #6ee7b7;" data-i18n="navRaudhahOverview">Overview &amp; Digital Waqf</a></li>
+        <li><a href="raudhah/index.html" class="nav-item-link mobile-sub-link" style="color: #34d399;" data-i18n="navRaudhahShowcase">Official Showcase &amp; Guide ↗</a></li>
+        <li><a href="raudhah/index.html#editions" class="nav-item-link mobile-sub-link" data-i18n="navRaudhahEditions">Lite vs Full Editions</a></li>
+        <li><a href="raudhah/index.html#download" class="nav-item-link mobile-sub-link" data-i18n="navRaudhahDownload">Download ($0 / Gift)</a></li>
+
+        <li class="mobile-nav-group-title">Company &amp; Legal</li>
+        <li><a href="#verification" class="nav-item-link mobile-sub-link" data-i18n="navVerification">D-U-N-S® Verification</a></li>
+        <li><a href="terms.html" class="nav-item-link mobile-sub-link" data-i18n="navTerms">Terms of Service</a></li>
+        <li><a href="privacy.html" class="nav-item-link mobile-sub-link" data-i18n="navPrivacy">Privacy Policy</a></li>
+        <li><a href="refund.html" class="nav-item-link mobile-sub-link" data-i18n="navRefund">Refund Policy</a></li>
+
         <li><a href="#contact" class="nav-item-link" data-i18n="navContact">Contact</a></li>
       </ul>
-      <div class="nav-actions">
-        <div class="lang-switcher">
-          <button class="lang-btn" data-lang="id">ID</button>
-          <button class="lang-btn active" data-lang="en">EN</button>
-        </div>
-        <a href="#contact" class="btn-header-cta" data-i18n="btnHeaderCta">Contact Us</a>
+
+      <div style="padding: 1.25rem;">
+        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;" data-i18n="btnHeaderCta">Contact Us</a>
       </div>
     </div>
   </header>
@@ -1001,14 +1050,14 @@
         <div class="section-header">
           <div class="raudhah-badge-wakaf">
             <span class="pulse-dot-emerald"></span>
-            <span data-i18n="raudhahTag">WAKAF DIGITAL • 100% GRATIS &amp; BEBAS IKLAN • TANPA LANGGANAN</span>
+            <span data-i18n="raudhahTag">DIGITAL WAQF • 100% FREE &amp; AD-FREE • ZERO SUBSCRIPTIONS</span>
           </div>
           <h2 class="section-title">
             <span data-i18n="raudhahTitlePrefix">Raudhah —</span>
             <span class="text-gradient-emerald" data-i18n="raudhahTitleGradient">Islamic Worship &amp; Sacred Knowledge Companion</span>
           </h2>
           <p class="section-desc" data-i18n="raudhahDesc">
-            Aplikasi pendamping ibadah dan penuntut ilmu syar'i 100% bebas iklan dan offline. Memuat Al-Qur'an 30 Juz perkata &amp; tajwid warna, 62.169 Hadits 9 Imam, Sifat Shalat Nabi, Dzikir Hisnul Muslim, Simulator Manasik Haji 3D, dan Kalkulator Waris Faraidh. Tersedia untuk Android &amp; Windows PC.
+            A complete, ultra-lightweight, and 100% ad-free offline companion. Featuring Holy Qur'an 30 Juz word-by-word with dynamic tajweed, 62,169 Hadiths of 9 Imams, Sifat Shalat Nabi, Hisnul Muslim adhkar, 3D Hajj simulator, and automated Faraidh inheritance engine. Available for Android APK &amp; Windows PC.
           </p>
         </div>
 
@@ -1023,27 +1072,27 @@
               💻 Windows PC (Portable EXE &amp; ZIP)
             </span>
             <span class="product-pill raudhah-pill-gold">
-              🛡️ Enkripsi Militer AES-256-CBC
+              🛡️ AES-256-CBC Encrypted &amp; Signed
             </span>
             <span class="product-pill raudhah-pill">
               ⚡ 100% Offline-First
             </span>
             <span class="product-pill raudhah-pill-gold">
-              🎁 Wakaf Digital ($0 Gratis / Hadiah Sukarela)
+              🎁 Digital Waqf ($0 Free / Voluntary Gift)
             </span>
             <span class="product-pill raudhah-pill">
-              📚 62.169 Hadits 9 Imam
+              📚 62,169 Hadiths (9 Imams)
             </span>
             <span class="product-pill raudhah-pill">
               🕋 3D Dynamic Hajj Simulator
             </span>
           </div>
 
-          <!-- Banner Layout inside Card -->
-          <div style="padding: 2rem 2.5rem; display: grid; grid-template-columns: 1.15fr 1fr; gap: 2.5rem; align-items: center;">
+          <!-- Banner Layout with User Authentic Screenshots -->
+          <div style="padding: 2.25rem 2.5rem; display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: center;">
             <div>
-              <div class="image-wrapper" title="Klik untuk membuka showcase lengkap Raudhah" style="cursor: pointer; border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.3);">
-                <img src="assets/images/raudhah-cover-hero.png" alt="Raudhah Islamic Worship Companion" style="width: 100%; display: block; border-radius: var(--radius-md);">
+              <div class="image-wrapper" title="Raudhah Application Screenshot" style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid rgba(16, 185, 129, 0.35); box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); max-height: 520px; display: flex; justify-content: center; background: #07090e;">
+                <img src="assets/images/raudhah-user-mainmenu.jpg" alt="Raudhah Islamic Worship Companion Main Menu" style="width: 100%; max-width: 380px; object-fit: contain; border-radius: var(--radius-md);">
               </div>
             </div>
             <div>
@@ -1051,76 +1100,93 @@
                 PRODUCT ID: 1483526 • BUILD 48 RELEASE
               </div>
               <h3 style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;" data-i18n="raudhahCardTitle">
-                Persembahan Wakaf Digital untuk Kaum Muslimin &amp; Penuntut Ilmu
+                Dedicated Digital Waqf for Muslims &amp; Seekers of Sacred Knowledge
               </h3>
               <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;" data-i18n="raudhahCardBody">
-                Raudhah dirancang tanpa iklan, tanpa langganan, dan berarsitektur offline-first murni. Tersedia dalam dua varian: <strong>Edisi Lite (~40 MB)</strong> hemat memori dan <strong>Edisi Full Offline (~193 MB)</strong> komplit dengan 62.169 Hadits dan Tafsir lengkap.
+                Raudhah is crafted with zero ads, zero recurring subscriptions, and a pure offline-first architecture. Available in two distributions: <strong>Lite Edition (~40 MB)</strong> for storage efficiency and <strong>Full Offline Edition (~193 MB)</strong> featuring the complete 62,169 Hadiths and classical Tafsir libraries.
               </p>
 
               <div class="gift-notice-box" style="margin-bottom: 1.5rem;" data-i18n="raudhahCardGiftNotice">
-                <strong>Catatan Apresiasi &amp; Hadiah:</strong><br>
-                Aplikasi ini 100% GRATIS (ketik 0 pada harga checkout). Jika ingin memberikan hadiah tanda terima kasih atas karya teknologi ini, Anda dapat menyertakan nominal sukarela melalui Lemon Squeezy atau menu apresiasi di dalam aplikasi (murni sebagai hadiah / apresiasi, bukan infak).
+                <strong>Integrity &amp; Appreciation Note:</strong><br>
+                This application is <strong>100% FREE</strong> (simply enter 0 in the price field). For those who wish to express gratitude or offer a voluntary gift (hadiah) for the technological craftsmanship invested, you are welcome to contribute any nominal amount via Lemon Squeezy or through the in-app appreciation menu. This is purely a gift of appreciation for the work, not an infak or charity.
               </div>
 
               <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center;">
                 <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1" 
                    class="lemonsqueezy-button btn-raudhah-lemon" 
                    data-i18n="btnRaudhahLemon">
-                  Unduh / Beli di Lemon Squeezy ($0 / Hadiah)
+                  Get on Lemon Squeezy ($0 / Voluntary Gift)
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
                 </a>
                 <a href="raudhah/index.html" class="btn btn-secondary" style="border-color: rgba(16, 185, 129, 0.4); color: #6ee7b7; text-decoration: none; display: inline-flex; align-items: center; padding: 0.85rem 1.4rem; border-radius: var(--radius-md);" data-i18n="btnRaudhahShowcase">
-                  Buka Halaman Showcase Raudhah →
+                  Open Full Raudhah Showcase →
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 4 Grid Features -->
-        <div class="prod-features-grid" style="margin-top: 2.5rem;">
-          <div class="glass-panel prod-feat-card" style="border-color: rgba(16, 185, 129, 0.25);">
-            <div class="prod-feat-header">
-              <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">📖</div>
-              <span class="feat-number font-mono" style="color: #34d399;">01 // AL-QUR'AN 30 JUZ</span>
-            </div>
-            <h3 class="prod-feat-title" data-i18n="rFeat1Title">Tafsir Perkata &amp; Tajwid Warna</h3>
-            <p class="prod-feat-desc" data-i18n="rFeat1Desc">
-              114 Surah lengkap perkata dengan I'rab tata bahasa, tajwid fonetik warna, auto-scroll pintar tanpa lompat, dan tafsir terpercaya (Ibnu Katsir, As-Sa'di, Muyassar).
-            </p>
+        <!-- 6 User Screenshots Feature Gallery Grid -->
+        <div style="margin-top: 3.5rem;">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span class="section-tag" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);" data-i18n="rGalleryTag">AUTHENTIC IN-APP SCREENSHOTS</span>
+            <h3 style="font-size: 1.5rem; color: #fff; margin-top: 0.5rem;" data-i18n="rGalleryTitle">Explore Raudhah's Real User Interface</h3>
           </div>
 
-          <div class="glass-panel prod-feat-card" style="border-color: rgba(16, 185, 129, 0.25);">
-            <div class="prod-feat-header">
-              <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">📚</div>
-              <span class="feat-number font-mono" style="color: #34d399;">02 // KUTUBUT TIS'AH</span>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <!-- Screenshot 1: Holy Qur'an -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-quran.jpg" alt="Holy Qur'an Word by Word" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr1Title">1. Qur'an Word-by-Word &amp; Tajweed</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr1Desc">Surah Al-Kahf with grammatical roots, phonetic tajweed colors &amp; smooth auto-scroll.</p>
             </div>
-            <h3 class="prod-feat-title" data-i18n="rFeat2Title">62.169 Hadits 9 Imam Besar</h3>
-            <p class="prod-feat-desc" data-i18n="rFeat2Desc">
-              Database offline lengkap Shahih Bukhari, Muslim, Abu Daud, Tirmidzi, Nasa'i, Ibnu Majah, Ahmad, Malik, dan Darimi dengan pencarian kata kunci instan.
-            </p>
-          </div>
 
-          <div class="glass-panel prod-feat-card" style="border-color: rgba(16, 185, 129, 0.25);">
-            <div class="prod-feat-header">
-              <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">🕋</div>
-              <span class="feat-number font-mono" style="color: #34d399;">03 // HAJI &amp; UMRAH 3D</span>
+            <!-- Screenshot 2: Hadith 9 Imams -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-hadith.jpg" alt="Shahih Al-Bukhari Hadith" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr2Title">2. 62,169 Hadiths (Kutubut Tis'ah)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr2Desc">Shahih Bukhari, Muslim, Abu Daud with authenticity classification &amp; word breakdown.</p>
             </div>
-            <h3 class="prod-feat-title" data-i18n="rFeat3Title">Simulator Rute Manasik 3D Dinamis</h3>
-            <p class="prod-feat-desc" data-i18n="rFeat3Desc">
-              Pelacakan rute satelit interaktif 3D meliputi Masjidil Haram (Mataf Ka'bah), Mina, Arafah, dan Muzdalifah dengan checklist rukun serta doa ma'tsur.
-            </p>
-          </div>
 
-          <div class="glass-panel prod-feat-card" style="border-color: rgba(16, 185, 129, 0.25);">
-            <div class="prod-feat-header">
-              <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.35); color: #34d399;">💰</div>
-              <span class="feat-number font-mono" style="color: #34d399;">04 // FARAIDH MAWARIS</span>
+            <!-- Screenshot 3: Hajj 3D Simulator -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-hajj.jpg" alt="3D Visual Hajj Simulator Mataf Kaaba" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr3Title">3. 3D Visual Hajj &amp; Umrah Simulator</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr3Desc">Interactive satellite tracking of Mataf Kaaba, Mina, Arafah with ritual checklists &amp; prayers.</p>
             </div>
-            <h3 class="prod-feat-title" data-i18n="rFeat4Title">Kalkulator Waris Otomatis</h3>
-            <p class="prod-feat-desc" data-i18n="rFeat4Desc">
-              Kalkulasi matematis pembagian tirkah (harta pusaka) sesuai 4 mazhab fiqih, deduksi hutang dan wasiat, serta pembagian transparan untuk Ashabul Furudh.
-            </p>
+
+            <!-- Screenshot 4: Faraidh Calculator -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-faraidh.jpg" alt="Faraidh Inheritance Calculator" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr4Title">4. Automated Faraidh Inheritance</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr4Desc">Estate calculation (Tirkah), funeral expenses, debt settlement &amp; Shariah shares.</p>
+            </div>
+
+            <!-- Screenshot 5: Audio Murottal -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-audio.jpg" alt="Audio Murottal and Muraja'ah" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr5Title">5. Audio Murottal &amp; Muraja'ah</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr5Desc">15 world-renowned reciters (Mishary Al-Afasy) with flexible ayah repetition (1-30x).</p>
+            </div>
+
+            <!-- Screenshot 6: Sifat Shalat & Adhkar -->
+            <div class="glass-panel" style="padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(16, 185, 129, 0.25);">
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1rem; background: #07090e; display: flex; justify-content: center;">
+                <img src="assets/images/raudhah-user-mainmenu.jpg" alt="Sifat Shalat Nabi and Adhkar" style="width: 100%; height: 320px; object-fit: contain;">
+              </div>
+              <h4 style="font-size: 1rem; color: #fff; margin-bottom: 0.35rem;" data-i18n="rScr6Title">6. Sifat Shalat &amp; Hisnul Muslim</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="rScr6Desc">Prophetic prayer recitations from Takbir to Salam, plus morning/evening adhkar with digital tasbih.</p>
+            </div>
           </div>
         </div>
 
