@@ -37,7 +37,7 @@ Dokumen ini dirancang lengkap agar Anda atau developer manapun dapat:
 LuminaTweak Glass Edition adalah utilitas sistem desktop native macOS berorientasi performa dan estetika tingkat tinggi yang dirancang untuk pengguna pro, developer, dan desainer.
 
 ### A. Fitur Unggulan (Core Pillars):
-1. **2,265+ Native macOS Preferences**:
+1. **2,300+ Native macOS Preferences**:
    * Menjangkau 11 layer konfigurasi sistem: Finder, Dock, Mission Control, Safari, Xcode/Dev, Hardware & Power, Window Manager, Screenshots, Lock Screen, Keyboard & Input, Animation Curves.
    * 100% SIP-Safe (System Integrity Protection Safe) — tidak membutuhkan modifikasi kernel root yang berisiko.
 2. **Near-Zero Battery Shield (`~0% Sleep Drain` / `Almost 0% Sleep Loss`)**:
@@ -135,7 +135,7 @@ and zero recurring subscriptions. Here is what’s unlocked 🧵 👇
 Replying to @apexvistastudio
 
 🔹 Near Zero-Drain Battery Shield 
-🔹 2,265+ native preferences across 11 macOS layers 
+🔹 2,300+ native preferences across 11 macOS layers 
 🔹 Universal Apple Silicon & Intel support 
 🔹 Buy once, keep forever ($39 / $59 / $99) 
 

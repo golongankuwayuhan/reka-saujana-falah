@@ -27,7 +27,7 @@ Today, we’re proud to launch LuminaTweak Glass Edition on @LemonSqueezy! 🚀 
 Replying to @apexvistastudio
 
 🔹 Near Zero-Drain Battery Shield 
-🔹 2,265+ native preferences across 11 macOS layers 
+🔹 2,300+ native preferences across 11 macOS layers 
 🔹 Universal Apple Silicon & Intel support 
 🔹 Buy once, keep forever ($39 / $59 / $99) 
 
@@ -38,7 +38,7 @@ Try our interactive live simulator:
 ```
 * **Media Attachment**: `Cover_Image_4x3.jpg` / `luminatweak-storefront-4x3.jpg` (1600x1200)
   * Menampilkan MacBook Pro dengan antarmuka gelap, pantulan obsidian studio, dan badge:
-    * `⚡ 2,265+ Native macOS Tweaks`
+    * `⚡ 2,300+ Native macOS Tweaks`
     * `🔋 Near-Zero Battery Drain — Almost 0% Sleep Loss`
     * `💎 Perpetual One-Time License`
 

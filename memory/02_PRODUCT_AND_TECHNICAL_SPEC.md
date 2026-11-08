@@ -1,7 +1,13 @@
 # Memory 02: Spesifikasi Produk & Arsitektur Teknis LuminaTweak Glass Edition
 
-## 1. Konsep Dasar Produk
+## 1. Konsep Dasar Produk & Total Komposisi Tweak
 LuminaTweak Glass Edition adalah aplikasi macOS native yang menyatukan ribuan pengaturan tersembunyi macOS (yang selama ini hanya bisa diakses via perintah Terminal `defaults write`) ke dalam sebuah dasbor grafis elegan berbasis **Liquid Frosted Glass**.
+
+### Komposisi Total 2.337 Tweak Native macOS:
+* **72 Curated Primary Tweaks**: Tweak kurasi inti dengan slider kontrol presisi, toggle neon, telemetri live, dan video preview 60fps sebelum vs sesudah.
+* **2.265 Universal Registry Plist Catalog**: Tweak menyeluruh dari hasil audit 411 domain preferensi resmi macOS (Dock, Finder, Safari, CoreAudio, WindowManager, Terminal, dll.).
+* **Total Keseluruhan Sistem**: **2.337 Tweak Native** (100% Genuine Native Defaults & Kernel Settings).
+* **Standar Penyebutan Pemasaran**: **2.300+ Tweak Native macOS** (Bahasa Indonesia) / **2,300+ Native macOS Tweaks** (English) mengikuti prinsip *under-promise, over-deliver*.
 
 ## 2. Parameter Teknis & Kompatibilitas
 * **Format Distribusi**: Universal Binary (.dmg & .zip)

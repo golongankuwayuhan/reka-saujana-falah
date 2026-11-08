@@ -41,3 +41,14 @@
   * Mengganti teaser card poster menjadi render 3D resmi `luminatweak-social-promo.jpg` dan menghubungkan tombol aksi langsung ke modal overlay Lemon Squeezy.
   * Memastikan `lumina/index.html` dan `lumina/demo.html` tersinkronisasi 100%.
   * Menyimpan dan merapikan seluruh memory pengembangan ke dalam repositori git.
+
+## Fase 6: Penyelarasan Jumlah Tweak Menjadi 2.337 Tweak (Standar: 2.300+ Tweak)
+* **Instruksi Pengguna**: Selaraskan jumlah tweak website dengan update di chat LuminaTweak Glass.
+* **Tindakan**:
+  * Mengaudit komposisi tweak: 72 Curated Primary Tweaks + 2.265 Universal Registry Plist Catalog = **Total 2.337 Tweak Native macOS**.
+  * Menyelaraskan seluruh materi pemasaran dan website:
+    * Bahasa Indonesia: **2.300+ Tweak Native macOS** (menggantikan 2.265+).
+    * Bahasa Inggris: **2,300+ Native macOS Tweaks** (menggantikan 2,265+).
+    * Simulator in-browser active counter: Diperbarui menjadi `18 / 2,337`.
+  * Memperbarui seluruh halaman web (`index.html`, `pricing.html`, `enterprise-pricing.html`, `demo.html`, `lumina/demo.html`, `lumina/index.html`, `lumina/lemon/*`, `lumina/paddle/*`, `assets/js/main.js`).
+  * Mendorong pembaruan ke Git remote `origin` dan `memory`.
