@@ -2842,6 +2842,57 @@ section {
   color: #fff;
 }
 
+.btn-raudhah-playstore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #0a0f1d 0%, #141f36 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: all var(--transition-fast);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+.btn-raudhah-playstore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.35);
+  border-color: #34d399;
+  background: linear-gradient(135deg, #141f36 0%, #1e293b 100%);
+  color: #a7f3d0;
+}
+
+.raudhah-install-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+  .raudhah-install-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.raudhah-download-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 860px) {
+  .raudhah-download-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .raudhah-platforms-badge {
   display: flex;
   flex-wrap: wrap;

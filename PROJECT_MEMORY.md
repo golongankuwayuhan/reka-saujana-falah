@@ -106,11 +106,13 @@ Website mengimplementasikan checkout modal elegan in-browser tanpa me-redirect p
 * **Product Name**: Raudhah - Qur'an, Sunnah Prayers, Hajj, Hadith
 * **Product ID Lemon**: `1483526`
 * **Model Distribusi**: **Wakaf Digital (100% Free & Ad-Free / Pay What You Want min $0)**
-* **Prinsip**: Kontribusi berbayar adalah **Hadiah / Apresiasi Sukarela** (bukan infak).
-* **Direct Checkout URL**: `https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1`
-* **Deliverables**:
-  - Android APK (Lite ~41 MB & Full ~193 MB)
-  - Windows Portable EXE & ZIP (Lite ~40 MB & Full ~192 MB)
+* **Prinsip**: Kontribusi berbayar adalah **Hadiah / Apresiasi Sukarela** (bukan infak/sedekah).
+* **Multiplatform Targets & Distribusi**:
+  - **Android (Google Play Store)**: `https://play.google.com/store/apps/details?id=com.raudhah.app&pcampaignid=web_share` (Pemasangan instan 1-tap & pembaruan otomatis).
+  - **macOS (Mac OSX .dmg)**: Tersedia di Lemon Squeezy pada link checkout yang sama (`https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1`), universal binary untuk Apple Silicon (M1/M2/M3/M4) & Intel Mac.
+  - **Windows PC**: Portable Single EXE & ZIP (Lite ~40 MB & Full ~192 MB) di Lemon Squeezy.
+  - **Standalone Android APK**: Lite ~41 MB & Full ~193 MB di Lemon Squeezy.
+* **Direct Checkout URL Lemon Squeezy**: `https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1`
 * **Live Showcase**: `https://rekasaujanafalah.com/raudhah/index.html`
 
 ---

@@ -52,3 +52,23 @@
     * Simulator in-browser active counter: Diperbarui menjadi `18 / 2,337`.
   * Memperbarui seluruh halaman web (`index.html`, `pricing.html`, `enterprise-pricing.html`, `demo.html`, `lumina/demo.html`, `lumina/index.html`, `lumina/lemon/*`, `lumina/paddle/*`, `assets/js/main.js`).
   * Mendorong pembaruan ke Git remote `origin` dan `memory`.
+
+## Fase 7: Ekspansi Multiplatform Produk Raudhah (Google Play Store & macOS DMG di Lemon Squeezy)
+* **Instruksi Pengguna**:
+  * Perbaiki website terutama produk Raudhah: kini sudah tersedia versi Mac OSX DMG di Lemon Squeezy pada tautan yang sama.
+  * Tambahkan rilis resmi Google Play Store untuk Android dengan tautan: `https://play.google.com/store/apps/details?id=com.raudhah.app&pcampaignid=web_share`.
+  * Perbarui seluruh kode dan memory pengembangan secara lengkap di Git.
+* **Tindakan**:
+  * **Penyelarasan Platform Raudhah**:
+    * Android: Google Play Store (pemasangan 1-tap dan auto-update) + APK mandiri.
+    * macOS: Berkas `.dmg` universal (Apple Silicon & Intel) via Lemon Squeezy ($0 / Hadiah Sukarela).
+    * Windows PC: Single executable `.exe` dan `.zip` portabel via Lemon Squeezy.
+  * **Pembaruan Website**:
+    * Menambahkan tombol dan navigasi resmi ke Google Play Store serta Lemon Squeezy macOS DMG di `index.html` (navbar desktop, mobile drawer, dan section `#raudhah`).
+    * Menambahkan tombol berdesain logo resmi Google Play Store (`.btn-raudhah-playstore`) di CSS dan HTML.
+    * Memperbarui showcase portal `raudhah/index.html`: hero badges, banner CTA, rincian varian Lite vs Full, opsi unduhan terpisah (Play Store vs Lemon Squeezy), serta panduan pemasangan 3 kolom (Android, macOS DMG, dan Windows PC).
+    * Menyelaraskan kamus dwibahasa (ID & EN) di `assets/js/main.js` dan `raudhah/index.html`.
+  * **Pembaruan Dokumentasi Memory**:
+    * Memperbarui `PROJECT_MEMORY.md` dan `memory/07_RAUDHAH_APP_AND_LEMON_SETUP.md`.
+    * Mencatat riwayat changelog Fase 7 pada `memory/05_DEVELOPMENT_HISTORY_AND_CHANGELOG.md`.
+    * Melakukan commit dan push ke repositori GitHub `reka-saujana-falah` dan `Memory-Website-Company-Profile`.
