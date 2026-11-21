@@ -1,6 +1,6 @@
 # 🛡️ PADDLE.COM MERCHANT ONBOARDING & VERIFICATION GUIDE
 **Entitas**: PT Reka Saujana Falah (operating as Apex Vista Studio)  
-**Nomor D-U-N-S®**: 560249821  
+**Status D-U-N-S®**: D-U-N-S® Compliance Ready  
 **Website Resmi**: https://rekasaujanafalah.com  
 **Portal Khusus Paddle**: https://rekasaujanafalah.com/lumina/paddle/pricing.html  
 **Status**: Sedang Dalam Proses Verifikasi Kepatuhan (Under Merchant Review)  
@@ -13,7 +13,7 @@
 Dokumen ini mencatat seluruh arsitektur teknis, integrasi pembayaran, dan kepatuhan hukum (*merchant compliance*) yang disiapkan oleh **PT Reka Saujana Falah** untuk persetujuan akun **Paddle.com (Merchant of Record)**.
 
 Ketika tim kepatuhan (*compliance & risk team*) Paddle memeriksa situs `rekasaujanafalah.com`, seluruh elemen yang mereka butuhkan telah siap 100%:
-1. **Entitas Bisnis Sah & Transparan**: PT Reka Saujana Falah terdaftar resmi di Republik Indonesia dengan profil D-U-N-S® 560249821.
+1. **Entitas Bisnis Sah & Transparan**: PT Reka Saujana Falah terdaftar resmi di Republik Indonesia (Ditjen AHU Kemenkumham & OSS BKPM) serta disiapkan untuk audit kelayakan direktori global D-U-N-S®.
 2. **Katalog Produk Asli & Nyata**:
    * **LuminaTweak Glass Edition**: Utilitas sistem macOS native berkinerja tinggi dengan 2.300+ tweak, Near-Zero Battery Shield, dan simulator interaktif 1:1 real-time.
    * **Aplikasi Raudhah**: Aplikasi ibadah dan ilmu syar'i 100% bebas iklan dan offline untuk Android (Google Play Store), macOS (.dmg), dan Windows PC (.exe/.zip) dengan skema Wakaf Digital ($0 / Hadiah Sukarela).
@@ -128,7 +128,7 @@ Untuk memudahkan verifikasi oleh agen/analis Paddle:
 
 1. **Nama Bisnis**: PT Reka Saujana Falah
 2. **Negara & Domisili**: Indonesia (Jawa Barat)
-3. **DUNS Registered**: Ya (560249821)
+3. **Pendaftaran Entitas**: Ditjen AHU Kemenkumham RI & NIB OSS BKPM (D-U-N-S® Compliance Ready)
 4. **Kontak Resmi**:
    * Email Kepatuhan: `admin@rekasaujanafalah.com` / `contact@rekasaujanafalah.com`
    * WhatsApp Hotline: `+62 896-0101-4132`
