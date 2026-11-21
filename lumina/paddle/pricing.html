@@ -47,6 +47,23 @@
     </div>
   </header>
 
+  <!-- Paddle Onboarding & Verification Alert Banner -->
+  <div class="paddle-verification-alert-banner">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="live-pulse-dot" style="background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></span>
+        <span style="color: #e2e8f0;">
+          <strong style="color: #38bdf8;" id="bannerNoticeTitle">Paddle.com Merchant Verification in Progress:</strong>
+          <span id="bannerNoticeDesc">PT Reka Saujana Falah is currently completing official onboarding verification with Paddle.com. Product specifications, transparent pricing ($39 Plus, $59 Pro, $99 Power Pack), refund terms (30 days), and privacy protections below are verified and ready for live checkout activation upon Paddle approval.</span>
+        </span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+        <span style="display: inline-block; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 0.75rem; font-weight: 700;" id="bannerBadgeStatus">STATUS: IN REVIEW</span>
+        <a href="https://apexvista.lemonsqueezy.com/checkout/buy/44395d94-dbeb-4f8a-a3a6-71507099943b?embed=1" class="lemonsqueezy-button" style="font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-full); background: rgba(255, 199, 44, 0.15); border: 1px solid rgba(255, 199, 44, 0.4); color: #ffd600; text-decoration: none; font-weight: 600;" id="bannerActiveStoreLink">Active Store: Lemon Squeezy ↗</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Page Header -->
   <section class="legal-page-header">
     <div class="container">
@@ -559,6 +576,36 @@
     })();
   </script>
 
+  <!-- Paddle Verification Info Modal -->
+  <div id="paddleVerificationModal" class="paddle-modal-overlay" aria-hidden="true">
+    <div class="paddle-modal-box">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 0.65rem;">
+          <img src="../../assets/images/paddle-icon.svg" alt="Paddle" style="width: 22px; height: 22px;">
+          <h3 style="color: #fff; font-size: 1.2rem; font-weight: 700; margin: 0;">Paddle.com Integration Status</h3>
+        </div>
+        <button type="button" onclick="closePaddleVerificationModal()" style="background: none; border: none; color: #94a3b8; font-size: 1.5rem; cursor: pointer; padding: 0.25rem 0.5rem; line-height: 1;">&times;</button>
+      </div>
+
+      <div style="padding: 0.5rem 0 1.25rem;">
+        <div style="display: inline-block; padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.85rem;">
+          STATUS: MERCHANT VERIFICATION IN REVIEW
+        </div>
+        <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.65; margin-bottom: 1rem;">
+          PT Reka Saujana Falah is currently completing official onboarding verification with Paddle.com. This price tier is configured and verified in our Paddle merchant dashboard. Live checkout will be enabled immediately upon account activation.
+        </p>
+        <p style="color: #94a3b8; font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          In the meantime, you may purchase LuminaTweak Glass Edition immediately with instant license delivery through our active Lemon Squeezy storefront.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 0.85rem; justify-content: flex-end; flex-wrap: wrap;">
+        <button type="button" onclick="closePaddleVerificationModal()" class="btn btn-secondary" style="padding: 0.65rem 1.15rem; font-size: 0.85rem;">Close</button>
+        <a href="https://apexvista.lemonsqueezy.com/checkout/buy/44395d94-dbeb-4f8a-a3a6-71507099943b?embed=1" class="btn btn-primary" style="padding: 0.65rem 1.15rem; font-size: 0.85rem;">Buy on Lemon Squeezy Now ↗</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Paddle Billing v2 CDN & Initialization (LIVE PRODUCTION) -->
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script type="text/javascript">
@@ -584,7 +631,7 @@
 
     function openPaddleCheckout(priceId) {
       if (typeof Paddle === 'undefined') {
-        alert('Paddle billing script is loading. Please refresh if this persists.');
+        showPaddleVerificationModal(priceId);
         return;
       }
       var storedCustomerEmail = localStorage.getItem('lumina_customer_email') || new URLSearchParams(window.location.search).get('email') || "";
@@ -603,8 +650,24 @@
       try {
         Paddle.Checkout.open(checkoutOptions);
       } catch (err) {
-        console.error('Paddle open checkout error:', err);
-        alert('Error launching checkout: ' + err.message);
+        console.warn('Paddle open checkout error:', err);
+        showPaddleVerificationModal(priceId);
+      }
+    }
+
+    function showPaddleVerificationModal(priceId) {
+      var modal = document.getElementById('paddleVerificationModal');
+      if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+    }
+
+    function closePaddleVerificationModal() {
+      var modal = document.getElementById('paddleVerificationModal');
+      if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
       }
     }
   </script>

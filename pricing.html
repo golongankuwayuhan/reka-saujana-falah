@@ -29,6 +29,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-item-link" id="navHome">Home</a></li>
           <li><a href="pricing.html" class="nav-item-link active" id="navPricing" style="color: var(--accent-cyan);">Pricing &amp; Licensing</a></li>
+          <li><a href="lumina/paddle/pricing.html" class="nav-item-link" id="navPaddle" style="color: #38bdf8;">Paddle Store (Coming Soon) ↗</a></li>
           <li><a href="enterprise-pricing.html" class="nav-item-link" id="navEnterprise">Enterprise Pricing</a></li>
           <li><a href="terms.html" class="nav-item-link" id="navTerms">Terms of Service</a></li>
           <li><a href="privacy.html" class="nav-item-link" id="navPrivacy">Privacy Policy</a></li>
@@ -95,6 +96,30 @@
       </div>
     </div>
 
+    <!-- Paddle Onboarding & Verification Callout Banner -->
+    <div class="paddle-onboarding-callout">
+      <div class="paddle-callout-content">
+        <div class="paddle-callout-badge-row">
+          <span class="live-pulse-dot" style="background: #38bdf8; box-shadow: 0 0 10px #38bdf8;"></span>
+          <span style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: #38bdf8; font-weight: 700; text-transform: uppercase;" id="calloutStatusBadge">
+            PADDLE.COM MOR INTEGRATION • VERIFICATION IN PROGRESS
+          </span>
+        </div>
+        <h3 class="paddle-callout-title" id="calloutTitle">
+          Paddle.com Merchant of Record Integration — Under Verification Review
+        </h3>
+        <p class="paddle-callout-desc" id="calloutDesc">
+          PT Reka Saujana Falah is currently completing official onboarding verification with Paddle.com. All product tiers ($39 Plus, $59 Pro, $99 Power Pack) are configured, verified, and ready for instant activation upon Paddle approval. Customers may also purchase immediately via our active Lemon Squeezy storefront.
+        </p>
+      </div>
+      <div class="paddle-callout-action">
+        <a href="lumina/paddle/pricing.html" class="btn-paddle-callout" id="calloutBtnPaddle">
+          <img src="assets/images/paddle-icon.svg" alt="" style="width: 16px; height: 16px;">
+          <span>Dedicated Paddle Store ↗</span>
+        </a>
+      </div>
+    </div>
+
     <!-- Official Pricing Cards Grid -->
     <div class="pricing-cards-grid">
 
@@ -129,9 +154,9 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qmerytd57vfyt0rkay8tb'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t1BtnPaddle" style="display: none;">
+          <a href="lumina/paddle/pricing.html" class="btn-tier-paddle-cs" id="t1BtnPaddle">
             <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
-            <span>Get via Paddle ($39)</span>
+            <span>Paddle ($39) • In Review ↗</span>
           </a>
           <a href="https://apexvista.lemonsqueezy.com/checkout/buy/9847ba29-b065-4849-8379-aa75e5bd2c16?embed=1" class="lemonsqueezy-button btn btn-tier-buy" id="t1Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
@@ -173,10 +198,9 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qpy498d7wyfs4y8eydbpb'); return false;" class="btn btn-popular-paddle" id="t2BtnPaddle" style="display: none;">
+          <a href="lumina/paddle/pricing.html" class="btn-tier-paddle-cs" id="t2BtnPaddle">
             <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
-            <span>Get via Paddle ($59)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            <span>Paddle ($59) • In Review ↗</span>
           </a>
           <a href="https://apexvista.lemonsqueezy.com/checkout/buy/44395d94-dbeb-4f8a-a3a6-71507099943b?embed=1" class="lemonsqueezy-button btn btn-primary btn-popular-buy" id="t2Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
@@ -217,9 +241,9 @@
         </ul>
 
         <div class="tier-action">
-          <a href="javascript:void(0)" onclick="openPaddleCheckout('pri_01m54qrjt8mdpn532kq78wpytp'); return false;" class="btn btn-tier-buy btn-tier-paddle" id="t3BtnPaddle" style="display: none;">
+          <a href="lumina/paddle/pricing.html" class="btn-tier-paddle-cs" id="t3BtnPaddle">
             <img src="assets/images/paddle-icon.svg" alt="" class="btn-tier-paddle-icon">
-            <span>Get via Paddle ($99)</span>
+            <span>Paddle ($99) • In Review ↗</span>
           </a>
           <a href="https://apexvista.lemonsqueezy.com/checkout/buy/17c1f119-e6ca-4774-a9f5-1d646e8796be?embed=1" class="lemonsqueezy-button btn btn-tier-buy" id="t3Btn">
             <img src="assets/images/lemon-icon.svg" alt="" class="btn-tier-lemon-icon">
@@ -291,7 +315,7 @@
         <a href="privacy.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morPrivacy">Privacy Policy →</a>
         <a href="refund.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morRefund">Refund Policy (Refunds) →</a>
         <a href="enterprise-pricing.html" style="color: var(--accent-cyan); text-decoration: underline;" id="morEnterprise">Enterprise Pricing Sheet →</a>
-        <a href="lumina/paddle/pricing.html" style="color: #38bdf8; font-weight: 600; text-decoration: underline; display: none;" id="morPaddleSub">Dedicated Paddle Store &amp; Verification Suite →</a>
+        <a href="lumina/paddle/pricing.html" style="color: #38bdf8; font-weight: 600; text-decoration: underline;" id="morPaddleSub">Dedicated Paddle Store &amp; Verification Suite →</a>
       </div>
     </div>
 
@@ -327,8 +351,8 @@
             <li><a href="refund.html" class="footer-link" id="footerRefund">Refund Policy</a></li>
             <li><a href="pricing.html" class="footer-link active" id="footerPricing" style="color: var(--accent-cyan);">Official Pricing Page</a></li>
             <li><a href="enterprise-pricing.html" class="footer-link" id="footerEnterprise">Enterprise Pricing Sheet</a></li>
-            <li><a href="https://customer-portal.paddle.com/cpl_01m53zw12h8q1a33g91qg96yqg" target="_blank" rel="noopener noreferrer" class="footer-link" id="footerPaddlePortal" style="display: none; color: #38bdf8;">Paddle Customer Portal</a></li>
-            <li><a href="lumina/paddle/pricing.html" class="footer-link" id="footerPaddleLink" style="display: none;">Paddle Verification Suite</a></li>
+            <li><a href="https://customer-portal.paddle.com/cpl_01m53zw12h8q1a33g91qg96yqg" target="_blank" rel="noopener noreferrer" class="footer-link" id="footerPaddlePortal" style="color: #38bdf8;">Paddle Customer Portal</a></li>
+            <li><a href="lumina/paddle/pricing.html" class="footer-link" id="footerPaddleLink" style="color: #38bdf8;">Paddle Store (Coming Soon)</a></li>
             <li><a href="lumina/lemon/pricing.html" class="footer-link" id="footerLemonLink">Lemon Squeezy Store</a></li>
           </ul>
         </div>
@@ -398,12 +422,22 @@
         if (docSubtitle) docSubtitle.textContent = isId ? 'Beli sekali, miliki selamanya. Tanpa biaya langganan bulanan. Kunci lisensi dikirim instan melalui Merchant of Record resmi.' : 'Buy once, keep forever. Zero monthly subscriptions. Instant license key dispatch via authorized Merchant of Record.';
         if (docLangPrompt) docLangPrompt.textContent = isId ? 'Pilih Bahasa Tampilan:' : 'Select Display Language:';
 
+        // Callout Banner
+        const calloutStatusBadge = document.getElementById('calloutStatusBadge');
+        const calloutTitle = document.getElementById('calloutTitle');
+        const calloutDesc = document.getElementById('calloutDesc');
+        const calloutBtnPaddle = document.getElementById('calloutBtnPaddle');
+        if (calloutStatusBadge) calloutStatusBadge.textContent = isId ? 'INTEGRASI PADDLE.COM MOR • PROSES VERIFIKASI' : 'PADDLE.COM MOR INTEGRATION • VERIFICATION IN PROGRESS';
+        if (calloutTitle) calloutTitle.textContent = isId ? 'Integrasi Merchant of Record Paddle.com — Sedang Dalam Proses Verifikasi' : 'Paddle.com Merchant of Record Integration — Under Verification Review';
+        if (calloutDesc) calloutDesc.textContent = isId ? 'PT Reka Saujana Falah sedang menyelesaikan proses verifikasi merchant resmi dengan Paddle.com. Seluruh tier produk ($39 Plus, $59 Pro, $99 Power Pack) telah dikonfigurasi, diverifikasi, dan siap diaktifkan seketika setelah persetujuan Paddle. Anda juga dapat langsung membeli melalui toko Lemon Squeezy resmi kami yang telah aktif.' : 'PT Reka Saujana Falah is currently completing official onboarding verification with Paddle.com. All product tiers ($39 Plus, $59 Pro, $99 Power Pack) are configured, verified, and ready for instant activation upon Paddle approval. Customers may also purchase immediately via our active Lemon Squeezy storefront.';
+        if (calloutBtnPaddle && calloutBtnPaddle.querySelector('span')) calloutBtnPaddle.querySelector('span').textContent = isId ? 'Kunjungi Toko Khusus Paddle ↗' : 'Dedicated Paddle Store ↗';
+
         // Meta Badges
         const metaVerified = document.getElementById('metaVerified');
         const metaTweaks = document.getElementById('metaTweaks');
         const metaBattery = document.getElementById('metaBattery');
         const metaLangs = document.getElementById('metaLangs');
-        if (metaVerified) metaVerified.textContent = isId ? '🛡️ Terverifikasi Lemon Squeezy Merchant of Record' : '🛡️ Lemon Squeezy Verified Merchant of Record';
+        if (metaVerified) metaVerified.textContent = isId ? '🛡️ Lemon Squeezy (Aktif) & Paddle.com (Dalam Proses Verifikasi)' : '🛡️ Lemon Squeezy (Active) & Paddle.com (In Verification Review)';
         if (metaTweaks) metaTweaks.textContent = isId ? '⚡ 2.300+ Tweak macOS' : '⚡ 2,300+ macOS Tweaks';
         if (metaBattery) metaBattery.textContent = isId ? '🔋 Near-Zero Battery Shield' : '🔋 Near-Zero Battery Shield';
         if (metaLangs) metaLangs.textContent = isId ? '🌍 12 Bahasa Antarmuka & RTL' : '🌍 12 UI Languages & RTL Matrix';
@@ -423,7 +457,7 @@
         if (t1Suffix) t1Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t1Save) t1Save.textContent = isId ? 'Hemat $10 — Penawaran Peluncuran' : 'Save $10 — Launch Special Deal';
         if (t1Desc) t1Desc.textContent = isId ? 'Pilihan hemat untuk solo developer, desainer UI/UX, dan pelajar pengguna 1 unit Mac.' : 'Affordable choice for solo developers, UI/UX designers, and students on 1 Mac.';
-        if (t1BtnPaddle) t1BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($39)' : 'Get via Paddle ($39)';
+        if (t1BtnPaddle && t1BtnPaddle.querySelector('span')) t1BtnPaddle.querySelector('span').textContent = isId ? 'Paddle ($39) • Segera Hadir ↗' : 'Paddle ($39) • In Review ↗';
         if (t1Btn) t1Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($39)' : 'Get via Lemon Squeezy ($39)';
         if (t1FeatList) {
           t1FeatList.innerHTML = isId ? `
@@ -458,7 +492,7 @@
         if (t2Suffix) t2Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t2Save) t2Save.textContent = isId ? 'Hemat $20 — Pilihan Favorit Pengguna' : 'Save $20 — Most Popular Choice';
         if (t2Desc) t2Desc.textContent = isId ? 'Pilihan paling ideal untuk kombinasi MacBook laptop, Mac mini, hingga workstation Studio.' : 'Ideal choice for MacBook, Mac mini, and Mac Studio multi-desk setups.';
-        if (t2BtnPaddle) t2BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($59)' : 'Get via Paddle ($59)';
+        if (t2BtnPaddle && t2BtnPaddle.querySelector('span')) t2BtnPaddle.querySelector('span').textContent = isId ? 'Paddle ($59) • Segera Hadir ↗' : 'Paddle ($59) • In Review ↗';
         if (t2Btn) t2Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($59)' : 'Get via Lemon Squeezy ($59)';
         if (t2FeatList) {
           t2FeatList.innerHTML = isId ? `
@@ -491,7 +525,7 @@
         if (t3Suffix) t3Suffix.textContent = isId ? '/ Jual Putus' : '/ One-Time';
         if (t3Save) t3Save.textContent = isId ? 'Hemat $50 — Nilai Terbaik Multi-Mac' : 'Save $50 — Best Value for Multi-Mac';
         if (t3Desc) t3Desc.textContent = isId ? 'Bagi power users, studio kreatif, lab pengembangan aplikasi, dan workstation multi-mesin.' : 'For power users, creative studios, app testing labs, and multi-Mac setups.';
-        if (t3BtnPaddle) t3BtnPaddle.querySelector('span').textContent = isId ? 'Beli di Paddle ($99)' : 'Get via Paddle ($99)';
+        if (t3BtnPaddle && t3BtnPaddle.querySelector('span')) t3BtnPaddle.querySelector('span').textContent = isId ? 'Paddle ($99) • Segera Hadir ↗' : 'Paddle ($99) • In Review ↗';
         if (t3Btn) t3Btn.querySelector('span').textContent = isId ? 'Beli di Lemon Squeezy ($99)' : 'Get via Lemon Squeezy ($99)';
         if (t3FeatList) {
           t3FeatList.innerHTML = isId ? `

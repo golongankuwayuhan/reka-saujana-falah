@@ -72,3 +72,36 @@
     * Memperbarui `PROJECT_MEMORY.md` dan `memory/07_RAUDHAH_APP_AND_LEMON_SETUP.md`.
     * Mencatat riwayat changelog Fase 7 pada `memory/05_DEVELOPMENT_HISTORY_AND_CHANGELOG.md`.
     * Melakukan commit dan push ke repositori GitHub `reka-saujana-falah` dan `Memory-Website-Company-Profile`.
+
+## Fase 8: Persiapan Informasi "Coming Soon" & Verifikasi Merchant of Record Paddle.com Lintas Produk
+* **Instruksi Pengguna**:
+  * Sedang proses pengajuan/verifikasi merchant dengan Paddle.com.
+  * Siapkan informasi "Coming Soon" untuk Paddle pada setiap produk (LuminaTweak Glass & Raudhah App) agar tim verifikasi Paddle yang mengonfirmasi website melihat integrasi aktif, kepatuhan legal lengkap, dan antusias menyetujui proposal merchant PT Reka Saujana Falah.
+  * Perbarui kode dan seluruh memory pengembangan lengkap di Git.
+* **Tindakan**:
+  * **Integrasi UI & Branding Paddle "Coming Soon"**:
+    * Menambahkan styling `.btn-tier-paddle-cs`, `.paddle-onboarding-callout`, `.btn-raudhah-paddle-cs`, dan modal `.paddle-modal-overlay` di `assets/css/style.css`.
+    * Memperbarui `index.html`:
+      * Menampilkan badge Paddle MoR (Coming Soon / In Review) di hero section Lumina.
+      * Menyempurnakan Store Guidance Banner dengan logo Lemon Squeezy dan Paddle, serta tombol langsung ke portal Paddle.
+      * Menambahkan callout banner resmi Paddle di atas tabel harga Lumina.
+      * Membuka tombol checkout tier Paddle ($39, $59, $99) dengan badge "Coming Soon / In Review ↗" yang mengarah ke portal Paddle.
+      * Menambahkan badge dan tombol gerbang Paddle (Coming Soon) di section showcase Raudhah.
+      * Menambahkan tautan portal Paddle di dropdown navbar, mobile drawer, dan footer.
+    * Memperbarui `pricing.html`:
+      * Menambahkan banner callout status verifikasi Paddle di atas kartu harga.
+      * Mengaktifkan tombol Paddle di setiap kartu harga dengan tautan ke portal Paddle.
+      * Membuka tautan legal dan portal Paddle di footer dan kotak Merchant of Record.
+    * Memperbarui `raudhah/index.html`:
+      * Menambahkan badge hero "Paddle.com Gateway (In Review)".
+      * Menambahkan opsi ke-3 pada kartu unduhan/donasi: "Paddle.com Global Gateway (Coming Soon / In Review)" untuk hadiah sukarela wakaf digital internasional multi-mata uang.
+    * Memperbarui dedicated portal `lumina/paddle/index.html` dan `lumina/paddle/pricing.html`:
+      * Menambahkan top alert banner resmi verifikasi Paddle: "Paddle.com Merchant Verification in Progress".
+      * Menambahkan modal informatif elegan ketika tombol checkout diklik selama masa ulasan merchant.
+  * **Sinkronisasi Dwibahasa (ID & EN)**:
+    * Menambahkan seluruh kunci penerjemahan Paddle di `assets/js/main.js` dan inline script `raudhah/index.html`.
+  * **Dokumentasi Memory**:
+    * Menambahkan Bab D di `PROJECT_MEMORY.md`.
+    * Mencatat Fase 8 di `memory/05_DEVELOPMENT_HISTORY_AND_CHANGELOG.md`.
+    * Membuat panduan verifikasi khusus `memory/08_PADDLE_MERCHANT_ONBOARDING_AND_VERIFICATION.md`.
+    * Mendorong seluruh perubahan ke Git remote `origin` (`reka-saujana-falah`) dan `memory` (`Memory-Website-Company-Profile`).

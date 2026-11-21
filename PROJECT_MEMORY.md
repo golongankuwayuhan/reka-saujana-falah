@@ -115,6 +115,18 @@ Website mengimplementasikan checkout modal elegan in-browser tanpa me-redirect p
 * **Direct Checkout URL Lemon Squeezy**: `https://apexvista.lemonsqueezy.com/checkout/buy/9d3b78ec-09ac-4647-bd59-3e5aad3d9b0a?embed=1`
 * **Live Showcase**: `https://rekasaujanafalah.com/raudhah/index.html`
 
+### D. Integrasi Merchant of Record Paddle.com (Coming Soon / Under Verification Review)
+* **Kanal MoR Kedua**: Paddle.com Market Ltd
+* **Status**: Sedang dalam proses ulasan kepatuhan & verifikasi proposal merchant oleh tim Paddle.
+* **Price Tiers LuminaTweak Glass di Paddle**:
+  1. Plus Edition ($39.00 USD, 1 Mac): `pri_01m54qmerytd57vfyt0rkay8tb`
+  2. Pro Edition ($59.00 USD, 3 Macs): `pri_01m54qpy498d7wyfs4y8eydbpb`
+  3. Power Pack ($99.00 USD, 5 Macs): `pri_01m54qrjt8mdpn532kq78wpytp`
+  4. Enterprise Fleet ($299.00+ USD, MDM): `lumina/paddle/enterprise-pricing.html`
+* **Gerbang Hadiah Sukarela Raudhah**: Gerbang multi-mata uang internasional via Paddle MoR untuk hadiah sukarela wakaf digital ($0 / Pay What You Want).
+* **Dedicated Paddle Store**: `https://rekasaujanafalah.com/lumina/paddle/pricing.html`
+* **Panduan Kepatuhan Reviewer**: `memory/08_PADDLE_MERCHANT_ONBOARDING_AND_VERIFICATION.md`
+
 ---
 
 ## 🚀 5. RIWAYAT KAMPANYE PELUNCURAN (OFFICIAL LAUNCH TWEET)
@@ -181,24 +193,27 @@ Try our interactive live simulator:
 │   ├── 04_MARKETING_ASSETS_AND_LAUNCH.md
 │   ├── 05_DEVELOPMENT_HISTORY_AND_CHANGELOG.md
 │   ├── 06_HOW_TO_RESUME_ON_ANOTHER_PC.md
-│   └── 07_RAUDHAH_APP_AND_LEMON_SETUP.md
+│   ├── 07_RAUDHAH_APP_AND_LEMON_SETUP.md
+│   └── 08_PADDLE_MERCHANT_ONBOARDING_AND_VERIFICATION.md
 ├── raudhah/
 │   └── index.html              # Showcase & portal resmi Raudhah
 ├── lumina/
 │   ├── index.html              # Showcase & Live simulator (URL: rekasaujanafalah.com/lumina)
 │   ├── demo.html               # Showcase & Live simulator (URL: rekasaujanafalah.com/lumina/demo.html)
-│   ├── lemon/                  # Kanal resmi Lemon Squeezy
+│   ├── lemon/                  # Kanal resmi Lemon Squeezy (Aktif)
 │   │   ├── index.html          # Portal Lemon Squeezy
 │   │   ├── demo.html           # Live demo simulator kanal Lemon
 │   │   ├── pricing.html        # Halaman pricing 3 tier ($39 / $59 / $99)
 │   │   ├── terms.html          # Syarat ketentuan MoR Lemon Squeezy
 │   │   ├── privacy.html        # Kebijakan privasi MoR Lemon Squeezy
 │   │   └── refund.html         # Kebijakan refund 30 hari
-│   └── paddle/                 # Preserved (Disembunyikan sementara di UI)
-│       ├── index.html
-│       ├── pricing.html
-│       ├── terms.html
-│       └── privacy.html
+│   └── paddle/                 # Kanal resmi Paddle (Coming Soon / Verifikasi Onboarding)
+│       ├── index.html          # Portal Paddle dengan top banner verifikasi
+│       ├── pricing.html        # Halaman pricing Paddle 3 tier ($39 / $59 / $99) & modal verifikasi
+│       ├── enterprise-pricing.html # Halaman harga volume enterprise
+│       ├── terms.html          # Syarat ketentuan MoR Paddle
+│       ├── privacy.html        # Kebijakan privasi MoR Paddle
+│       └── refund.html         # Kebijakan pengembalian dana 30 hari MoR Paddle
 └── assets/
     ├── css/
     │   └── style.css           # Framework desain glassmorphism & simulator engine
