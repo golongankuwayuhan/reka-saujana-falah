@@ -137,4 +137,22 @@ Untuk memudahkan verifikasi oleh agen/analis Paddle:
 7. **Pengiriman Produk**: Instan via email digital receipt dan lisensi unduhan software.
 
 ---
+
+## 🆔 6. PROSEDUR KYC / IDENTITY VERIFICATION & NAME DISCREPANCY RESOLUTION
+
+### Kronologi Kasus (November 2026):
+* **Konteks**: Sistem verifikasi identitas Paddle (biometrik/Veriff) meminta unggah ID dan perekaman video wajah.
+* **Tindakan**: Pemilik mengunggah SIM (Driver's License) atas nama **ENDRA SETIAJI** beserta video verifikasi wajah.
+* **Tanggapan Paddle (Lara - sellers@paddle.com)**:
+  > *"Upon reviewing your provided identification, I've noticed a discrepancy between the name on your account and the document submitted. Your account name is listed as PT Reka Saujana Falah, while the document displays ENDRA SETIAJI. Could you clarify the name discrepancy on your document for us and confirm your full name?"*
+
+### Analisis & Solusi Kepatuhan (Compliance Standard):
+1. **Mengapa Ini Terjadi**:
+   Akun didaftarkan sebagai Badan Usaha (*Company Entity*) dengan nama `PT Reka Saujana Falah`. Sistem otomatis Paddle membandingkan nama akun dan nama pada ID. Karena perusahaan (*legal entity*) tidak memiliki KTP/SIM atau wajah, ID yang diserahkan adalah milik Direktur/Pemilik Perorangan (*ENDRA SETIAJI*).
+2. **Klarifikasi Hubungan Hukum (Ultimate Beneficial Owner & Legal Representative)**:
+   * **Nama Lengkap**: ENDRA SETIAJI
+   * **Peran**: Direktur Utama (*Sole Director*), Pendiri (*Founder*), dan Pemilik Manfaat Akhir (*Ultimate Beneficial Owner - UBO / Majority Shareholder*) dari **PT Reka Saujana Falah**.
+   * **Dokumen Penghubung Legalitas**: SK Kemenkumham (AHU) / Akta Pendirian Perseroan & NIB (Nomor Induk Berusaha OSS) yang secara eksplisit mencantumkan nama ENDRA SETIAJI sebagai penanggung jawab dan direktur perseroan.
+
+---
 *Dibuat oleh Tim Rekayasa Perangkat Lunak PT Reka Saujana Falah — 2026.*
